@@ -1,6 +1,21 @@
 .default-container
-  %header.sp-header.visible-sp
-    .sp-header-inner
+  %header.main-header.visible-sp
+    .main-header-inner
       %h1.logo
         %a{href: '#'}
-          = image_tag 'mercari_logo_horizontal.png', size: "134x36", alt: 'mercari', class: 'input-dfault'
+          = image_tag 'mercari_logo_horizontal.png', size: '134x36', alt: 'mercari', class: 'input-dfault'
+      .main-header-user-nav.clearfix
+        %a.main-header-user-icon{href: '#'} 
+          %figure
+            %i.far.fa-bell
+        %a.main-header-user-icon{href: '#'} 
+          %figure
+            %i.fas.fa-check
+        %a.main-header-user-icon{href: '#'} 
+          %figure
+            %div
+              = image_tag 'face-icon.png', size: '32', alt: 'face-icon'
+
+    .search-box
+      %form.main-header-form{action: '#'} 
+        %input.input-holder{type: 'search', name: 'keyword', placeholder: '何かお探しですか？'}
