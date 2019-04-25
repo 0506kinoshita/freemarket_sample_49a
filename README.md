@@ -27,56 +27,55 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|not null, unique, index|
-|e-mail|text|not null, unique|
-|first_name|string|not null|
+|mail-address|text|not null, unique|
+|password|string|not null|
+|password_confirm|string|not null|
 |last_name|string|not null|
-|kana_first_name|string|not null|
-|kana_last_name|string|not null|
+|first_name|string|not null|
+|last_name_kana|string|not null|
+|first_name_kana|string|not null|
 |birth_year|integer|not null|
 |birth_month|integer|not null|
 |birth_day|integer|not null|
-|password|string|not null|
-|product_id|integer|foreign_key :true|
-|fund| integer|not null|
+|phone_number|integer|
 
 ### Association
--has_many :items
+-has_one :address
 -has_many :messages
 -has_many :notieces
 -has_one :addresses
 
-## high_rating_table
-|Column|Type|Options|
-|------|----|-------|
-|buyer_id|integer|not null|
-|seller_user_id|integer|not null|
-|rating|integer|
-
-## middle_rating_table
-Column|Type|Options|
-|------|----|-------|
-|buyer_id|integer|not null|
-|seller_id|integer|not null|
-|rating|integer|
-
-## low_rating_table
-Column|Type|Options|
-|------|----|-------|
-|buyer_id|integer|not null|
-|seller_id|integer|not null|
-|rating|integer|
-
 ## addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|state|string|not null|
-|city|string|not null|
-|address_line|text|not null|
 |zip-code|integer|not null|
+|prefecture|string|not null|
+|city|string|not null|
+|block_number|text|not null|
+|building_name|text|
 |phone_number|integer|not null|
+|user_id|integer|foreign_key :true|
 
 ### Association
--has_one :users
+-has_one :user
+
+## high_rating_table
+|Column|Type|Options|
+|------|----|-------|
+|send_user|integer|not null|
+|received_user|integer|not null|
+
+## middle_rating_table
+|Column|Type|Options|
+|------|----|-------|
+|send_user|integer|not null|
+|received_user|integer|not null|
+
+## low_rating_table
+|Column|Type|Options|
+|------|----|-------|
+|send_user|integer|not null|
+|received_user|integer|not null|
 
 ## noticeテーブル
 Column|Type|Options|
@@ -90,7 +89,7 @@ Column|Type|Options|
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|not null|
+|text|text|
 |user_id|integer|foreign_key :true|
 
 ### Association
