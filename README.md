@@ -26,7 +26,7 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|not null, unique, index|
+|nickname|string|not null, unique|
 |mail-address|text|not null, unique|
 |password|string|not null|
 |password_confirm|string|not null|
@@ -37,13 +37,11 @@ Things you may want to cover:
 |birth_year|integer|not null|
 |birth_month|integer|not null|
 |birth_day|integer|not null|
-|phone_number|integer|
+|phone_number|integer|not null, unique|
 
 ### Association
 -has_one :address
--has_many :messages
--has_many :notieces
--has_one :addresses
+-has_one :creditcard
 
 ## addressesテーブル
 |Column|Type|Options|
@@ -53,13 +51,13 @@ Things you may want to cover:
 |city|string|not null|
 |block_number|text|not null|
 |building_name|text|
-|phone_number|integer|not null|
+|homephone_number|integer|
 |user_id|integer|foreign_key :true|
-
+<!-- homephoneに変更しました -->
 ### Association
 -has_one :user
 
-## creditcardテーブル
+## creditcardsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |card_number|integer|not null, unique|
@@ -71,29 +69,30 @@ Things you may want to cover:
 ### Association
 -has_one :user
 
-## high_rating_table
+## like_highテーブル
 |Column|Type|Options|
 |------|----|-------|
 |send_user|integer|not null|
 |received_user|integer|not null|
-
-## middle_rating_table
+<!-- order tableからAssociation -->
+## like_middleテーブル
 |Column|Type|Options|
 |------|----|-------|
 |send_user|integer|not null|
 |received_user|integer|not null|
-
-## low_rating_table
+<!-- order tableからAssociation -->
+## like_lowテーブル
 |Column|Type|Options|
 |------|----|-------|
 |send_user|integer|not null|
 |received_user|integer|not null|
-
-## noticeテーブル
+<!-- order tableからAssociation -->
+## noticesテーブル
 Column|Type|Options|
 |------|----|-------|
 |user_id|integer|foreign_key :true|
-|news|text|
+|title|text|not null|
+|body|text|not null|
 
 ### Association
 -belongs_to :user
@@ -112,13 +111,15 @@ Column|Type|Options|
 |Column|Type|Options|
 |------|----|-------|
 |name|string|not null|
-|category_id|integer|not null, foreign_key :ture|
-|brand_id|integer|not null, foreign_key :true|
-|size|string|
+|detail|text|
 |condition|string|not null|
+|delivery_fee|integer|not null|
+|region|string|not null|
+|day_rule|string|not null|
 |price|integer|not null|
+|user_id|integer|foreign_key :true|
+|size|string|
 |image|text|not null|
-|comment|text| 
 
 ### Association
 -has_one :delivery
@@ -126,50 +127,44 @@ Column|Type|Options|
 -has_many :brands
 -has_many :categories
 
-## deliveriesテーブル
+## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|postage|integer|not null|
-|send_type|string|not null|
-|region|string|not null|
-|require_data|string|not null|
-|daftrayer|string| not null, unique|
+|body|text|not null|
+|user_id|integer|not null|
+|send_user_id|integer|not null|
+|item_id|integer|foreign_key :true|
 
 ### Association
 -has_one :items
 -has_one :order
 
-## orderテーブル
+## order_itemテーブル
 Column|Type|Options|
 |------|----|-------|
 |item_id|integer|foreign_key :true|
 |buyer_id|integer|foreing_key :true|
-|seller_id|integer|foreign_key :true|
+|user_id|integer|foreign_key :true|
 
-## todoテーブル
+## sold_itemテーブル
 Column|Type|Options|
 |------|----|-------|
-|order_id|integer|foreign_key :true|
-|buyer_id|integer|foreign_key :true|
-|seller_id|integer|foreign_key :true|
+|item_id|integer|foreign_key :true|
+|buyer_id|integer|foreing_key :true|
+|user_id|integer|foreign_key :true|
 
 ## brnadsテーブル
 Column|Type|Options|
 |------|----|-------|
 |name|string|not null, unique|
-|genre_id|integer|foreign_key :true|
-|categorory_id|integer|foreign_key :true|
-
-## genresテーブル
-Column|Type|Options|
-|------|----|-------|
-|name|string|not null|
-|brand_id|integer|foreign_key :true|
-|category_id|integer|foreign_key :true|
 
 ## categoriesテーブル
 Column|Type|Options|
 |------|----|-------|
 |name|string|not null|
-|genre_id|integer|foreign_key :true|
-|brand_id|integer|foreign_key :true|
+
+## item_categoriesテーブル
+Column|Type|Options|
+|------|----|-------|
+|item_id|integer|foreign_key :ture|
+|category_id|integer||foreign_key :true|
