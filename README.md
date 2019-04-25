@@ -42,6 +42,11 @@ Things you may want to cover:
 ### Association
 -has_one :address
 -has_one :creditcard
+-has_many :notices
+-has_many :items
+-has_many :like_high
+-has_many :like_middle
+-has_many :like_low
 
 ## addressesテーブル
 |Column|Type|Options|
@@ -53,7 +58,6 @@ Things you may want to cover:
 |building_name|text|
 |homephone_number|integer|
 |user_id|integer|foreign_key :true|
-<!-- homephoneに変更しました -->
 ### Association
 -has_one :user
 
@@ -74,19 +78,28 @@ Things you may want to cover:
 |------|----|-------|
 |send_user|integer|not null|
 |received_user|integer|not null|
-<!-- order tableからAssociation -->
+
+### Association
+belongs_to :user
+
 ## like_middleテーブル
 |Column|Type|Options|
 |------|----|-------|
 |send_user|integer|not null|
 |received_user|integer|not null|
-<!-- order tableからAssociation -->
+
+### Association
+belongs_to :user
+
 ## like_lowテーブル
 |Column|Type|Options|
 |------|----|-------|
 |send_user|integer|not null|
 |received_user|integer|not null|
-<!-- order tableからAssociation -->
+
+### Association
+belongs_to :user
+
 ## noticesテーブル
 Column|Type|Options|
 |------|----|-------|
@@ -111,21 +124,27 @@ Column|Type|Options|
 |Column|Type|Options|
 |------|----|-------|
 |name|string|not null|
-|detail|text|
-|condition|string|not null|
-|delivery_fee|integer|not null|
-|region|string|not null|
-|day_rule|string|not null|
-|price|integer|not null|
-|user_id|integer|foreign_key :true|
+|category_id|integer|not null, foreign_key :true|
+|brand_id|integer|foreign_key :true|
 |size|string|
+|condition|string|not null|
+|day_rule|string|not null|
+|delivery_fee|integer|not null|
+|price|integer|not null|
+|detail|text|
+|region|string|not null|
+|user_id|integer|foreign_key :true|
 |image|text|not null|
 
 ### Association
--has_one :delivery
--has_many :genres
+-has_many :items_likes
+-has_many :comments
 -has_many :brands
--has_many :categories
+-has_many :item_categories
+-has_many :categories through item_categories
+-has_many :ordered_items
+-has_many :sold_items
+-belongs_to :user
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -136,35 +155,51 @@ Column|Type|Options|
 |item_id|integer|foreign_key :true|
 
 ### Association
--has_one :items
--has_one :order
+-belongs_to :item
 
-## order_itemテーブル
+## ordered_itemsテーブル
 Column|Type|Options|
 |------|----|-------|
 |item_id|integer|foreign_key :true|
 |buyer_id|integer|foreing_key :true|
 |user_id|integer|foreign_key :true|
 
-## sold_itemテーブル
+### Association
+-belongs_to :item
+
+## sold_itemsテーブル
 Column|Type|Options|
 |------|----|-------|
 |item_id|integer|foreign_key :true|
 |buyer_id|integer|foreing_key :true|
 |user_id|integer|foreign_key :true|
+
+### Association
+belongs_to :item
 
 ## brnadsテーブル
 Column|Type|Options|
 |------|----|-------|
 |name|string|not null, unique|
 
+### Association
+-belongs_to :item
+
 ## categoriesテーブル
 Column|Type|Options|
 |------|----|-------|
 |name|string|not null|
+|item_category_id|integer|not null|
+
+### Association
+-has_many :item through item_categories
 
 ## item_categoriesテーブル
 Column|Type|Options|
 |------|----|-------|
 |item_id|integer|foreign_key :ture|
 |category_id|integer||foreign_key :true|
+
+### Association
+belongs_to :item
+belongs_to :category
