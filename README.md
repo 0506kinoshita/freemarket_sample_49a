@@ -59,6 +59,18 @@ Things you may want to cover:
 ### Association
 -has_one :user
 
+## creditcardテーブル
+|Column|Type|Options|
+|------|----|-------|
+|card_number|integer|not null, unique|
+|expiration_month|integer|not null|
+|expiration_year|integer|not null|
+|securith_code|integer|not null|
+|user_id|integer|foreign_key :true|
+
+### Association
+-has_one :user
+
 ## high_rating_table
 |Column|Type|Options|
 |------|----|-------|
