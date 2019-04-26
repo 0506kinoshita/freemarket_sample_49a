@@ -40,13 +40,13 @@ Things you may want to cover:
 |phone_number|integer|not null, unique|
 
 ### Association
--has_one :address
--has_one :creditcard
--has_many :notices
--has_many :items
--has_many :like_high
--has_many :like_middle
--has_many :like_low
+-has_one :address dependent: :destroy
+-has_one :creditcard dependent: :destroy
+-has_many :notices dependent: :destroy
+-has_many :items dependent: :destroy
+-has_many :like_high dependent: :destroy
+-has_many :like_middle dependent: :destroy
+-has_many :like_low dependent: :destroy
 
 ## addressesテーブル
 |Column|Type|Options|
@@ -137,13 +137,12 @@ Column|Type|Options|
 |image|text|not null|
 
 ### Association
--has_many :items_likes
--has_many :comments
--has_many :brands
+-has_many :items_likes dependent: :destroy
+-has_many :comments dependent: :destroy
+-belongs_to :brand
 -has_many :item_categories
 -has_many :categories through item_categories
 -has_many :ordered_items
--has_many :sold_items
 -belongs_to :user
 
 ## commentsテーブル
@@ -165,17 +164,17 @@ Column|Type|Options|
 |user_id|integer|foreign_key :true|
 
 ### Association
--belongs_to :item
-
+-belongs_to :item dependent: :destroy
+-has_many :sold_items
 ## sold_itemsテーブル
 Column|Type|Options|
-|------|----|-------|
+|------|----|-------|ß
 |item_id|integer|foreign_key :true|
 |buyer_id|integer|foreing_key :true|
 |user_id|integer|foreign_key :true|
 
 ### Association
-belongs_to :item
+belongs_to :ordered_item
 
 ## brnadsテーブル
 Column|Type|Options|
@@ -183,7 +182,7 @@ Column|Type|Options|
 |name|string|not null, unique|
 
 ### Association
--belongs_to :item
+-has_many :items
 
 ## categoriesテーブル
 Column|Type|Options|
