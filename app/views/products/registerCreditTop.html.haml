@@ -4,15 +4,15 @@
   .credit-register-contener
     %h2.credit-register-contener__head 支払い方法
     .credit-register-contener__middle
-      %section.cre-regi-cont-mid__inner
-        .cre-regi-cont-mid__inner__content 
-          .cre-regi-cont-mid__inner__content__detail　クレジットカード一覧
-      %section.cre-regi-cont-mid__btn-wrapper
-        .cre-regi-cont-mid__btn-wrapper__content
+      %section.credit-register-contener__middle__inner
+        .credit-register-contener__middle__inner__content 
+          .credit-register-contener__middle__inner__content__detail　クレジットカード一覧
+      %section.credit-register-contener__middle__btn-wrapper
+        .credit-register-contener__middle__btn-wrapper__content
           = link_to 'root', class: "cregit-register-redBtn" do
             = fa_icon("credit-card cregit-register-redBtn__image")
             %span クレジットカードを追加する
-      %section.cre-regi-cont-mid__lower
-        = link_to 'root', class: "cre-regi-cont-mid__lower__content" do
+      %section.credit-register-contener__middle__lower
+        = link_to 'root', class: "credit-register-contener__middle__lower__content" do
           %span 支払い方法について
           = fa_icon("chevron-right cregit-register-redBtn__image")

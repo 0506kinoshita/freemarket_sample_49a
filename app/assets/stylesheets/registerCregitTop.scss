@@ -35,25 +35,27 @@ header {
     height: 308px;
     padding: 64px;
 
-    .cre-regi-cont-mid__inner {
+    &__inner {
       height: 16px;
+
       &__content {
         height: 16px;
         margin: 0 auto;
         width: 320px;
+
         &__detail {
           font-size: 15px;
           font-weight: bold;
         }
       }
     }
-    .cre-regi-cont-mid__btn-wrapper {
+    &__btn-wrapper {
       height: 90px;
       width: 572px;
       padding-top: 30px;
       border-bottom: solid 1px #f5f5f5;
 
-      .cre-regi-cont-mid__btn-wrapper__content {
+      &__content {
         height: 50px;
         width: 320px;
         margin: auto;
@@ -82,11 +84,11 @@ header {
         }
       }
     }
-    .cre-regi-cont-mid__lower {
+    &__lower {
       text-align: right;
       padding-top: 50px;
 
-      .cre-regi-cont-mid__lower__content {
+      &__content {
         text-decoration: none;
         color: #0099e8;
       }
