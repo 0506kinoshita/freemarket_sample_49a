@@ -8,25 +8,37 @@
         %input.input-holder{type: 'search', name: 'keyword', placeholder: '何かお探しですか？'}
         %i.fas.fa-search.icon-search
 
-  .maine-header__main-gnav.clearfix
-    .gnav-left
-      %ul
-    .gnav-right
-      %ul.main-header__user-gnav
-        %li{data: {id: 'main-header__user-gnav', key: 'notice', url: '#'}}
-          %a.main-header__menu-link{href: 'https://www.mercari.com/jp/mypage/notification/',data: {url: '#'}}
-            %i.far.fa-bell
-            %span お知らせ
-          %ul.main-header__user-box.main-header__notice-box.mypage-item-list{data: {id: 'main-header__user-items'}}
-        %li{data: {id: 'main-header__user-gnav', key: 'todo', url: '#'}}
-          %a.main-header__menu-link{href: 'https://www.mercari.com/jp/mypage/todo/',data: {url: '#'}}
-            %i.fas.fa-check
-            %span やることリスト
-          %ul.main-header__user-box.main-header__todo-box.mypage-item-list{data: {id: 'main-header__user-items'}}
-        %li
-          %a.main-header__user-icon.main-header__menu-link{href: 'https://www.mercari.com/jp/mypage/'}
-            %figure
-              %div
-                =image_tag 'face-icon.png', size: '32', alt: 'face-icon'
-            %span マイページ
-          %ul.main-header__user-box.main-header__todo-box.mypage-item-list{data: {id: 'main-header__user-items'}}
+    .maine-header__main-gnav.clearfix
+      .gnav-left
+        %ul.main-header__gnav
+          %li
+            %h2
+              %a.main-header__gnav-root.list-parent{href: 'https://www.mercari.com/jp/category/'}
+                %i.fas.fa-list-ul.main-header__brand-icon
+                %span カテゴリーから探す
+          %li
+            %h2
+              %a.main-header__gnav-root{href: 'https://www.mercari.com/jp/brand/'}
+                %i.fa.fa-tag.main-header__brand-icon
+                %span ブランドから探す
+              %ul.main-header__gnav-parent-wrap
+
+      .gnav-right
+        %ul.main-header__user-gnav
+          %li{data: {id: 'main-header__user-gnav', key: 'notice', url: '#'}}
+            %a.main-header__menu-link{href: 'https://www.mercari.com/jp/mypage/notification/',data: {url: '#'}}
+              %i.far.fa-bell
+              %span お知らせ
+            %ul.main-header__user-box.main-header__notice-box.mypage-item-list{data: {id: 'main-header__user-items'}}
+          %li{data: {id: 'main-header__user-gnav', key: 'todo', url: '#'}}
+            %a.main-header__menu-link{href: 'https://www.mercari.com/jp/mypage/todo/',data: {url: '#'}}
+              %i.fas.fa-check
+              %span やることリスト
+            %ul.main-header__user-box.main-header__todo-box.mypage-item-list{data: {id: 'main-header__user-items'}}
+          %li
+            %a.main-header__user-icon.main-header__menu-link{href: 'https://www.mercari.com/jp/mypage/'}
+              %figure
+                %div
+                  =image_tag 'face-icon.png', size: '32', alt: 'face-icon'
+              %span マイページ
+            %ul.main-header__user-box.main-header__todo-box.mypage-item-list{data: {id: 'main-header__user-items'}}
