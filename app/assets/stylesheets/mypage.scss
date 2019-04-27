@@ -3,55 +3,57 @@
   width:100%;
   height: 1500px;
   background-color: #f5f5f5;
-  .user-page{
+  &__user-page{
     width: 1020px;
     margin: 0 auto;
-  }
-  .mypage-leftsidebar{
-    float:left;
-    width: 280px;
-  }
-  .mypage-main{
-    float: right;
-    width:700px;
-    background-color: #f5f5f5;
-    .mypage-inner{
-      .myuser-icon{
-        background: url("https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?6820409");
-        text-align: center;
-        height: 160px;
-        padding:20px;
-        .mypage-name{
-          font-weight: bold;
-          font-size: 14px;
-          margin-top: 8px
-        }
-        .user-icon{
-          display: block;
-          margin: 0 auto;
-          position:relative;
-          border-radius: 50%;
-        }
-        .mypage-number{
-          font-size: 14px;
-          .evaluations{
-            display: inline-block;
-            width: 100px;
+    &__leftsidebar{
+      float:left;
+      width: 280px;
+    }
+    &__main{
+      float: right;
+      width:700px;
+      background-color: #f5f5f5;
+      &__inner{
+        &__icon{
+          background: url("https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?6820409");
+          text-align: center;
+          height: 160px;
+          padding:20px;
+          h2{
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 8px
           }
-          .exhibitions{
-            display: inline-block;
-            width: 100px;
-            margin-left: 16px;
+          &__user-icon{
+            display: block;
+            margin: 0 auto;
+            position:relative;
+            border-radius: 50%;
+          }
+          &__number{
+            font-size: 14px;
+            &__evaluations{
+              display: inline-block;
+              width: 100px;
+            }
+            
+            &__exhibitions{
+              display: inline-block;
+              width: 100px;
+              margin-left: 16px;
+            }
           }
         }
       }
     }
-    .mypage-tab{
-      .mypage-tab1{
+
+    &__main__tab{
+      &__tab1{
         position: relative;
-        .mypage-tab-contents{
+        &__contents{
           list-style: none;
-          .mypage-info{
+          &__info{
             width:50%;
             text-align: center;
             float:left;
@@ -60,7 +62,7 @@
             line-height: 72px;
             border-top: 2px solid #ea352d;
           }
-          .mypage-must{
+          &__must{
             width:50%;
             text-align: center;
             float:right;
@@ -69,7 +71,7 @@
             line-height: 72px;
           }
         }
-        .mypage-info-box{
+        &__info-box{
           clear: both;
           background: url("https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?98418311");
           background-color: white;
@@ -82,12 +84,12 @@
           color: #CCCCCC;
         }
       }
-      .mypage-tab2{
+      &__tab2{
         display: none;
         position: relative;
-        .mypage-tab-contents{
+        &__contents{
           list-style: none;
-          .mypage-info{
+          &__info{
             width:50%;
             text-align: center;
             float:left;
@@ -95,7 +97,7 @@
             font-size: 16px;
             line-height: 72px;
           }
-          .mypage-must{
+          &__must{
             width:50%;
             text-align: center;
             float:right;
@@ -105,7 +107,7 @@
             border-top: 2px solid #ea352d;
           }
         }
-        .mypage-must-box{
+        &__must-box{
           clear: both;
           background: url("https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?98418311");
           background-color: white;
@@ -119,18 +121,18 @@
         }
       }
     }
-    .trade-information1{
+    &__main__trade-information1{
       position: relative;
       margin-top: 40px;
       background-color: white;
-      .mypage-purchase1{
+      &__purchase1{
       font-size: 16px;
       line-height: 72px;
       padding-left: 16px;
       }
-      .mypage-trade{
+      &__trade{
         list-style:none;
-        .mypage-trading{
+        &__trading{
           float: left;
           width:50%;
           text-align: center;
@@ -138,7 +140,7 @@
           line-height: 72px;
           border-top: 2px solid #ea352d;
         }
-        .mypage-traded{
+        &__traded{
           float: right;
           width:50%;
           text-align: center;
@@ -147,7 +149,7 @@
           background: #eee;
         }
       }
-      .mypage-trading-box{
+      &__trading-box{
         clear: both;
         background: url("https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?98418311");
         background-color: white;
@@ -161,19 +163,19 @@
       }
     }
     
-    .trade-information2{
+    &__main__trade-information2{
       display: none;
       position: relative;
       margin-top: 40px;
       background-color: white;
-      .mypage-purchase2{
+      &__purchase2{
         font-size: 16px;
         line-height: 72px;
         padding-left: 16px;
-        }
-      .mypage-trade{
+      }
+      &__trade{
         list-style:none;
-        .mypage-trading{
+        &__trading{
           float: left;
           width:50%;
           text-align: center;
@@ -181,7 +183,7 @@
           line-height: 72px;
           background: #eee;
         }
-        .mypage-traded{
+        &__traded{
           float: right;
           width:50%;
           text-align: center;
@@ -190,7 +192,7 @@
           border-top: 2px solid #ea352d;
         }
       }
-      .mypage-traded-box{
+      &__traded-box{
         clear: both;
         background: url("https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?98418311");
         background-color: white;

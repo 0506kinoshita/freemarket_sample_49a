@@ -1,55 +1,54 @@
 .mypage
-  .user-page
-    .mypage-leftsidebar
+  .mypage__user-page
+    .mypage__user-page__leftsidebar
       = render 'sidebar'
-      
-    .mypage-main
-      .mypage-inner
-        .myuser-icon
-          =image_tag "gopher.png" ,size: "60x60",class: "user-icon"
-          %h2.mypage-name ニックネーム
-          .mypage-number
-            .evaluations
+    .mypage__user-page__main
+      .mypage__user-page__main__inner
+        .mypage__user-page__main__inner__icon
+          =image_tag "gopher.png" ,size: "60x60",class: "mypage__user-page__main__inner__icon__user-icon"
+          %h2 ニックネーム
+          .mypage__user-page__main__inner__icon__user-icon__number
+            .mypage__user-page__main__inner__icon__user-icon__number__evaluations
               評価
               %span
               評価数
-            .exhibitions
+            .mypage__user-page__main__inner__icon__user-icon__number__exhibitions
               出品数
               %span
               出品数 
-      .mypage-tab
-        .mypage-tab1
-          %ul.mypage-tab-contents
-            %li.mypage-info
+      .mypage__user-page__main__tab
+        .mypage__user-page__main__tab__tab1
+          %ul.mypage__user-page__main__tab__tab1__contents
+            %li.mypage__user-page__main__tab__tab1__contents__info
               %h2 お知らせ
-            %li.mypage-must
+            %li.mypage__user-page__main__tab__tab1__contents__must
               %h2 やることリスト
-          .mypage-info-box
+          .mypage__user-page__main__tab__tab1__info-box
             お知らせはありません
-        .mypage-tab2
-          %ul.mypage-tab-contents
-            %li.mypage-info
+        .mypage__user-page__main__tab__tab2
+          %ul.mypage__user-page__main__tab__tab2__contents
+            %li.mypage__user-page__main__tab__tab2__contents__info
               %h2 お知らせ
-            %li.mypage-must
+            %li.mypage__user-page__main__tab__tab2__contents__must
               %h2 やることリスト
-          .mypage-must-box
+          .mypage__user-page__main__tab__tab2__must-box
             現在やることはありません
 
-      .trade-information1
-        %h2.mypage-purchase1 購入した商品
-        %ul.mypage-trade
-          %li.mypage-trading
+      .mypage__user-page__main__trade-information1
+        %h2.mypage__user-page__main__trade-information1__purchase1 購入した商品
+        %ul.mypage__user-page__main__trade-information1__trade
+          %li.mypage__user-page__main__trade-information1__trade__trading
             %h2 取引中
-          %li.mypage-traded
+          %li.mypage__user-page__main__trade-information1__trade__traded
             %h2 過去の取引
-        .mypage-trading-box
+        .mypage__user-page__main__trade-information1__trading-box
           取引中の商品がありません
-      .trade-information2
-        %h2.mypage-purchase2 購入した商品
-        %ul.mypage-trade
-          %li.mypage-trading
+      .mypage__user-page__main__trade-information2
+        %h2.mypage__user-page__main__trade-information2__purchase2 購入した商品
+        %ul.mypage__user-page__main__trade-information2__trade
+          %li.mypage__user-page__main__trade-information2__trade__trading
             %h2 取引中
-          %li.mypage-traded
+          %li.mypage__user-page__main__trade-information2__trade__traded
             %h2 過去の取引
-        .mypage-traded-box
+        .mypage__user-page__main__trade-information2__traded-box
           取引した商品はありません
