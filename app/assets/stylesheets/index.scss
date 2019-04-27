@@ -11,14 +11,10 @@
   border-width: 0;
 }
 
-.visible-pc{
-  display: block;
-}
-
 // ヘッダートップ
 
 .main-header{
-  $this: &;
+  display: block;
 
   &__inner{
     margin: 0 auto;
@@ -67,12 +63,13 @@
 }
 
 // ヘッダーメニュー
-.maine-header__main-gnav{
 
-  .gnav-right{
+.main-gnav{
+
+  &__right{
     float: right;
 
-    .main-header__user__gnav{
+    &__user{
       
       li{
         position: relative;
@@ -88,11 +85,11 @@
             font-size: 20px;
           }
 
-          figure{
-            display: inline-block;
-            position: relative;
-            text-align: center;
-            vertical-align: middle;
+            figure{
+              display: inline-block;
+              position: relative;
+              text-align: center;
+              vertical-align: middle;
           }
         }
       }
@@ -100,8 +97,8 @@
   }
 }
 
-// レフトヘッダー
-.gnav-left{
+
+.main-gnav__left{
   float: left;
 
   li{
