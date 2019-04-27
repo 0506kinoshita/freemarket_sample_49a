@@ -18,20 +18,21 @@
 // ヘッダートップ
 
 .main-header{
+  $this: &;
 
-  .main-header__inner{
+  &__inner{
     margin: 0 auto;
     padding: 1px 0 0;
     width: 1020px;  
 
-    .main-header__top{
+    &__top{
       display: flex;
       align-items: center;
       justify-content: space-between;
       -webkit-box-align: center;
       -webkit-box-pack: justify;
 
-        .main-header__form{
+      &__form{
           position: relative;
           margin-left: 40px;
           width: 100%;
@@ -66,13 +67,12 @@
 }
 
 // ヘッダーメニュー
-
 .maine-header__main-gnav{
 
   .gnav-right{
     float: right;
 
-    .main-header__user-gnav{
+    .main-header__user__gnav{
       
       li{
         position: relative;
@@ -100,7 +100,7 @@
   }
 }
 
-
+// レフトヘッダー
 .gnav-left{
   float: left;
 

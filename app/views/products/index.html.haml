@@ -1,10 +1,10 @@
 .main-header.visible-pc
   .main-header__inner
-    .main-header__top
+    .main-header__inner__top
       %h1
         %a{href: '#'}
           = image_tag 'mercari_logo_horizontal.png', size: '150x50', alt: 'mercari', class: 'input-dfault'
-      %form.main-header__form{action: '#'} 
+      %form.main-header__inner__top__form{action: '#'} 
         %input.input-holder{type: 'search', name: 'keyword', placeholder: '何かお探しですか？'}
         %i.fas.fa-search.icon-search
 
@@ -24,7 +24,7 @@
               %ul.main-header__gnav-parent-wrap
 
       .gnav-right
-        %ul.main-header__user-gnav
+        %ul.main-header__user__gnav
           %li{data: {id: 'main-header__user-gnav', key: 'notice', url: '#'}}
             %a.main-header__menu-link{href: 'https://www.mercari.com/jp/mypage/notification/',data: {url: '#'}}
               %i.far.fa-bell
