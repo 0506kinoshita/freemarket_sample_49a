@@ -1,0 +1,55 @@
+.mypage
+  .user-page
+    .mypage-leftsidebar
+      = render 'sidebar'
+      
+    .mypage-main
+      .mypage-inner
+        .myuser-icon
+          =image_tag "gopher.png" ,size: "60x60",class: "user-icon"
+          %h2.mypage-name ニックネーム
+          .mypage-number
+            .evaluations
+              評価
+              %span
+              評価数
+            .exhibitions
+              出品数
+              %span
+              出品数 
+      .mypage-tab
+        .mypage-tab1
+          %ul.mypage-tab-contents
+            %li.mypage-info
+              %h2 お知らせ
+            %li.mypage-must
+              %h2 やることリスト
+          .mypage-info-box
+            お知らせはありません
+        .mypage-tab2
+          %ul.mypage-tab-contents
+            %li.mypage-info
+              %h2 お知らせ
+            %li.mypage-must
+              %h2 やることリスト
+          .mypage-must-box
+            現在やることはありません
+
+      .trade-information1
+        %h2.mypage-purchase1 購入した商品
+        %ul.mypage-trade
+          %li.mypage-trading
+            %h2 取引中
+          %li.mypage-traded
+            %h2 過去の取引
+        .mypage-trading-box
+          取引中の商品がありません
+      .trade-information2
+        %h2.mypage-purchase2 購入した商品
+        %ul.mypage-trade
+          %li.mypage-trading
+            %h2 取引中
+          %li.mypage-traded
+            %h2 過去の取引
+        .mypage-traded-box
+          取引した商品はありません
