@@ -223,6 +223,11 @@
           -webkit-transition: all ease-out .3s;
           transition: all ease-out .3s;
           display: none;
+
+          img {
+            width: 300px;
+            height: 150px;
+          }
         }
       }
     }
