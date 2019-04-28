@@ -1,0 +1,40 @@
+.devise-footer{
+  width: 456px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 220px;
+  text-align: center;
+  &__logo{
+    width: 80px;
+    height: 65px;
+    margin: 40px auto 0;
+    text-decoration: none; 
+  }
+  &__text{
+    margin: 8px 0 0;
+  }
+  &__box{
+    color: black;
+    text-decoration: black;
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  li{
+    margin: 0 0 0 16px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+  }
+  .devise-footer__text {
+    font-size: 13px;
+  }
+  }

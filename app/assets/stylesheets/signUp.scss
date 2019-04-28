@@ -1,0 +1,120 @@
+.devise-container{
+  padding: 0 0 220px;
+  text-align: center;
+  .devise-header{
+    height: 128px;
+    background-color:#f5f5f5;
+    text-align: center;
+    &__logo{
+        line-height: 49px;
+        width: 185px;
+        height: 49px;
+        margin: 40px 0 0;
+      }
+    }
+}
+
+.sign-up-main{
+  .sign-up-main-upper{
+    background-color: white;
+    width: 700px;
+    margin: 0 auto;
+    &__text h2{
+      padding: 32px 16px;
+      font-size: 22px;
+      line-height: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+.sign-up-center{
+  border-top: 1px solid #f5f5f5;
+  padding: 64px;
+  &__content{
+    background-color: white;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .btn-default{
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+    }
+    .btn-mail{
+      position: relative;
+      background-color: #eee;
+    }
+    .icon{
+      position: absolute;
+      font-size: 14px;
+      top: 50%;
+      left: 16px;
+      transform: translate(0, -50%);
+      color: #ccc;
+      font-size: 16px;
+    }
+    .btn-facebook{
+      position: relative;
+      margin: 16px 0 0;
+      background: #385185;
+      color: #fff;
+      size:38px;
+    }
+    .btn-google{
+      position: relative;
+      margin: 16px 0 0;
+      height: 48px;
+      border: #979797 solid 1px;
+      color: #333;
+      }
+    }
+  
+  
+.devise-footer{
+  width: 456px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 220px;
+  text-align: center;
+  &__logo{
+    width: 80px;
+    height: 65px;
+    margin: 40px auto 0;
+    text-decoration: none; 
+  }
+  &__text{
+    margin: 8px 0 0;
+  }
+  &__box{
+    color: black;
+    text-decoration: black;
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  li{
+    margin: 0 0 0 16px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+  }
+  .devise-footer__text {
+    font-size: 13px;
+  }
+  }
