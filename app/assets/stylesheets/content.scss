@@ -1,0 +1,117 @@
+.slider{
+    margin: 10px auto;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.slider img{
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+
+
+// メインコンテンツ部分
+
+.main-contents{
+
+  h2{
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+.main-box__container{
+    width: 940px;
+    margin: 0 auto;
+
+  h3{
+     font-size: 22px;
+     margin: 26px 11px;
+     text-align: center;
+
+     a{
+        color: #0099e8;
+
+     }
+  }
+}
+
+.main-box-content{
+    width: auto;
+    margin:0 auto;
+}
+
+.item-content{
+    margin: 0 0 0 20px;
+    width: 213px;
+    float: left;
+
+    a{
+        display: block;
+        color: #333;
+        
+        figure{
+
+            img{
+                // position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.item-content-body{
+    padding: 16px;
+    height: 110px;
+    
+    h3{
+        font-size: 16px;
+        color: #333;
+
+    &__name{
+        overflow: hidden;
+        position: relative;
+        font-weight: 400;
+        height: 3em;
+        line-height: 1.5;
+        word-break: break-word;
+        white-space: normal;
+      }
+   }
+}
+
+.item-content-body__num{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 8px 0 0 ;
+
+    &__price{
+        font-size: 17px;
+
+    }
+}
+
+.item-content-body__num__tax{
+    font-size: 10px;
+}
+
+.main-all{
+    padding: 20px 0 30px;
+    width: 99.5%;
+    text-align: right;
+}
