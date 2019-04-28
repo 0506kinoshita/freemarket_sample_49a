@@ -1,25 +1,26 @@
 .devise-wrapper
   .devise-container
-    .devise-header
+    .devise-container__header
       =link_to 'https://www.mercari.com/jp/' do
-        %img.devise-header__logo{src:'//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281', alt:'mercari'}
+        = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281', class:'devise-container__header__logo'
       
     .sign-up-main
-      .sign-up-main-upper
-        .sign-up-main-upper__text
+      .sign-up-main__upper
+        .sign-up-main__upper__text
           %h2 新規会員登録
 
         .sign-up-center
           .sign-up-center__content
-            .btn-default.btn-mail
-              = fa_icon 'envelope', class: 'icon' 
-              メールアドレスで登録
-            .btn-default.btn-facebook#facebook-login
-              = image_tag 'fb-logo58.png', class: 'icon',size: "20x20"
-              Facebookで登録 
-            .btn-default.btn-google#google-login
-              = image_tag 'google-logo-web.png', class: 'icon',size: "20x20"
-              Googleで登録
+            .sign-up-center__content__btn
+              .sign-up-center__content__btn--mail
+                = fa_icon 'envelope', class: 'icon' 
+                メールアドレスで登録
+              .sign-up-center__content__btn--facebook
+                = image_tag 'flogo-HexRBG-Wht-58.png', class: 'icon',size: "20x20"
+                Facebookで登録 
+              .sign-up-center__content__btn--google
+                = image_tag 'google-logo-web.png', class: 'icon',size: "20x20"
+                Googleで登録
 
     .devise-footer
       %nav
