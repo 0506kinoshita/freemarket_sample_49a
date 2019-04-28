@@ -1,0 +1,124 @@
+.banner{
+  background: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?6820409);
+  background-position: center;
+  &__contents{
+    display: block;
+    position: relative;
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+    &__inner{
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      &__title{
+        font-size: 24px;
+      }
+      &__publicity{
+        font-size: 35px;
+        margin: 10px 0 0;
+      }
+      &__icons{
+        float: left;
+        margin: 20px 0 0;
+        &__image{
+          display: inline-block;
+          margin: 0;
+        }
+        &__link{
+          display: inline-block;
+          margin: 0 0 0 24px;
+          list-style: none;
+          // float: left;
+          &__app{
+            float: left;
+          }
+          &__google{
+            float: left;
+            margin: 0 0 0 16px;
+            
+          }
+        }
+      }
+      &__image{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.footer{
+  padding: 20px 20px 10px 20px;
+  background: #212121;
+  color: #fff;
+  height:400px;
+  &__main{
+    width: 1020px;
+    margin: 0 auto;
+    height:300px;
+    &__words{
+      float: left;
+      padding: 0 20px 0 0;
+      width: 20%;
+      &__title{
+        font-size: 16px;
+      }
+      &__inner{
+        list-style: none;
+        &__lists{
+          margin: 16px 0 0;
+          opacity: .7;
+          font-size: 12px;
+        }
+        .fab.fa-twitter{
+          margin: 20px 25px 0 0;
+        }
+      }
+    }
+    &__shortwords{
+      float: left;
+      padding: 25px 20px 0 0;
+      width: 18%;
+      &__inner{
+        list-style: none;
+        &__lists{
+          margin: 16px 0 0;
+          opacity: .7;
+          font-size: 12px;
+        }
+      }
+    }
+    &__rightwords{
+      float: left;
+      width: auto;
+      &__title{
+        font-size: 16px;
+      }
+      &__inner{
+        list-style: none;
+        &__lists{
+          margin: 16px 0 0;
+          opacity: .7;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__bottom{
+    margin: 30px auto 20px;
+    width: 1020px;
+    line-height: 0;
+    &__2019{
+      font-size: 8px;
+      text-align: center;
+      vertical-align: sub;
+    }
+  }
+}
