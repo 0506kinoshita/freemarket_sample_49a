@@ -1,0 +1,78 @@
+.wrapper
+  %header
+  %side-bar
+
+  .credit-edit-content
+    %h2.credit-edit-content__head クレジットカード情報入力
+    %form.credit-edit-content__form
+      .credit-edit-content__form__middle
+        .credit-edit-content__form__middle__card-form
+          %label.credit-edit-content__form__middle__card-form__label カード番号
+          %span.credit-edit-content__form__middle__card-form__require 必須
+          %input{ name: :name, size: "40", type: :text, class: "credit-edit-content__form__middle__card-form__number-form", placeholder: "半角数字のみ" }
+          %ul.credit-edit-content__form__middle__card-form__image
+            %li.credit-edit-content__form__middle__card-form__image__visa
+              = image_tag src="/assets/visa.svg", width: :"43", height: :"20"
+            %li.credit-edit-content__form__middle__card-form__image__mastercard
+              = image_tag src="/assets/master-card.svg", width: :"43", height: :"20"
+            %li.credit-edit-content__form__middle__card-form__image__saison
+              = image_tag src="/assets/saison-card.svg", width: :"43", height: :"20"
+            %li.credit-edit-content__form__middle__card-form__image__jcb
+              = image_tag src="/assets/jcb.svg", width: :"43", height: :"20"
+            %li.credit-edit-content__form__middle__card-form__image__americanexpress
+              = image_tag src="/assets/american_express.svg", width: :"30", height: :"20"
+            %li.credit-edit-content__form__middle__card-form__image__dinersclub
+              = image_tag src="/assets/dinersclub.svg", width: :"43", height: :"20"
+            %li.credit-edit-content__form__middle__card-form__image__discover
+              = image_tag src="/assets/discover.svg", width: :"43", height: :"20"
+
+      .credit-edit-content__form__expire
+        %label.credit-edit-content__form__expire__head 有効期限
+        %span.credit-edit-content__form__expire__require　必須
+
+        .credit-edit-content__form__expire__month-box
+          %select.credit-edit-content__form__expire__month-box__select
+            %option 01
+            %option 02
+            %option 03
+            %option 04
+            %option 05
+            %option 06
+            %option 07
+            %option 08
+            %option 09
+            %option 10
+            %option 11
+            %option 12
+          = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
+          %span 月
+
+        .credit-edit-content__form__expire__year-box   
+          %select.credit-edit-content__form__expire__year-box__select
+            %option 19
+            %option 20
+            %option 21
+            %option 22
+            %option 23
+            %option 24
+            %option 25
+            %option 26
+            %option 27
+            %option 28
+            %option 29
+          = fa_icon("chevron-down credit-edit-content__form__expire__year-box__image")
+          %span　年 
+
+      .credit-edit-content__form__security
+        %label.credit-edit-content__form__security__head セキュリティコード
+        %span.credit-edit-content__form__security__require 必須
+        %input.credit-edit-content__form__security__code{ placeholder: "カード背面4桁もしくは3桁の番号"}
+        .credit-edit-content__form__security__question
+          .credit-edit-content__form__security__question__text
+            = fa_icon("question-circle credit-edit-content__form__security__question__text__icon")
+            カード番号とは?
+          .credit-edit-content__form__security__question__info 
+            カード裏面をご覧ください
+            = image_tag src="/assets/sequrity_code_info.png",  width: :"300", height: :"150"
+
+      = submit_tag "追加する", class: "credit-edit-content__form__submit"
