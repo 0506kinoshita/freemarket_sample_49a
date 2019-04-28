@@ -1,0 +1,96 @@
+.sign-in-main{
+  max-width: none;
+  width: 456px;
+  margin: 0 auto;
+  &__upper{
+    text-align:center;
+    background-color: white;
+    padding: 40px 64px;
+    &__sign-up p{
+      font-size: 14px;
+    }
+    #recommend-sign-up{
+      display: block;
+      margin: 8px 0 0;
+      border: 1px solid #0099e8;
+      background: #0099e8;
+      color: #fff;
+      line-height: 40px;
+    }
+    }
+  }
+  .login-center{
+    border-top: 1px solid #eee;
+    margin: 0 auto;
+    max-width: none;
+    width: 456px;
+    &__content{
+      background-color: white;
+      padding: 32px 64px;
+    &__btn{
+    display: block;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    &--facebook{
+      position: relative;
+      margin: 16px 0 0;
+      background: #385185;
+      color: #fff;
+      size:38px;
+    }
+    &--google{
+      position: relative;
+      margin: 16px 0 0;
+      height: 48px;
+      border: #979797 solid 1px;
+      color: #333;
+    }
+    .icon{
+      position: absolute;
+      font-size: 14px;
+      top: 50%;
+      left: 16px;
+      transform: translate(0, -50%);
+      color: #ccc;
+      font-size: 16px;
+    }
+  }
+
+.form-member{
+  margin: 24px 0 0;
+  width:330px;
+  &__input-text{
+    width:330px;
+    line-height: 28px;
+    height: 28px;
+    padding: 10px 0 18px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+  &--red{
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    margin: 24px 0 0;
+    line-height: 48px;
+    width:100%;
+  }
+  &--captcha{
+    margin: 16px 0 0;
+    height: 74px;
+    width:300px;
+    color: #333;
+    }
+  }
+.forgot-password {
+  color:#0099e8;
+  margin: 40px 0 0;
+  display:block;
+}
+}
+  }
+}
