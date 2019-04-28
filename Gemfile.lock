@@ -119,6 +119,8 @@ GEM
       fog-core
       nokogiri (>= 1.5.11, < 2.0.0)
     formatador (0.2.5)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     haml (5.0.4)
@@ -281,6 +283,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   erb2haml
+  font-awesome-rails
   fog-aws
   haml-rails
   jbuilder (~> 2.5)

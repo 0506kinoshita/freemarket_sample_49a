@@ -1,0 +1,32 @@
+.mypage-nav {
+  &__list {
+    background-color: #fff;
+    list-style: none;
+    width: 280px;
+  }
+    .sidebar-mypage{
+      background: #eee;
+      font-weight: 600;
+      padding: 16px;
+      font-size: 14px;
+    }
+  &__title{
+    margin: 40px 0 0;
+    font-size:16px;
+    font-weight: 600;
+  }
+  .sidebar {
+    list-style: none;
+    border-top: 1px solid #eee;
+    padding: 16px;
+    font-size: 14px;
+    &:hover {
+      opacity: 0.5;
+    }
+    &:active {
+      position: relative;
+      top: 5px;
+      box-shadow: none;
+    }
+  }
+}

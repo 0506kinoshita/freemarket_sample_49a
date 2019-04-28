@@ -1,6 +1,44 @@
-.default-container
-  %header.sp-header.visible-sp
-    .sp-header-inner
-      %h1.logo
+.main-header
+  .main-header__inner
+    .main-header__inner__top
+      %h1
         %a{href: '#'}
-          = image_tag 'mercari_logo_horizontal.png', size: "134x36", alt: 'mercari', class: 'input-dfault'
+          = image_tag 'mercari_logo_horizontal.png', size: '150x50', alt: 'mercari', class: 'input-dfault'
+      %form.main-header__inner__top__form{action: '#'} 
+        %input.input-holder{type: 'search', name: 'keyword', placeholder: '何かお探しですか？'}
+        %i.fas.fa-search.icon-search
+          -# トップヘッダーGNAV
+    .main-gnav
+      .main-gnav__left
+        %ul.main-gnav__left__category
+          %li
+            %h2
+              %a.main-gnav__left__category__root{href: 'https://www.mercari.com/jp/category/'}
+                %i.fas.fa-list-ul
+                %span カテゴリーから探す
+          %li
+            %h2
+              %a.main-gnav__left__category__root{href: 'https://www.mercari.com/jp/brand/'}
+                %i.fa.fa-tag
+                %span ブランドから探す
+              %ul.main-gnav__left__category__root__wrap
+
+      .main-gnav__right
+        %ul.main-gnav__right__user
+          %li{data: {id: 'main-header__user-gnav', key: 'notice', url: '#'}}
+            %a.main-gnav__right__user__menu{href: 'https://www.mercari.com/jp/mypage/notification/',data: {url: '#'}}
+              %i.far.fa-bell
+              %span お知らせ
+            %ul.main-gnav__right__user__menu__box{data: {id: 'main-header__user-items'}}
+          %li{data: {id: 'main-header__user-gnav', key: 'todo', url: '#'}}
+            %a.main-gnav__right__user__menu{href: 'https://www.mercari.com/jp/mypage/todo/',data: {url: '#'}}
+              %i.fas.fa-check
+              %span やることリスト
+            %ul.main-gnav__right__user__menu__box{data: {id: 'main-header__user-items'}}
+          %li
+            %a.main-gnav__right__user__menu{href: 'https://www.mercari.com/jp/mypage/'}
+              %figure
+                %div
+                  =image_tag 'face-icon.png', size: '32', alt: 'face-icon'
+              %span マイページ
+            %ul.main-gnav__right__user__menu__box{data: {id: 'main-header__user-items'}}
