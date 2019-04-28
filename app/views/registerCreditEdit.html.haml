@@ -12,23 +12,23 @@
           %input{ name: :name, size: "40", type: :text, class: "credit-edit-content__form__middle__card-form__number-form", placeholder: "半角数字のみ" }
           %ul.credit-edit-content__form__middle__card-form__image
             %li.credit-edit-content__form__middle__card-form__image__visa
-              = image_tag src="/assets/visa.svg", width: :"43", height: :"20"
+              = image_tag "/assets/visa.svg"
             %li.credit-edit-content__form__middle__card-form__image__mastercard
-              = image_tag src="/assets/master-card.svg", width: :"43", height: :"20"
+              = image_tag "/assets/master-card.svg"
             %li.credit-edit-content__form__middle__card-form__image__saison
-              = image_tag src="/assets/saison-card.svg", width: :"43", height: :"20"
+              = image_tag "/assets/saison-card.svg"
             %li.credit-edit-content__form__middle__card-form__image__jcb
-              = image_tag src="/assets/jcb.svg", width: :"43", height: :"20"
+              = image_tag "/assets/jcb.svg"
             %li.credit-edit-content__form__middle__card-form__image__americanexpress
-              = image_tag src="/assets/american_express.svg", width: :"30", height: :"20"
+              = image_tag "/assets/american_express.svg"
             %li.credit-edit-content__form__middle__card-form__image__dinersclub
-              = image_tag src="/assets/dinersclub.svg", width: :"43", height: :"20"
+              = image_tag "/assets/dinersclub.svg"
             %li.credit-edit-content__form__middle__card-form__image__discover
-              = image_tag src="/assets/discover.svg", width: :"43", height: :"20"
+              = image_tag "/assets/discover.svg"
 
       .credit-edit-content__form__expire
         %label.credit-edit-content__form__expire__head 有効期限
-        %span.credit-edit-content__form__expire__require 必須
+        %span.credit-edit-content__form__expire__require　必須
 
         .credit-edit-content__form__expire__month-box
           = select_tag "month", options_for_select((01...13)),  class: "credit-edit-content__form__expire__month-box__select"
@@ -38,7 +38,7 @@
         .credit-edit-content__form__expire__year-box   
           = select_tag "year", options_for_select((19...30)),  class: "credit-edit-content__form__expire__year-box__select"
           = fa_icon("chevron-down credit-edit-content__form__expire__year-box__image")
-          %span 年 
+          %span　年 
 
       .credit-edit-content__form__security
         %label.credit-edit-content__form__security__head セキュリティコード
@@ -53,4 +53,3 @@
             = image_tag "/assets/sequrity_code_info.png"
 
       = submit_tag "追加する", class: "credit-edit-content__form__submit"
-      
