@@ -10,24 +10,18 @@
 }
 
 
-
+// スライド部分のCSS
 
 .slider{
     margin: 10px auto;
     width: 100vw;
     overflow: hidden;
     position: relative;
-}
-.slider img{
-    height: 400px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-/*slick setting*/
-.slick-prev:before,
-.slick-next:before {
-    color: #000;
+
+    img{
+        width: 100%;
+        height: 400px;
+    }
 }
 
 
