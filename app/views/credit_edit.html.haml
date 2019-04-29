@@ -28,7 +28,7 @@
 
       .credit-edit-content__form__expire
         %label.credit-edit-content__form__expire__head 有効期限
-        %span.credit-edit-content__form__expire__require　必須
+        %span.credit-edit-content__form__expire__require 必須
 
         .credit-edit-content__form__expire__month-box
           = select_tag "month", options_for_select((01...13)),  class: "credit-edit-content__form__expire__month-box__select"
@@ -38,7 +38,7 @@
         .credit-edit-content__form__expire__year-box   
           = select_tag "year", options_for_select((19...30)),  class: "credit-edit-content__form__expire__year-box__select"
           = fa_icon("chevron-down credit-edit-content__form__expire__year-box__image")
-          %span　年 
+          %span 年 
 
       .credit-edit-content__form__security
         %label.credit-edit-content__form__security__head セキュリティコード
