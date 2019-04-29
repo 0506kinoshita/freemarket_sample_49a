@@ -97,7 +97,7 @@
             .sign-up-center__content__form
               %input.sign-up-center__content__form__input{type:'hidden',value:'',name:'after_save_callback'}
               .form-member.login-captcha{data:{sitekey:''}}
-                = image_tag '認証.png',size: "328x72", class:'robo'
+                = image_tag '認証.png',class:'robo'
             
             .sign-up-center__content__form
               .sign-up-center__content__form__alert 
@@ -120,6 +120,6 @@
             =link_to'特定商取引に関する表記','https://www.mercari.com/jp/tokutei/'
       .devise-footer__logo
         =link_to'https://www.mercari.com/jp/' do
-          %img{src:'//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?570108281',alt:'mercari', style:'width:80px;', style:'height:65px;'} 
+          = image_tag'//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?570108281', class:'bottom-logo'
       %p.devise-footer__text 
         %small &copy; 2019 Mercari
