@@ -1,65 +1,60 @@
 %main.white
   %ul.slider
     %li
-      %a{:href => "#"}
-        =image_tag 'hwi.jpeg', size: '1900×500'
+      %a{href: '#'}
+        =image_tag 'hwi.jpeg', size: '1900×600'
+    %li
+      %a{href: '#'}
+        =image_tag 'original.jpeg'
 
-  %section.main-contents
-    %h2 ピックアップカテゴリー
-    %section.main-box__container
-      %h3.main-box__container__text
-        %a{href: 'https://www.mercari.com/jp/category/1/'} レディース新着アイテム
-      .main-box-content
-        %section.item-content
-          %a{href: 'https://item.mercari.com/jp/m27278690533/'}
-            %figure.item-content__photo
-              =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521', {data: {src: 'https://item.mercari.com/jp/m27278690533/'}}
-            .item-content-body
-              %h3.item-content-body__name  財布
-              .item-content-body__num
-                .item-content-body__num__price ¥ 25,000
-                .item-content-body__num__icon
-                  %i.far.fa-heart
-                  %span 2
-              %p.item-content-body__num__tax （税込）
+%section.main-contents
+  %h2 ピックアップカテゴリー
+  %section.main-box__container.clearfix
+    %h3.main-box__container__text
+      %a{href: 'https://www.mercari.com/jp/category/1/'} レディース新着アイテム
+    =render 'products/products'
 
-        %section.item-content
-          %a{href: 'https://item.mercari.com/jp/m27278690533/'}
-            %figure.item-content__photo
-              =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521', {data: {src: 'https://item.mercari.com/jp/m27278690533/'}}
-            .item-content-body
-              %h3.item-content-body__name  財布
-              .item-content-body__num
-                .item-content-body__num__price ¥ 25,000
-                .item-content-body__num__icon
-                  %i.far.fa-heart
-                  %span 2
-              %p.item-content-body__num__tax （税込）
+  %section.main-box__container.clearfix
+    %h3.main-box__container__text
+      %a{href: 'https://www.mercari.com/jp/category/1/'} メンズ新着アイテム
+    =render 'products/products'
 
-        %section.item-content
-          %a{href: 'https://item.mercari.com/jp/m27278690533/'}
-            %figure.item-content__photo
-              =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521', {data: {src: 'https://item.mercari.com/jp/m27278690533/'}}
-            .item-content-body
-              %h3.item-content-body__name  財布
-              .item-content-body__num
-                .item-content-body__num__price ¥ 25,000
-                .item-content-body__num__icon
-                  %i.far.fa-heart
-                  %span 2
-              %p.item-content-body__num__tax （税込）
+  %section.main-box__container.clearfix
+    %h3.main-box__container__text
+      %a{href: 'https://www.mercari.com/jp/category/1/'} ベビーキッズ新着アイテム
+    =render 'products/products'
 
-        %section.item-content
-          %a{href: 'https://item.mercari.com/jp/m27278690533/'}
-            %figure.item-content__photo
-              =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521', {data: {src: 'https://item.mercari.com/jp/m27278690533/'}}
-            .item-content-body
-              %h3.item-content-body__name  財布
-              .item-content-body__num
-                .item-content-body__num__price ¥ 25,000
-                .item-content-body__num__icon
-                  %i.far.fa-heart
-                  %span 2
-              %p.item-content-body__num__tax （税込）
-            .main-all
-              %a{hred: 'https://www.mercari.com/jp/category/1/'} すべての商品をみる
+  %section.main-box__container.clearfix
+    %h3.main-box__container__text
+      %a{href: 'https://www.mercari.com/jp/category/1/'} コスメ・香水・美容新着アイテム
+    =render 'products/products'
+
+%section.main-contents
+  %h2 ピックアップブランド
+  %section.main-box__container
+    %h3.main-box__container__text
+      %a{href: 'https://www.mercari.com/jp/category/1/'} シャネル新着アイテム
+    =render 'products/products'
+
+  %section.main-box__container.clearfix
+    %h3.main-box__container__text
+      %a{href: 'https://www.mercari.com/jp/category/1/'} ルイヴィトン新着アイテム
+    =render 'products/products'
+
+  %section.main-box__container.clearfix
+    %h3.main-box__container__text
+      %a{href: 'https://www.mercari.com/jp/category/1/'} シュプリーム新着アイテム
+    =render 'products/products'
+
+  %section.main-box__container.clearfix
+    %h3.main-box__container__text
+      %a{href: 'https://www.mercari.com/jp/category/1/'} ナイキ新着アイテム
+    =render 'products/products'
+
+
+%a.sell-btn{href: 'https://www.mercari.com/jp/sell/'} 
+  %div 
+  出品
+  %br>/
+  %i.fas.fa-camera
+

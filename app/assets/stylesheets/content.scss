@@ -1,3 +1,17 @@
+*,::before,::after{
+    border-style: solid;
+    border-width: 0;
+}
+
+.clearfix:after{
+    content: '';
+    display: block;
+    clear:both;
+}
+
+
+
+
 .slider{
     margin: 10px auto;
     width: 100vw;
@@ -20,7 +34,9 @@
 // メインコンテンツ部分
 
 .main-contents{
-
+    padding: 40px 0 ;
+    background-color: #f5f5f5;
+    
   h2{
     font-size: 28px;
     text-align: center;
@@ -36,37 +52,40 @@
      margin: 26px 11px;
      text-align: center;
 
-     a{
-        color: #0099e8;
-
+    a{
+      color: #0099e8;
      }
   }
 }
 
+
 .main-box-content{
     width: auto;
-    margin:0 auto;
-}
+    margin: 0 auto;
 
-.item-content{
+  .item-content{
     margin: 0 0 0 20px;
     width: 213px;
     float: left;
+    position: relative;
+    background-color: #fff;
+
 
     a{
-        display: block;
-        color: #333;
-        
-        figure{
+      display: block;
+      color: #333;
+            
 
-            img{
-                // position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                z-index: 1;
-                width: 100%;
+      figure{
+
+        img{
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+              }
             }
         }
     }
@@ -114,4 +133,34 @@
     padding: 20px 0 30px;
     width: 99.5%;
     text-align: right;
+    
+    a{
+      color: #0099e8;
+      font-size: 15px;
+    }
+}
+
+
+.sell-btn{
+    bottom: 32px;
+    right: 32px;
+    width: 160px;
+    height: 160px;
+    font-size: 22px;
+    position: fixed;
+    z-index: 1000;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+
+        div{
+            margin: 32px 0 0;
+  }
+}
+
+.fa-camera{
+    margin: 8px 0 0;
+    font-size: 54px;
+    background-color: red;
 }
