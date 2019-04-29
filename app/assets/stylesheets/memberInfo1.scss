@@ -1,0 +1,185 @@
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+//mixin別はフォルダへ後々統合する予定
+
+.devise-container-info__header{
+  height: 128px;
+  display: inline-block;
+  &__logo{
+  margin: 40px 0 0;
+  width: 185px;
+    height: 49px;
+    line-height: 49px;
+
+  }
+}
+
+.progress {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  padding: 40px 0 0 44px;
+  border: 0;
+  font-size: 0;
+  &--clearfix{
+    @include clearfix;
+    margin: 0;
+    li{
+      position: relative;
+      display: inline-block;
+      color: #ccc;
+      z-index: 1;
+      min-width: 60px;
+      font-size: 12px;
+      margin: 0 40px 0 0;
+      padding: 0;
+      .progress-status{
+        width: 12px;
+        height: 12px;
+        margin: 8px auto 0;
+        background: #ccc;
+        border-radius: 50%;
+        z-index: 8;
+      }
+    }
+  }
+}
+
+.progress-status::before{
+  content: '';
+  position: absolute;
+  display: block;
+  background: #ccc;
+  width: 180%;
+  height: 2px;
+  z-index: 2;
+  bottom: 5px;
+}
+
+#red .progress-status{
+  background: red;
+  }
+
+.member-info-main{
+  width: 700px;
+  margin: 0 auto;
+  &__upper{
+    text-align:start;
+    background-color: #fff;
+    padding: 32px 16px;
+    font-size: 22px;
+    &__text{
+      padding: 32px 16px;
+      font-size: 22px;
+      text-align:center;
+      font-weight: bold;
+    }
+    }
+
+
+.sign-up-center{
+  padding: 64px;
+  &__content{
+    max-width: 320px;
+    margin: 0 auto;
+    &__form{
+      margin: 40px 0 0;
+      &__label{
+        font-weight: 600;
+        display: inline-block;
+        font-size: 14px;
+      }
+      &__must{
+        background: #ea352d;
+        color:white;
+        margin: 0 0 0 8px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        font-size: 12px;
+        vertical-align: baseline;
+      }
+      &__input{
+        width: 100%;
+        margin: 8px 0 0;
+        height: 38px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        line-height: 38px;
+        font-size: 16px;
+      }
+      &__text{
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__simple{
+        margin: 8px 0 0;
+        padding: 0;
+        font-size:14px;
+      }
+      &__alert{
+        margin: 8px 0 0;
+        line-height: 1.5rem;
+        color: #888;
+        font-size:14px;
+      }
+      &__next{
+        margin: 40px 0 0;
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        cursor: pointer;
+        text-align: center;
+      }
+      &__bottom-right{
+        margin: 40px 0 0;
+        text-align: right;
+        a:link{
+          color: #0099e8;
+          text-decoration: none;
+          font-size:14px;
+        }
+       }
+      }
+    }
+  }
+}
+
+.birth-select-box__contents{
+  background: #fff;
+  margin: 8px 0 0;
+  position:absolute;
+  &__field{
+    color: #888;
+    margin: 8px 0 0;
+    width: 140px;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+}
+  .fa-chevron-down{
+    position:relative;
+    top: 12px;
+    z-index: 2;
+    color: #888;
+    right:35px;
+    top:5px;
+  }
+
