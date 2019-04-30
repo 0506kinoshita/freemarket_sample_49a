@@ -28,7 +28,7 @@
       -webkit-box-align: center;
       -webkit-box-pack: justify;
 
-      &__form{
+        &__form{
           position: relative;
           margin-left: 40px;
           width: 100%;
@@ -75,7 +75,7 @@
     float: right;
 
     &__user{
-      
+
       li{
         position: relative;
         display: inline-block;
@@ -140,7 +140,7 @@
 .main-gnav__parent{
   left: 0;
 
-  &__list{
-    
+    &__list{
+      
   }
 }

@@ -1,26 +1,26 @@
 *,::before,::after{
-    border-style: solid;
-    border-width: 0;
+  border-style: solid;
+  border-width: 0;
 }
 
 .clearfix:after{
-    content: '';
-    display: block;
-    clear:both;
+  content: '';
+  display: block;
+  clear:both;
 }
 
 
 // スライド部分のCSS
 
 .slider{
-    margin: 10px auto;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
+  margin: 10px auto;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
 
-    img{
-        width: 100%;
-        height: 400px;
+  img{
+    width: 100%;
+    height: 400px;
     }
 }
 
@@ -35,9 +35,9 @@
 // メインコンテンツ部分
 
 .main-contents{
-    padding: 40px 0 ;
-    background-color: #f5f5f5;
-    
+  padding: 40px 0 ;
+  background-color: #f5f5f5;
+
   h2{
     font-size: 28px;
     text-align: center;
@@ -45,13 +45,13 @@
 }
 
 .main-box__container{
-    width: 940px;
-    margin: 0 auto;
+  width: 940px;
+  margin: 0 auto;
 
   h3{
-     font-size: 22px;
-     margin: 26px 11px;
-     text-align: center;
+    font-size: 22px;
+    margin: 26px 11px;
+    text-align: center;
 
     a{
       color: #0099e8;
@@ -75,7 +75,6 @@
     a{
       display: block;
       color: #333;
-            
 
       figure{
 
@@ -93,70 +92,69 @@
 }
 
 .item-content-body{
-    padding: 16px;
-    height: 110px;
+  padding: 16px;
+  height: 110px;
     
-    h3{
-        font-size: 16px;
-        color: #333;
+  h3{
+    font-size: 16px;
+    color: #333;
 
     &__name{
-        overflow: hidden;
-        position: relative;
-        font-weight: 400;
-        height: 3em;
-        line-height: 1.5;
-        word-break: break-word;
-        white-space: normal;
+      overflow: hidden;
+      position: relative;
+      font-weight: 400;
+      height: 3em;
+      line-height: 1.5;
+      word-break: break-word;
+      white-space: normal;
       }
    }
 }
 
 .item-content-body__num{
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    margin: 8px 0 0 ;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin: 8px 0 0 ;
 
-    &__price{
-        font-size: 17px;
-
+  &__price{
+    font-size: 17px;
     }
 }
 
 .item-content-body__num__tax{
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .main-all{
-    padding: 20px 0 30px;
-    width: 99.5%;
-    text-align: right;
+  padding: 20px 0 30px;
+  width: 99.5%;
+  text-align: right;
     
-    a{
-      color: #0099e8;
-      font-size: 15px;
+  a{
+    color: #0099e8;
+    font-size: 15px;
     }
 }
 
 
 .sell-btn{
-    bottom: 32px;
-    right: 32px;
-    width: 160px;
-    height: 160px;
-    font-size: 22px;
-    position: fixed;
-    z-index: 1000;
-    background-color: red;
-    color: #fff;
-    text-align: center;
-    border-radius: 50%;
+  bottom: 32px;
+  right: 32px;
+  width: 160px;
+  height: 160px;
+  font-size: 22px;
+  position: fixed;
+  z-index: 1000;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
 
-        &__lang{
-            margin: 32px 0 0;
+  &__lang{
+    margin: 32px 0 0;
   }
 }
 
