@@ -84,25 +84,25 @@
 
         a{
           color: #333;
-
-          i{
-            color: #dcdcdc;
-            font-size: 20px;
-          }
-
-            figure{
-              display: inline-block;
-              position: relative;
-              text-align: center;
-              vertical-align: middle;
-
-                .face-icon{
-                  width: 32px;
-            }
-          }
         }
       }
     }
+  }
+}
+
+i{
+  color: #dcdcdc;
+  font-size: 20px;
+}
+
+figure{
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+
+  .face-icon{
+    width: 32px;
   }
 }
 
