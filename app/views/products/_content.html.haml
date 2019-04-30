@@ -1,59 +1,59 @@
 .slick-container
   %ul.slider
     %li
-      %a{href: '#'}
-        =image_tag 'mer.jpeg', size: '1900×600'
+      = link_to 'https://www.mercari.com/jp/featured/newlife/' do
+        =image_tag 'mer.jpeg'
     %li
-      %a{href: '#'}
+      = link_to 'https://www.mercari.com/jp/promotion/201812_bokurano_heisei/' do
         =image_tag 'ounen.jpeg'
         
 %section.main-contents
   %h2 ピックアップカテゴリー
   %section.main-box__container.clearfix
     %h3.main-box__container__text
-      %a{href: 'https://www.mercari.com/jp/category/1/'} レディース新着アイテム
+      =link_to'レディース新着アイテム', '#' 
     =render 'products/products'
 
   %section.main-box__container.clearfix
     %h3.main-box__container__text
-      %a{href: 'https://www.mercari.com/jp/category/1/'} メンズ新着アイテム
+      =link_to'メンズ新着アイテム', '#' 
     =render 'products/products'
 
   %section.main-box__container.clearfix
     %h3.main-box__container__text
-      %a{href: 'https://www.mercari.com/jp/category/1/'} ベビーキッズ新着アイテム
+      =link_to'ベビーキッズ新着アイテム', '#' 
     =render 'products/products'
 
   %section.main-box__container.clearfix
     %h3.main-box__container__text
-      %a{href: 'https://www.mercari.com/jp/category/1/'} コスメ・香水・美容新着アイテム
+      =link_to'コスメ・香水・美容新着アイテム', '#' 
     =render 'products/products'
 
 %section.main-contents
   %h2 ピックアップブランド
   %section.main-box__container
     %h3.main-box__container__text
-      %a{href: 'https://www.mercari.com/jp/category/1/'} シャネル新着アイテム
+      =link_to'シャネル新着アイテム', '#' 
     =render 'products/products'
 
   %section.main-box__container.clearfix
     %h3.main-box__container__text
-      %a{href: 'https://www.mercari.com/jp/category/1/'} ルイヴィトン新着アイテム
+      =link_to'ルイヴィトン新着アイテム', '#' 
     =render 'products/products'
 
   %section.main-box__container.clearfix
     %h3.main-box__container__text
-      %a{href: 'https://www.mercari.com/jp/category/1/'} シュプリーム新着アイテム
+      =link_to'シュプリーム新着アイテム', '#' 
     =render 'products/products'
 
   %section.main-box__container.clearfix
     %h3.main-box__container__text
-      %a{href: 'https://www.mercari.com/jp/category/1/'} ナイキ新着アイテム
+      =link_to'ナイキ新着アイテム', '#' 
     =render 'products/products'
 
 
 %a.sell-btn{href: 'https://www.mercari.com/jp/sell/'} 
-  %div 
+  .sell-btn__lang 
   出品
   %br>/
   %i.fas.fa-camera
