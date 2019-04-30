@@ -8,9 +8,6 @@
 
 //mixin別はフォルダへ後々統合する予定
 
-
-
-
 .progress {
   display: inline-block;
   vertical-align: top;
@@ -61,16 +58,6 @@
 }
 
 .progress-status::before {
-left: 47%;
-background: red;
-}
-
-
-.active.progress-status{
-background: red;
-}
-
-#red.progress-status{
 background: red;
 }
 
@@ -85,8 +72,6 @@ font-weight: bold;
       &__top{
         background-color: #fff;
         &__text{
-          font-size: 24px;
-          padding: 8px 24px;
           font-size: 24px;
           padding: 8px 24px;
           font-weight: bold;
