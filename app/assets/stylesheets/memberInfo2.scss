@@ -1,0 +1,153 @@
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+//mixin別はフォルダへ後々統合する予定
+
+
+
+  .progress {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 40px 0 0 44px;
+    border: 0;
+    font-size: 0;
+    &--clearfix{
+      @include clearfix;
+      margin: 0;
+      li{
+        position: relative;
+        display: inline-block;
+        color: #ccc;
+        z-index: 1;
+        min-width: 60px;
+        font-size: 12px;
+        margin: 0 40px 0 0;
+        padding: 0;
+        .progress-status{
+          width: 12px;
+          height: 12px;
+          margin: 8px auto 0;
+          background: #ccc;
+          border-radius: 50%;
+          z-index: 8;
+        }
+      }
+    }
+  }
+  
+  .progress-status::before{
+    content: '';
+    position: absolute;
+    display: block;
+    background: #ccc;
+    width: 180%;
+    height: 2px;
+    z-index: 2;
+    bottom: 5px;
+  }
+  
+.now .progress-status::before {
+  left: 50%;
+  background: red;
+}
+.finish .progress-status::before{
+  right: 50%;
+}
+
+.active.progress-status{
+  background: red;
+}
+
+#red.progress-status{
+  background: red;
+  }
+li.active{
+  color:red;
+  font-weight: bold;
+}
+
+    .member-info-main{
+      width: 700px;
+      margin: 0 auto;
+      &__top{
+        background-color: #fff;
+        &__text{
+          font-size: 24px;
+          padding: 8px 24px;
+          font-size: 24px;
+          padding: 8px 24px;
+          font-weight: bold;
+          max-width: 320px;
+          margin: 0 auto;
+        &__input{
+          margin: 8px 0 0;
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          line-height: 1.5;
+          font-size: 16px;
+      }
+    }
+  }
+}
+
+.member-info__center{
+  border-top: 1px solid #f5f5f5;
+  padding: 64px;
+  background-color:white;
+  text-align:initial;
+  &__content{
+    max-width: 320px;
+    margin: 0 auto;
+    &__form{
+      margin:0;
+      &__text{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    &__input{
+      width: 100%;
+      margin: 8px 0 0;
+      height: 38px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      line-height: 38px;
+      font-size: 16px;
+      }
+    &__simple{
+      margin: 8px 0 0;
+      line-height: 1.5;
+    }
+    &__send{
+      margin: 40px 0 0;
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    &__bottom-right{
+      margin: 40px 0 0;
+      text-align: right;
+      color:#0099e8;
+    }
+      .fa-chevron-right:before{
+      color:#0099e8;
+    }
+      }
+     }
+    }
+  
+
