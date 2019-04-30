@@ -46,6 +46,8 @@
   }
 }
 }
+
+
 .progress-status::before{
   content: '';
   position: absolute;
@@ -64,31 +66,6 @@ background: red;
 li.active{
 color:red;
 font-weight: bold;
-}
-
-    .member-info-main{
-      width: 700px;
-      margin: 0 auto;
-      &__top{
-        background-color: #fff;
-        &__text{
-          font-size: 24px;
-          padding: 8px 24px;
-          font-weight: bold;
-          max-width: 320px;
-          margin: 0 auto;
-        &__input{
-          margin: 8px 0 0;
-          height: 48px;
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-      }
-    }
-  }
 }
 
 .member-info-main__center{
