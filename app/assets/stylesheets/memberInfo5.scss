@@ -1,0 +1,141 @@
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+//mixin別はフォルダへ後々統合する予定
+
+
+
+
+.progress {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  padding: 40px 0 0 44px;
+  border: 0;
+  font-size: 0;
+  &--clearfix{
+    @include clearfix;
+    margin: 0;
+    li{
+      position: relative;
+      display: inline-block;
+      color: #888;
+      z-index: 1;
+      min-width: 60px;
+      font-size: 12px;
+      margin: 0 40px 0 0;
+      padding: 0;
+    }
+      .progress-status{
+        width: 12px;
+        height: 12px;
+        margin: 8px auto 0;
+        background: #888;
+        border-radius: 50%;
+        z-index: 8;
+      &__end{
+        width: 12px;
+        height: 12px;
+        margin: 8px auto 0;
+        background: red;
+        border-radius: 50%;
+        z-index: 8;
+    }
+  }
+}
+}
+.progress-status::before{
+  content: '';
+  position: absolute;
+  display: block;
+  background: #888;
+  width: 180%;
+  height: 2px;
+  z-index: 2;
+  bottom: 5px;
+}
+
+.progress-status::before {
+left: 47%;
+background: red;
+}
+
+
+.active.progress-status{
+background: red;
+}
+
+#red.progress-status{
+background: red;
+}
+
+li.active{
+color:red;
+font-weight: bold;
+}
+
+    .member-info-main{
+      width: 700px;
+      margin: 0 auto;
+      &__top{
+        background-color: #fff;
+        &__text{
+          font-size: 24px;
+          padding: 8px 24px;
+          font-size: 24px;
+          padding: 8px 24px;
+          font-weight: bold;
+          max-width: 320px;
+          margin: 0 auto;
+        &__input{
+          margin: 8px 0 0;
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          line-height: 1.5;
+          font-size: 16px;
+      }
+    }
+  }
+}
+
+.member-info-main__center{
+  width: 700px;
+  margin: 0 auto;
+  text-align:center;
+  border-top: 1px solid #f5f5f5;
+    &__content{
+      background-color:white;
+      max-width: 320px;
+      margin: 0 auto;
+      &__form{
+        margin:0;
+        &__text{
+        margin: 8px 0 0;
+        line-height: 1.5;
+        list-style:none;
+        font-size:16px;
+        }
+        &__input{
+          margin: 40px 0 0;
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+          display: block;
+          width: 100%;
+          line-height: 48px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+
