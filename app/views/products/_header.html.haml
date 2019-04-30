@@ -2,7 +2,7 @@
   .main-header__inner
     .main-header__inner__top
       %h1
-        =link_to '#' do
+        = link_to '#' do
           = image_tag 'mercari_logo_horizontal.png', alt: 'mercari', class: 'input-dfault'
       %form.main-header__inner__top__form{action: '#'} 
         %input.input-holder{type: 'search', name: 'keyword', placeholder: '何かお探しですか？'}
@@ -13,12 +13,12 @@
         %ul.main-gnav__left__category
           %li
             %h2
-              =link_to 'https://www.mercari.com/jp/category/', {class: 'main-gnav__left__category__root'} do
+              = link_to 'https://www.mercari.com/jp/category/', {class: 'main-gnav__left__category__root'} do
                 %i.fas.fa-list-ul
                 %span カテゴリーから探す
           %li
             %h2
-              =link_to 'https://www.mercari.com/jp/brand/', {class: 'main-gnav__left__category__root'} do
+              = link_to 'https://www.mercari.com/jp/brand/', {class: 'main-gnav__left__category__root'} do
                 %i.fa.fa-tag
                 %span ブランドから探す
               %ul.main-gnav__left__category__root__wrap
@@ -26,16 +26,16 @@
       .main-gnav__right
         %ul.main-gnav__right__user
           %li{key: 'notice', url: '#'}
-            =link_to 'https://www.mercari.com/jp/mypage/notification/', {class: 'main-gnav__right__user__menu'} do
+            = link_to 'https://www.mercari.com/jp/mypage/notification/', {class: 'main-gnav__right__user__menu'} do
               %i.far.fa-bell
               %span お知らせ
           %li{key: 'todo', url: '#'}
-            =link_to 'https://www.mercari.com/jp/mypage/todo/',{class: 'main-gnav__right__user__menu'} do
+            = link_to 'https://www.mercari.com/jp/mypage/todo/',{class: 'main-gnav__right__user__menu'} do
               %i.fas.fa-check
               %span やることリスト
           %li
-            =link_to 'https://www.mercari.com/jp/mypage/', {class: 'main-gnav__right__user__menu'} do
+            = link_to 'https://www.mercari.com/jp/mypage/', {class: 'main-gnav__right__user__menu'} do
               %figure
                 %div
-                  =image_tag 'face-icon.png', alt: 'face-icon', class: 'face-icon'
+                  = image_tag 'face-icon.png', alt: 'face-icon', class: 'face-icon'
               %span マイページ
