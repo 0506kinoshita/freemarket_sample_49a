@@ -1,0 +1,342 @@
+.devise-wrapper{
+  position: relative;
+    min-height: 100%;
+    background: #f5f5f5;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+    a:link {color:black; text-decoration:none }
+    a:hover { color:red; text-decoration:none }
+}
+
+.devise-container{
+  padding: 0 0 220px;
+  text-align: center;
+
+  &__header{
+    height: 128px;
+    background-color:#f5f5f5;
+    text-align: center;
+
+    &__logo{
+        line-height: 49px;
+        width: 185px;
+        height: 49px;
+        margin: 40px 0 0;
+    }
+  }
+}
+
+.sign-up-main{
+
+  &__upper{
+    background-color: white;
+    width: 700px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f5f5f5;
+
+    &__text h2{
+      padding: 32px 16px;
+      font-size: 22px;
+      line-height: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  &__address {
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+
+      // 郵便番号入力フォーム
+    &__zipcode {
+      width: 320px;
+      height: 93px;
+      margin: auto;
+      padding: 45px 17px 17px 17px;
+
+      // 「郵便番号」記述
+      &__head {
+        font-weight: 550;
+        float: left; 
+      }
+
+      // 「必須」記述
+      &__require {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #ea352d;
+      }
+
+      // 郵便番号入力欄
+      &__form {
+        height: 48px;
+        width: 320px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;
+      }
+    }
+
+    // 都道府県入力フォーム
+    &__prefecture {
+      width: 320px;
+      height: 93px;
+      margin: auto;
+      padding: 17px;
+      position: relative;
+
+      // 「都道府県」記述
+      &__head {
+        font-weight: 550;
+        float: left; 
+      }
+
+      // 「必須」記述
+      &__require {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #ea352d;
+      }
+
+      // 都道府県選択ボックス
+      &__form {
+        height: 48px;
+        width: 320px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;
+        -webkit-appearance: none;  
+      }
+
+      .fa-chevron-down {
+        z-index: 2;
+        color: #888;
+        position: absolute;
+        left: 300px;
+        top: 50px;
+      }
+    }
+
+    // 市区町村入力フォーム
+    &__city {
+      width: 320px;
+      height: 93px;
+      margin: auto;
+      padding: 17px;
+
+      // 「市区町村」記述
+      &__head {
+        font-weight: 550;
+        float: left; 
+      }
+
+      // 「必須」記述
+      &__require {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #ea352d;
+      }
+
+      // 市町村入力フォーム
+      &__form {
+        height: 48px;
+        width: 320px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;        
+      }
+    }
+
+    // 番地入力フォーム
+    &__block-num {
+      width: 320px;
+      height: 93px;
+      margin: auto;
+      padding: 17px;
+      
+      // 「番地」記述
+      &__head {
+        font-weight: 550;
+        float: left;         
+      }
+
+      // 「必須」記述
+      &__require {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #ea352d;        
+      }
+
+      // 番地入力欄記述
+      &__form {
+        height: 48px;
+        width: 320px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;         
+      }
+    }
+
+    // 建物入力フォーム
+    &__building-name {
+      width: 320px;
+      height: 93px;
+      margin: auto;
+      padding: 17px;      
+
+      // 「建物名」記述
+      &__head {
+        font-weight: 550;
+        float: left;        
+      }
+
+      // 「任意」記述
+      &__optional {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #979797;        
+      }
+
+      // 建物名入力欄
+      &__form {
+        height: 48px;
+        width: 320px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;         
+      }
+    }
+
+    // 電話番号任意記述
+    &__home-phone-num {
+      width: 320px;
+      height: 93px;
+      margin: auto;
+      padding: 17px;    
+      
+      // 「電話」記述
+      &__head {
+        font-weight: 550;
+        float: left;         
+      }
+
+      // 「任意」記述
+      &__optional {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #979797;         
+      }
+
+      // 電話番号入力欄
+      &__form {
+        height: 48px;
+        width: 320px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;         
+      }
+    }
+
+    // 「次に進む」記述
+    &__submit-btn {
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      width: 320px;
+      line-height: 48px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+
+// 以下、deviseFooter.scssと同じ記述です
+.devise-footer{
+  width: 456px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 220px;
+  text-align: center;
+  &__logo{
+    margin: 40px auto 0;
+    text-decoration: none; 
+  }
+  &__text{
+    margin: 8px 0 0;
+  }
+  &__box{
+    color: black;
+    text-decoration: black;
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  &__text {
+    font-size: 13px;
+  }
+  li{
+    margin: 0 0 0 16px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+  }
+  .bottom-logo{
+    width: 80px;
+    height: 65px;
+  }
+  }

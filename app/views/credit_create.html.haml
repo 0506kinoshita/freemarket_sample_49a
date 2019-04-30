@@ -1,0 +1,25 @@
+%wrapper 
+  %header
+  %side-bar
+  .credit-register-contener
+    %h2.credit-register-contener__head 支払い方法
+    .credit-register-contener__middle
+      %section.credit-register-contener__middle__inner
+        .credit-register-contener__middle__inner__content 
+          .credit-register-contener__middle__inner__content__detail　クレジットカード一覧
+
+      -# クレジット登録完了画面
+      %ul.credit-register-contener__middle__card-info
+        %li.credit-register-contener__middle__card-info__list
+          = form_tag "creditcard", class: "credit-register-contener__middle__card-info__list__inner" do
+            %figure.credit-register-contener__middle__card-info__list__inner__image
+              = image_tag "/assets/visa.svg"
+            .credit-register-contener__middle__card-info__list__inner__number **********7444
+            .credit-register-contener__middle__card-info__list__inner__expiration 05/22
+            %button.credit-register-contener__middle__card-info__list__inner__remove 削除する
+            
+      %section.credit-register-contener__middle__lower
+        = link_to 'root', class: "credit-register-contener__middle__lower__content" do
+          %span 支払い方法について
+          = fa_icon("chevron-right cregit-register-redBtn__image")
+      

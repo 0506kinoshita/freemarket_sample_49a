@@ -1,0 +1,75 @@
+.devise-container{
+  padding: 0 0 220px;
+  text-align: center;
+  &__header{
+    height: 128px;
+    background-color:#f5f5f5;
+    text-align: center;
+    &__logo{
+        line-height: 49px;
+        width: 185px;
+        height: 49px;
+        margin: 40px 0 0;
+      }
+    }
+}
+
+.sign-up-main{
+    &__upper{
+    background-color: white;
+    width: 700px;
+    margin: 0 auto;
+      &__text h2{
+        padding: 32px 16px;
+        font-size: 22px;
+        line-height: 1.5rem;
+        text-align: center;
+        font-weight: bold;
+    }
+  }
+}
+
+.sign-up-center{
+  border-top: 1px solid #f5f5f5;
+  padding: 64px;
+  &__content{
+    background-color: white;
+    max-width: 320px;
+    margin: 0 auto;
+  &__btn{
+    display: block;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    &--mail{
+      position: relative;
+      background-color: #eee;
+    }
+    &--facebook{
+      position: relative;
+      margin: 16px 0 0;
+      background: #385185;
+      color: #fff;
+      size:38px;
+    }
+    &--google{
+      position: relative;
+      margin: 16px 0 0;
+      height: 48px;
+      border: #979797 solid 1px;
+      color: #333;
+      }
+    .icon{
+      position: absolute;
+      font-size: 14px;
+      top: 50%;
+      left: 16px;
+      transform: translate(0, -50%);
+      color: #ccc;
+      font-size: 16px;
+    }
+    }
+  }
+}
