@@ -1,8 +1,8 @@
 .main-box-content.clearfix
   %section.item-content
-    %a.item-content__photo{href: 'https://item.mercari.com/jp/m27278690533/'}
+    =link_to 'https://item.mercari.com/jp/m27278690533/', {class: 'item-content__photo'} do
       %figure.item-content__photo
-        =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521', {data: {src: 'https://item.mercari.com/jp/m27278690533/'}}
+        =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521'
       .item-content-body
         %h3.item-content-body__name  財布
         .item-content-body__num
@@ -13,9 +13,9 @@
         %p.item-content-body__num__tax （税込）
 
   %section.item-content
-    %a{href: 'https://item.mercari.com/jp/m27278690533/'}
+    =link_to 'https://item.mercari.com/jp/m27278690533/' do
       %figure.item-content__photo
-        =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521', {data: {src: 'https://item.mercari.com/jp/m27278690533/'}}
+        =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521'
       .item-content-body
         %h3.item-content-body__name  財布
         .item-content-body__num
@@ -26,9 +26,9 @@
         %p.item-content-body__num__tax （税込）
 
   %section.item-content
-    %a{href: 'https://item.mercari.com/jp/m27278690533/'}
+    =link_to 'https://item.mercari.com/jp/m27278690533/' do
       %figure.item-content__photo
-        =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521', {data: {src: 'https://item.mercari.com/jp/m27278690533/'}}
+        =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521'
       .item-content-body
         %h3.item-content-body__name  財布
         .item-content-body__num
@@ -39,9 +39,9 @@
         %p.item-content-body__num__tax （税込）
 
   %section.item-content
-    %a{href: 'https://item.mercari.com/jp/m27278690533/'}
+    =link_to 'https://item.mercari.com/jp/m27278690533/' do
       %figure.item-content__photo
-        =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521', {data: {src: 'https://item.mercari.com/jp/m27278690533/'}}
+        =image_tag 'https://static.mercdn.net/thumb/photos/m27278690533_1.jpg?1555391521'
       .item-content-body
         %h3.item-content-body__name  財布
         .item-content-body__num
@@ -51,4 +51,4 @@
             %span 2
         %p.item-content-body__num__tax （税込）
 .main-all
-  %a{href: 'https://www.mercari.com/jp/category/1/'} すべての商品をみる
+  =link_to'すべての商品をみる', 'https://www.mercari.com/jp/category/1/'

@@ -25,12 +25,12 @@
 
       .main-gnav__right
         %ul.main-gnav__right__user
-          %li{data: {id: 'main-header__user-gnav', key: 'notice', url: '#'}}
-            =link_to 'https://www.mercari.com/jp/mypage/notification/', {class: 'main-gnav__right__user__menu' ,data: {url: '#'}} do
+          %li{key: 'notice', url: '#'}
+            =link_to 'https://www.mercari.com/jp/mypage/notification/', {class: 'main-gnav__right__user__menu'} do
               %i.far.fa-bell
               %span お知らせ
-          %li{data: {id: 'main-header__user-gnav', key: 'todo', url: '#'}}
-            =link_to 'https://www.mercari.com/jp/mypage/todo/',{class: 'main-gnav__right__user__menu',data: {url: '#'}} do
+          %li{key: 'todo', url: '#'}
+            =link_to 'https://www.mercari.com/jp/mypage/todo/',{class: 'main-gnav__right__user__menu'} do
               %i.fas.fa-check
               %span やることリスト
           %li
