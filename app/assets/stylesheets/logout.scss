@@ -1,0 +1,92 @@
+*,::before,::after {
+  border-style: solid;
+  border-width: 0;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear:both;
+}
+
+//sidebar個別の色付けは別途必要。
+//render利用かつこのページにのみcssを適用できればいい
+//renderしないのであれば、個別指定で可能です
+
+.log-out-wrapper{
+  background-color: #f5f5f5;
+  padding:20px 0 40px;
+  }
+.log-out-container{
+  margin: 0 auto ;
+  width: 1020px;
+  margin: 40px auto 0;
+  &__right{
+    float: right;
+    width: 700px;
+    height:179px;
+    background-color: white;
+    &__form{
+    background-color:white;
+      &__box{
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 64px;
+        color:white;
+        &__btn{
+          display: block;
+          width: 100%;
+          line-height: 48px;
+          height:48px;
+          font-size: 14px;
+          cursor: pointer;
+          text-align: center;
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+        }
+      }
+    }
+}
+}
+
+.log-out-container__left{
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+}
+
+.log-out-sells-entrance{
+    &__area{
+      bottom: 32px;
+      right: 32px;
+      width: 160px;
+      height: 160px;
+      font-size: 22px;
+      position: fixed;
+      z-index: 1000;
+      border-radius: 50%;
+      background: #ea352d;
+      color: #fff;
+      text-align: center;
+      &__text{
+        margin: 32px 0 0;
+      }
+      &__image{
+        font-size: 54px;
+      }
+        .fa-camera:before{
+          color:white;
+          background-position: center;
+          background-size: cover;
+          margin: 8px 0 0;
+          font-size: 54px;
+
+       }
+    }
+  }
+
+
+
+
+
