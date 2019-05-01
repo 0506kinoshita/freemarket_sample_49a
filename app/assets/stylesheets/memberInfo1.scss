@@ -5,7 +5,7 @@
     clear: both;
   }
 }
-//mixin別はフォルダへ後々統合する予定
+//mixin別はフォルダへ後々統合する予定。progress-barで使用
 
 .devise-container-info__header{
   height: 128px;
@@ -32,38 +32,49 @@
     li{
       position: relative;
       display: inline-block;
-      color: #ccc;
+      color:  #888;;
       z-index: 1;
       min-width: 60px;
       font-size: 12px;
       margin: 0 40px 0 0;
       padding: 0;
-      .progress-status{
+//ここまでprogress-bar共通部分
+      .progress-status-1{
         width: 12px;
         height: 12px;
         margin: 8px auto 0;
-        background: #ccc;
+        background: #888;
         border-radius: 50%;
-        z-index: 8;
       }
     }
   }
 }
 
-.progress-status::before{
+.progress-status-1::before{
   content: '';
   position: absolute;
   display: block;
-  background: #ccc;
+  background:  #888;
   width: 180%;
   height: 2px;
-  z-index: 2;
   bottom: 5px;
 }
+//線を描画
 
-#red .progress-status{
+.finish .progress-status-1::before{
+  right: 50%;
+}
+
+#red-1 .progress-status-1{
   background: red;
   }
+
+li.active{
+  color:red;
+  font-weight: bold;
+}
+//.activeを指定した文字列（会員情報から〜完了まで）を赤くする
+//この記述はprogressーbar共通
 
 .member-info-main{
   width: 700px;

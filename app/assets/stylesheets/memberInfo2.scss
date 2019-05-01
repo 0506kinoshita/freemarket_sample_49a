@@ -1,76 +1,32 @@
-@mixin clearfix() {
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+
+.progress-status-2{
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  background: #ccc;
+  border-radius: 50%;
 }
 
-//mixin別はフォルダへ後々統合する予定
-
-
-
-  .progress {
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-    padding: 40px 0 0 44px;
-    border: 0;
-    font-size: 0;
-    &--clearfix{
-      @include clearfix;
-      margin: 0;
-      li{
-        position: relative;
-        display: inline-block;
-        color: #ccc;
-        z-index: 1;
-        min-width: 60px;
-        font-size: 12px;
-        margin: 0 40px 0 0;
-        padding: 0;
-        .progress-status{
-          width: 12px;
-          height: 12px;
-          margin: 8px auto 0;
-          background: #ccc;
-          border-radius: 50%;
-          z-index: 8;
-        }
-      }
-    }
-  }
-  
-  .progress-status::before{
+  .progress-status-2::before{
     content: '';
     position: absolute;
     display: block;
     background: #ccc;
     width: 180%;
     height: 2px;
-    z-index: 2;
     bottom: 5px;
   }
   
-.now .progress-status::before {
+.done .progress-status-2::before {
   left: 50%;
   background: red;
 }
-.finish .progress-status::before{
-  right: 50%;
-}
+//会員情報〜電話番号認証間のラインを赤くする
 
-.active.progress-status{
+#red-2.progress-status-2{
   background: red;
 }
 
-#red.progress-status{
-  background: red;
-  }
-li.active{
-  color:red;
-  font-weight: bold;
-}
 
     .member-info-main{
       width: 700px;

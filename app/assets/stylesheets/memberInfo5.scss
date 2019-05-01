@@ -1,52 +1,19 @@
-@mixin clearfix() {
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
+.progress-status{
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  background: #888;
+  border-radius: 50%;
+  z-index: 8;
+  &__end{
+    width: 12px;
+    height: 12px;
+    margin: 8px auto 0;
+    background: red;
+    border-radius: 50%;
+    z-index: 8;
   }
 }
-
-//mixin別はフォルダへ後々統合する予定
-
-.progress {
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  padding: 40px 0 0 44px;
-  border: 0;
-  font-size: 0;
-  &--clearfix{
-    @include clearfix;
-    margin: 0;
-    li{
-      position: relative;
-      display: inline-block;
-      color: #888;
-      z-index: 1;
-      min-width: 60px;
-      font-size: 12px;
-      margin: 0 40px 0 0;
-      padding: 0;
-    }
-      .progress-status{
-        width: 12px;
-        height: 12px;
-        margin: 8px auto 0;
-        background: #888;
-        border-radius: 50%;
-        z-index: 8;
-      &__end{
-        width: 12px;
-        height: 12px;
-        margin: 8px auto 0;
-        background: red;
-        border-radius: 50%;
-        z-index: 8;
-    }
-  }
-}
-}
-
 
 .progress-status::before{
   content: '';
@@ -59,14 +26,15 @@
   bottom: 5px;
 }
 
+#red-5.progress-status{
+  background: red;
+}
+//○を赤くする
+
 .progress-status::before {
 background: red;
 }
-
-li.active{
-color:red;
-font-weight: bold;
-}
+//線を赤くする
 
 .member-info-main__center{
   width: 700px;
@@ -99,5 +67,3 @@ font-weight: bold;
       }
     }
   }
-
-
