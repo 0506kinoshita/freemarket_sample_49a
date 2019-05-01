@@ -44,16 +44,17 @@
           border: 1px solid #ea352d;
           color: #fff;
         }
+        &__left{
+          float: left;
+          width: 280px;
+          margin: 0 40px 0 0;
+        }
       }
     }
-}
+  }
 }
 
-.log-out-container__left{
-  float: left;
-  width: 280px;
-  margin: 0 40px 0 0;
-}
+
 
 .log-out-sells-entrance{
     &__area{
@@ -80,7 +81,6 @@
           background-size: cover;
           margin: 8px 0 0;
           font-size: 54px;
-
        }
     }
   }
