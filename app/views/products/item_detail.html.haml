@@ -5,33 +5,31 @@
       #wrap.main-product-box__name__clearfix__photo
         %ul#slider
           %li.slide-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_1.jpg?1538634870", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_1.jpg?1538634870"
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_1.jpg?1538634870"
           %li.slide-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_2.jpg?1538634870", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_2.jpg?1538634870"
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_2.jpg?1538634870"
           %li.slide-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_3.jpg?1538634870", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_3.jpg?1538634870"
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_3.jpg?1538634870"
           %li.slide-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_4.jpg?15386348700", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_4.jpg?1538634870"
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_4.jpg?15386348700"
         %ul#thumbnail-list
           %li.thumbnail-item
-            %img{alt: "画像", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_1.jpg?1538634870"}/
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_1.jpg?1538634870"
           %li.thumbnail-item
-            %img{alt: "画像", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_2.jpg?1538634870"}/
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_2.jpg?1538634870"
           %li.thumbnail-item
-            %img{alt: "画像", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_3.jpg?1538634870"}/
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_3.jpg?1538634870"
           %li.thumbnail-item
-            %img{alt: "画像", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_4.jpg?1538634870"}/
-
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_4.jpg?1538634870"
 
       %table.product-detail-space
         %tbody
           %tr
             %th出品者
             %td
-              %a{href: ""} ダテ
+              =link_to 'ダテ', ''
               .product-user-ratings
                 %i.fas.fa-smile
-
                 %span 200
               .product-user-ratings
                 %i.fas.fa-meh
@@ -42,22 +40,21 @@
           %tr
             %thカテゴリー
             %td
-              %a{href: ""}
-                メンズ
-              %a{href: ""}
+              =link_to 'メンズ', ''
+                
+              =link_to '' do
                 .product-detail-space__second-category
                   %i.fas.fa-chevron-right
                   トップス
-              %a{href: ""}
+              =link_to '' do
                 .product-detail-space__third-category
                   %i.fas.fa-chevron-right
-                  
                   Tシャツ/カットソー(半袖/袖なし)
           %tr
             %thブランド
             %td
-              %a{href: "" }
-                ナイキ
+              =link_to 'ナイキ', ''
+                
           %tr
             %th商品のサイズ
             %td
@@ -77,13 +74,13 @@
           %tr
             %th配送元地域
             %td
-              %a{href: ""}
-                兵庫県
+              =link_to '兵庫県', ''
+                
           %tr
             %th発送日の目安
             %td
               2~3日で発送
-    %div.product-price-box{style: "text-align:center"}
+    .product-price-box
       %span.product-price-box__bold ¥1,800
       %span.product-price-box__bold__tax (税込)
       %span.product-price-box__bold__tax__delivery-fee 送料込み
