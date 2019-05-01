@@ -1,0 +1,152 @@
+.product-wrapper
+  %section.main-product-box
+    %h1.main-product-box__name 古着　90's NIKE Tシャツ　ビンテージ　一点物
+    .main-product-box__name__clearfix
+      #wrap.main-product-box__name__clearfix__photo
+        %ul#slider
+          %li.slide-item
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_1.jpg?1538634870", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_1.jpg?1538634870"
+          %li.slide-item
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_2.jpg?1538634870", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_2.jpg?1538634870"
+          %li.slide-item
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_3.jpg?1538634870", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_3.jpg?1538634870"
+          %li.slide-item
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_4.jpg?15386348700", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_4.jpg?1538634870"
+        %ul#thumbnail-list
+          %li.thumbnail-item
+            %img{alt: "画像", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_1.jpg?1538634870"}/
+          %li.thumbnail-item
+            %img{alt: "画像", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_2.jpg?1538634870"}/
+          %li.thumbnail-item
+            %img{alt: "画像", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_3.jpg?1538634870"}/
+          %li.thumbnail-item
+            %img{alt: "画像", src: "https://static.mercdn.net/item/detail/orig/photos/m83895112625_4.jpg?1538634870"}/
+
+
+      %table.product-detail-space
+        %tbody
+          %tr
+            %th出品者
+            %td
+              %a{href: ""} ダテ
+              .product-user-ratings
+                %i.fas.fa-smile
+
+                %span 200
+              .product-user-ratings
+                %i.fas.fa-meh
+                %span 200
+              .product-user-ratings
+                %i.fas.fa-frown
+                %span 200
+          %tr
+            %thカテゴリー
+            %td
+              %a{href: ""}
+                メンズ
+              %a{href: ""}
+                .product-detail-space__second-category
+                  %i.fas.fa-chevron-right
+                  トップス
+              %a{href: ""}
+                .product-detail-space__third-category
+                  %i.fas.fa-chevron-right
+                  
+                  Tシャツ/カットソー(半袖/袖なし)
+          %tr
+            %thブランド
+            %td
+              %a{href: "" }
+                ナイキ
+          %tr
+            %th商品のサイズ
+            %td
+              L
+          %tr
+            %th商品の状態
+            %td
+              目立った傷や汚れなし
+          %tr
+            %th配送料の負担
+            %td
+              送料込み(出品者負担)
+          %tr
+            %th配送の方法
+            %td
+              未定
+          %tr
+            %th配送元地域
+            %td
+              %a{href: ""}
+                兵庫県
+          %tr
+            %th発送日の目安
+            %td
+              2~3日で発送
+    %div.product-price-box{style: "text-align:center"}
+      %span.product-price-box__bold ¥1,800
+      %span.product-price-box__bold__tax (税込)
+      %span.product-price-box__bold__tax__delivery-fee 送料込み
+    %a.product-price-box__buy-btn.f18-24{"data-client": "hidden", href: ""}購入画面に進む
+    .product-outline.f14
+      %p.product-outline__inner
+        ご覧頂きましてありがとうございます。
+        ■年代：90's
+        ■素材：コットン100
+        ■状態：目立ったダメージありませんが古着という事をご理解下さい。
+        3枚目汚れあり
+        着丈70㎝
+        身幅55㎝
+        肩幅53㎝
+        袖丈22㎝
+        ※古着、ビンテージ品となりますので多少の汚れダメージをご理解頂ける方のみお願い致します。
+        原宿、下北沢、高円寺、ビンテージ、レトロ、アート
+        クラシカル、アメカジ、菅田将暉、奇抜、アロハ
+        70's/80's/90'sスタイルの方にオススメです。
+
+    .product-button__box.clearfix
+      .product-button__box__left
+        %button.product-button.product-button__box__left__like{"data-ga": "element","data-ga-category": "LIKE","data-ga-label": "like!","data-id": "m83895112625","data-toggle": "like", name: "like", type: "button"}
+          %i.far.fa-heart
+            %span  いいね!
+
+        %a.product-button.product-button__box__report.clearfix{"data-modal": "report-product","data-open": "modal", href: ""}
+          %i.far.fa-flag
+            %span 不適切な商品の報告
+
+      .product-button__box__right
+        %a{href: "/", target: "_blank"}
+          %i.fas.fa-lock
+            %span あんしん・あんぜんへの取り組み
+
+    .detail-wrapper
+
+    .product-detail__comment
+      .product-detail__comment__box
+        .product-detail__comment_box__content
+          %form.product-detail__comment__box__form{action: "",method: "POST"}
+            %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+            %textarea.product-detail__comment__box__form__text{name: "body",type: "text",value: ""}
+            %button.product-detail__comment__box__form__text__submit.gray-btn{type: "submit"}
+              %spanコメントする
+
+    %ul.product-link__prev-next.clearfix
+      %li.product-link__prev-next__prev
+        %a{href: ""}
+          %i.fas.fa-chevron-left
+          トコちゃんベルト2 Mサイズ
+      %li.product-link__prev-next__next
+        %a{href: ""}
+          未使用 お年玉袋 27枚
+          %i.fas.fa-chevron-right
+      .product-sns__media
+        %ul.product-sns__media__sns-media
+          %li
+            %a.sns-media__share-btn{"data-window-name": "facebook_window", href: "", target: "_blank"}
+              = image_tag 'facebook.png', size: '40x40', alt: 'facebook'
+          %li
+            %a.sns-media__share-btn{"data-window-name": "twitter_window", href: "", target: "_blank"}
+              = image_tag 'twitter.png', size: '40x40', alt: 'facebook'
+          %li
+            %a.sns-media__share-btn{"data-window-name": "pinterest_window", href: "", targert: "_blank"}
+              = image_tag 'pinterest.png', size: '40x40', alt: 'facebook'
