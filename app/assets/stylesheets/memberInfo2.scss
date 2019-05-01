@@ -27,6 +27,11 @@
   background: red;
 }
 
+.finish .progress-status-2::before{
+  right: 50%;
+}
+//"完了"から右側に伸びる線を整える。
+
 
     .member-info-main{
       width: 700px;
