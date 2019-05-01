@@ -124,11 +124,11 @@
     .product-detail__comment
       .product-detail__comment__box
         .product-detail__comment_box__content
-          %form.product-detail__comment__box__form{action: "",method: "POST"}
-            %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          %form.product-detail__comment__box__content__form{action: "",method: "POST"}
+            .product-detail__comment__box__content__form__text 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
             %textarea.product-detail__comment__box__form__text{name: "body",type: "text",value: ""}
             %button.product-detail__comment__box__form__text__submit.gray-btn{type: "submit"}
-              %spanコメントする
+              %span コメントする
 
     %ul.product-link__prev-next.clearfix
       %li.product-link__prev-next__prev

@@ -27,7 +27,6 @@
 
 .main-product-box {
   padding: 24px 40px 40px;
-  margin: 40px auto 0;
   background-color: #fff;
   margin: 0 auto;
   width: 660px;
@@ -186,12 +185,6 @@ td {
   display: table-cell;
   vertical-align: inherit;
 
-  a {
-    color: #0099e8;
-    text-decoration: none;
-    float: left;
-
-  }
 }
 
 .product-user-ratings {
@@ -300,11 +293,9 @@ td {
 
 .product-button__box__report {
 
-  padding: 8px 16px;
   color: #333;
   border: 1px solid #f5f5f5;
   background: #f5f5f5;
-  display: inline-block;
   padding: 8px 16px;
   display: inline-block;
   margin: 0 0 0 16px;
@@ -367,12 +358,16 @@ td {
 
       padding: 24px;
 
-      p {
+      &__form {
+
+        &__text {
         padding: 8px;
         font-size: 14px;
         background: #fff6de;
         width: 100%;
         width: 580px;
+        }
+        
      
       }
     }
