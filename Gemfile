@@ -75,6 +75,7 @@ gem 'fog-aws'
 gem "font-awesome-rails"
 gem 'haml-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'devise'
 gem 'jquery-rails'
 gem 'devise'
 gem 'pry-rails'

@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_one :creditcard, dependent: :destroy
   has_many :notices, dependent: :destroy
   has_many :items, dependent: :destroy
-  has_many :like_high, dependent: :destroy 
+  has_many :like_high, dependent: :destroy
   has_many :like_middle, dependent: :destroy
   has_many :like_low, dependent: :destroy
 
