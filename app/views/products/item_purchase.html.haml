@@ -1,0 +1,63 @@
+.purchase-wrapper
+  .purchase-wrapper__header
+    %h1
+      =link_to 'https://www.mercari.com/jp/' do
+        =image_tag "mercari_logo_horizontal.png"
+
+  .purchase-wrapper__main
+    %section.purchase-wrapper__main__container
+      %h2 購入を確定しますか？
+      %section.purchase-wrapper__main__container__buy-product
+        .purchase-wrapper__main__container__buy-product__inner
+          %h3.purchase-wrapper__main__container__buy-product__inner__image
+            = image_tag 'https://static.mercdn.net/thumb/photos/m48892587533_1.jpg?1556752041'
+          %p.purchase-wrapper__main__container__buy-product__inner__name APE milo Tシャツ
+          %form.purchase-wrapper__main__container__buy-product__inner__name__purchase__form{action: '', method: :'POST', novalidate: ''}
+            .purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-ja
+              %p.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-ja__price ¥ 1,800
+              %span.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-ja__shipping-fee.f14 送料込み
+            %ul.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__accordion
+              %li.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__accordion__parent
+                .purchase-wrapper__main__container__buy-product__inner__name__purchase__form__accordion__parent__toggle ポイントはありません
+            %ul.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-table
+              %li.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-table__row
+                .purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-table__row__cell 支払い金額
+                .purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-table__row__cell
+                  %span.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-table__row__cell__pay{'data-purchase-pay': '1800'} ¥1,800
+              %button.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-table__row__cell__pay__btn 購入する
+
+      %section.purchase-wrapper__main__container__user-info
+        .purchase-wrapper__main__container__user-info__inner
+          %h3 配送先
+          %address.purchase-wrapper__main__container__user-info__inner__text 〒111-2222
+          %br 東京都渋谷区〇〇1-1-1
+          %br 渋谷 イトマン
+          %a.purchase-wrapper__main__container__user-info__inner__fix{href: 'https://www.mercari.com/jp/transaction/address/m48892587533'}
+            %span 変更する
+            %i.fas.fa-chevron-right
+      
+      %section.purchase-wrapper__main__container__pay-method
+        .purchase-wrapper__main__container__pay-method__inner
+          %h3 支払い方法
+          %p.purchase-wrapper__main__container__pay-method__inner__text ************1111
+          %br 03/30
+          %figure
+            =image_tag 'master-card.svg'
+          %a.purchase-wrapper__main__container__user-info__inner__fix{href: 'https://www.mercari.com/jp/transaction/select_card/m83895112625/?_s=U2FsdGVkX1-gKUq-tLoxNU6TDF84FOguSLSdMphiGkjN4UOXVjYUa9JcVzWT-DWvGxczy_ZAB8XFpQJVeerMGWwzD6wM44eGIpVzbJrDrUg91p7zxaj_IPhanUjZfCUe'}
+            %span 変更する
+            %i.fas.fa-chevron-right
+
+  .purchase-wrapper__footer
+    #nav
+      %ul.purchase-wrapper__footer__clearfix
+        %li
+          %a{href: 'https://www.mercari.com/jp/privacy/'} プライバシーポリシー
+        %li
+          %a{href: 'https://www.mercari.com/jp/tos/'} メルカリ利用規約
+        %li
+          %a{href: 'https://www.mercari.com/jp/tokutei/'} 特定商取引に関する表記
+    %a.purchase-wrapper__footer__logo{href: 'https://www.mercari.com/jp/'}
+      = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?4194600336'
+    %p
+      %small © 2019 Mercari
+      
