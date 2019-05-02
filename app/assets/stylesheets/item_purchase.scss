@@ -78,29 +78,31 @@ figure {
     text-align: center;
 
   }
-}
 
-.purchase-wrapper__main__container__buy-product {
+    &__buy-product {
 
-  padding: 24px 12.5% 0;
-  text-align: center;
-  border-top: 1px solid #f5f5f5;
-
-  &__inner {
-
-    max-width: 320px;
-    margin: 0 auto;
-
-    h3 {
-
-      font-size: 22px;
-
-      img {
-        width: 148px;
-        vertical-align: middle;
-      
+      padding: 24px 12.5% 0;
+      text-align: center;
+      border-top: 1px solid #f5f5f5;
+    
+      &__inner {
+    
+        max-width: 320px;
+        margin: 0 auto;
+    
+        h3 {
+    
+          font-size: 22px;
+    
+          img {
+            width: 148px;
+            vertical-align: middle;
+          
+          
+        }
       }
     }
+
   }
 }
 
