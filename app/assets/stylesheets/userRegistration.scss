@@ -1,0 +1,358 @@
+*,::before,::after {
+  border-style: solid;
+  border-width: 0;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear:both;
+}
+
+//sidebar個別の色付けは別途必要。
+//render利用かつこのページにのみcssを適用できればいい
+//renderしないのであれば、個別指定で可能です
+
+.user-registration-wrapper{
+  background-color: #f5f5f5;
+  padding:20px 0 40px;
+  }
+
+.user-registration-container{
+    width: 1020px;
+    margin: 40px auto 0;
+    &__left{
+      float: left;
+      width: 280px;
+      margin: 0 40px 0 0;
+    }
+    &__right{
+      float: right;
+      width: 700px;
+      height:179px;
+      background-color: white;
+      &__form{
+      background-color:white;
+        &__box{
+          margin: 0 auto;
+          color:black;
+          font-weight:bold;
+          &__top{
+            font-size: 24px;
+            padding: 8px 24px;
+            text-align: center;
+          }
+          &__main{
+            padding: 64px;
+            border-top: 1px solid #f5f5f5;
+            line-height: 1.5;
+            font-size:14px;
+            &__info{
+              margin: 40px 0 0;
+              line-height: 1.5;
+              font-size:14px;
+              &__upper{
+                font-weight: 600;
+                font-size:14px;
+              &__bottom{
+                font-size:14px;
+                margin: 8px 0 0;
+              &__head{
+                font-weight: 600;
+              &__require{
+                background: #ccc;
+                margin: 0 0 0 8px;
+                padding: 2px 4px;
+                border-radius: 2px;
+                color: #fff;
+                font-size: 12px;
+                vertical-align: top;
+              }
+              }
+              }
+              }
+              }
+            &__guide{
+              margin: 8px 0 0;
+              &__right{
+                text-align: right;
+                margin: 8px 0 0;
+                color: #0099e8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.inner__address {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+    // 郵便番号入力フォーム
+    &__zipcode {
+      height: 93px;
+      margin: auto;
+      padding: 45px 17px 17px 17px;
+
+      // 「郵便番号」記述
+      &__head {
+        font-weight: 550;
+        float: left; 
+      }
+
+      // 「」記述
+      &__require {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #ccc;
+      }
+
+      // 郵便番号入力欄
+      &__form {
+        height: 48px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;
+        padding: 0 16px; 
+      }
+    }
+
+    // 都道府県入力フォーム
+    &__prefecture {
+      height: 93px;
+      margin: auto;
+      padding: 17px;
+      position: relative;
+
+      // 「都道府県」記述
+      &__head {
+        font-weight: 550;
+        float: left; 
+      }
+
+      // 「必須」記述
+      &__require {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #ccc;
+      }
+
+      // 都道府県選択ボックス
+      &__form {
+        height: 48px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;
+        -webkit-appearance: none; 
+        padding: 0 16px; 
+      }
+
+      .fa-chevron-down {
+        z-index: 2;
+        color: #888;
+        position: absolute;
+        left: 530px;
+        top: 55px;
+      }
+    }
+
+    // 市区町村入力フォーム
+    &__city {
+      height: 93px;
+      margin: auto;
+      padding: 17px;
+
+      // 「市区町村」記述
+      &__head {
+        font-weight: 550;
+        float: left; 
+      }
+
+      // 「必須」記述
+      &__require {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #ccc;
+      }
+
+      // 市町村入力フォーム
+      &__form {
+        height: 48px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;
+        padding: 0 16px; 
+      }
+    }
+
+    // 番地入力フォーム
+    &__block-num {
+      height: 93px;
+      margin: auto;
+      padding: 17px;
+      
+      // 「番地」記述
+      &__head {
+        font-weight: 550;
+        float: left;
+      }
+
+      // 「任意」記述
+      &__require {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #ccc;      
+      }
+
+      // 番地入力欄記述
+      &__form {
+        height: 48px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;
+        padding: 0 16px; 
+      }
+    }
+
+    // 建物入力フォーム
+    &__building-name {
+      height: 93px;
+      margin: auto;
+      padding: 17px;      
+
+      // 「建物名」記述
+      &__head {
+        font-weight: 550;
+        float: left;        
+      }
+
+      // 「任意」記述
+      &__optional {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #979797;        
+      }
+
+      // 建物名入力欄
+      &__form {
+        height: 48px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1;
+        font-size: 16px;
+        padding: 0 16px; 
+      }
+      &__after{
+        color: #0099e8;
+        display:block;
+        text-align: right;
+      }
+    }
+
+    // 電話番号任意記述
+    &__home-phone-num {
+      height: 93px;
+      margin: auto;
+      padding: 17px;    
+      
+      // 「電話」記述
+      &__head {
+        font-weight: 550;
+        float: left;         
+      }
+
+      // 「任意」記述
+      &__optional {
+        float: left;
+        margin: 0 0 0 8px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+        background-color: #979797;         
+  }
+}
+
+    // 「次に進む」記述
+    &__submit-btn {
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      cursor: pointer;
+  }
+}
+
+.user-registration-sells-entrance{
+  &__area{
+    bottom: 32px;
+    right: 32px;
+    width: 160px;
+    height: 160px;
+    font-size: 22px;
+    position: fixed;
+    z-index: 1000;
+    border-radius: 50%;
+    background: #ea352d;
+    color: #fff;
+    text-align: center;
+    &__text{
+      margin: 32px 0 0;
+    }
+    &__image{
+      font-size: 54px;
+    }
+      .fa-camera:before{
+        color:white;
+        background-position: center;
+        background-size: cover;
+        margin: 8px 0 0;
+        font-size: 54px;
+     }
+  }
+}
