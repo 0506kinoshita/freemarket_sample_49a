@@ -13,8 +13,8 @@
           .sign-up-center__content
             .sign-up-center__content__btn
               .sign-up-center__content__btn--mail
+                = link_to 'メールアドレスで登録', '/users/sign_up'
                 = fa_icon 'envelope', class: 'icon' 
-                メールアドレスで登録
               .sign-up-center__content__btn--facebook
                 = image_tag 'flogo-HexRBG-Wht-58.png', class: 'icon',size: "20x20"
                 Facebookで登録 
