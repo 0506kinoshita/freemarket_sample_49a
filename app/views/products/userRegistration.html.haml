@@ -1,0 +1,78 @@
+.user-registration__header.clearfix
+  =render 'products/header'
+
+.user-registration-wrapper.clearfix
+  .user-registration-container.clearfix
+    .user-registration-container__right
+      .user-registration-container__right__form
+        .user-registration-container__right__form__box
+          .user-registration-container__right__form__box__top 本人情報の登録
+        .user-registration-container__right__form__box__main
+          .user-registration-container__right__form__box__main__guide
+          %p お客さまの本人情報をご登録ください。
+          %p 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+          .user-registration-container__right__form__box__main__guide__right
+            =link_to'' do
+              本人確認書類のアップロードについて
+              = fa_icon("chevron-right user-registration-container__right__form__box__main__guide__right--icon")
+          .user-registration-container__right__form__box__main__info
+            %label.user-registration-container__right__form__box__main__info__upper お名前
+            %p.user-form__info__bottom Test User
+          
+          .user-registration-container__right__form__box__main__info
+            %label.user-registration-container__right__form__box__main__info__upper お名前カナ
+            %p.user-registration-container__right__form__box__main__info__bottom テストユーザー
+
+          .user-registration-container__right__form__box__main__info
+            %label.user-registration-container__right__form__box__main__info__upper 生年月日
+            %p.user-registration-container__right__form__box__main__info__bottom 2019/05/01
+
+          .user-registration-container__right__form__box__main__info
+            .inner__address__zipcode
+              %label.inner__address__zipcode__head 郵便番号
+              %span.inner__address__zipcode__require 任意
+              %input.inner__address__zipcode__form{ placeholder: "例)1234567"}
+
+            .inner__address__prefecture
+              %label.inner__address__prefecture__head 都道府県
+              %span.inner__address__prefecture__require 任意
+              .inner__address__prefecture__form
+                = form_with model: @prefecture do |f|
+                  = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt:"--",class:"form"
+                  = fa_icon("chevron-down")
+
+            .inner__address__city
+              %label.inner__address__city__head 市区町村
+              %span.inner__address__city__require 任意
+              %input.inner__address__city__form{ placeholder: "例)横浜市港区"}
+
+            .inner__address__block-num
+              %label.inner__address__block-num__head 番地
+              %span.inner__address__block-num__require 任意
+              %input.inner__address__block-num__form{ placeholder: "例)青山1-1-1"}
+
+            .inner__address__building-name
+              %label.inner__address__building-name__head 建物名
+              %span.inner__address__building-name__optional 任意
+              %input.inner__address__building-name__form{ placeholder: "例) 横浜ビル"}
+
+            = submit_tag "登録する", class: "inner__address__submit-btn"
+
+          .user-registration-container__right__form__box__main__info
+            .inner__address__building-name__after
+              =link_to'' do
+                本人情報の登録について
+                = fa_icon("chevron-right user-registration-container__right__form__box__main__guide__right--icon")
+
+    .user-registration-container__left
+      =render 'products/sidebar'
+
+.user-registration-sells-entrance
+  = link_to'' do
+    .user-registration-sells-entrance__area
+      .user-registration-sells-entrance__area__text 出品
+      .user-registration-sells-entrance__area__image
+        = fa_icon("camera log-out-sells-entrance__area__image__btn")
+
+.log-out__bottom
+  =render 'products/footer'
