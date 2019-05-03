@@ -97,49 +97,46 @@ figure {
           img {
             width: 148px;
             vertical-align: middle;
-          
-          
+          }
         }
-      }
+
+          p {
+
+            margin: 8px 0 0;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 600;
+
+            &__shipping-fee.f14 {
+
+              margin: 0 0 0 8px;
+              font-size: 14px;
+                    
+            }
+          }
+
+          &__name__purchase__form__price-ja {
+
+            p {
+          
+              margin: 8px 0 0;
+              line-height: 1.5;
+              font-size: 28px;
+              font-weight: 600;
+          
+            }
+          }
+
+          &__name__purchase__form__price-ja__shipping-fee.f14 {
+
+            margin: 0 0 0 8px;
+            font-size: 14px;
+            font-weight: 400;
+            display: inline-block;
+          
+          }
     }
-
   }
-}
-
-p.purchase-wrapper__main__container__buy-product__inner__name {
-
-    margin: 8px 0 0;
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 600;
-
-    &__shipping-fee.f14 {
-
-      margin: 0 0 0 8px;
-      font-size: 14px;
-      
-  }
-}
-
-.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-ja {
-
-  p {
-
-    margin: 8px 0 0;
-    line-height: 1.5;
-    font-size: 28px;
-    font-weight: 600;
-
-  }
-}
-
-.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__price-ja__shipping-fee.f14 {
-
-  margin: 0 0 0 8px;
-  font-size: 14px;
-  font-weight: 400;
-  display: inline-block;
-
 }
 
 ul.purchase-wrapper__main__container__buy-product__inner__name__purchase__form__accordion {
