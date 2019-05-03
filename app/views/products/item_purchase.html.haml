@@ -51,11 +51,11 @@
     #nav
       %ul.purchase-wrapper__footer__clearfix
         %li
-          %a{href: 'https://www.mercari.com/jp/privacy/'} プライバシーポリシー
+          =link_to 'プライバシーポリシー','https://www.mercari.com/jp/privacy/'
         %li
-          %a{href: 'https://www.mercari.com/jp/tos/'} メルカリ利用規約
+          =link_to 'メルカリ利用規約','https://www.mercari.com/jp/tos/'
         %li
-          %a{href: 'https://www.mercari.com/jp/tokutei/'} 特定商取引に関する表記
+          =link_to '特定商取引に関する表記','https://www.mercari.com/jp/tokutei/'
     %a.purchase-wrapper__footer__logo{href: 'https://www.mercari.com/jp/'}
       = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?4194600336'
     %p
