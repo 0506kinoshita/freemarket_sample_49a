@@ -124,15 +124,13 @@ Column|Type|Options|
 |Column|Type|Options|
 |------|----|-------|
 |name|string|not null|
-|category_id|integer|not null, foreign_key :true|
-|brand_id|integer|foreign_key :true|
 |size|string|
 |condition|string|not null|
-|day_rule|string|not null|
-|delivery_fee|integer|not null|
+|shipment_day|string|not null|
+|delivery_fee|string|not null|
 |price|integer|not null|
-|detail|text|
-|region|string|not null|
+|detail|text|not null|
+|prefecture|string|not null|
 |user_id|integer|foreign_key :true|
 |image|text|not null|
 
