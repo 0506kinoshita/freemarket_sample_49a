@@ -72,6 +72,7 @@ end
 gem 'active_hash'
 gem 'carrierwave'
 gem 'devise'
+gem 'dropzonejs-rails', '~> 0.7.3'
 gem 'erb2haml'
 gem 'fog-aws'
 gem "font-awesome-rails"
@@ -79,4 +80,3 @@ gem 'haml-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'pry-rails'
-gem 'dropzonejs-rails', '~> 0.7.3'
