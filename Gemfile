@@ -79,3 +79,4 @@ gem 'haml-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'pry-rails'
+gem 'dropzonejs-rails', '~> 0.7.3'

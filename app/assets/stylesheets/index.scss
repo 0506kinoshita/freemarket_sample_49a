@@ -123,6 +123,7 @@
               }
             }
             &__state{
+              padding-top: 20px;
               span{
                 background: #ea352d;
                 margin: 0 0 0 8px;
@@ -339,4 +340,16 @@
   text-align: right;
   margin: 0;
   }
+}
+
+select {
+    height: 100%;
+    width: 100%;
+    -webkit-appearance: none;
+    background: white;
+
+}
+
+form {
+  height: 100%;
 }
