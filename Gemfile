@@ -72,6 +72,7 @@ end
 gem 'active_hash'
 gem 'carrierwave'
 gem 'devise'
+gem 'dropzonejs-rails', '~> 0.7.3'
 gem 'erb2haml'
 gem 'fog-aws'
 gem "font-awesome-rails"
