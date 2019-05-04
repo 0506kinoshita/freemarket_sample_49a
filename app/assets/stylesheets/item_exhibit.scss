@@ -195,6 +195,10 @@
                 vertical-align: top;
               }
             }
+            &__select{
+              &__box4{
+              }
+            }
             &__date{
               margin-top: 40px;
               span{
@@ -207,7 +211,10 @@
                 vertical-align: top;
               }
             }
- 
+            &__select{
+              &__box5{
+              }
+            }
           }
         }
         &__price{
