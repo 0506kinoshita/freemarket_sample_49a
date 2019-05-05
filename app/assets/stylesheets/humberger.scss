@@ -71,10 +71,6 @@
   color: black;
 }
 /* 3階層目 */
-li {
-list-style-type: none;
-}
-
 ul.third-content {
   position: absolute;
   visibility: hidden;
@@ -120,10 +116,6 @@ ul.third-content {
 }
 
 /* 4階層目 */
-li {
-  list-style-type: none;
-  }
-  
   ul.forth-content {
     position: absolute;
     visibility: hidden;
