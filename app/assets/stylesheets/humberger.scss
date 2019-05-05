@@ -1,0 +1,171 @@
+.fa-list-ul{
+  color:red;
+}
+
+#menu-content{
+  background-color: #fff;
+  padding-left: 0;
+  margin: 0 auto;
+  width: 1000px;
+  height: 100%;
+  list-style-type: none;
+}
+#menu-content > li{
+  position: relative;
+  float: left;
+  height: 90%;
+  text-align: center;
+}
+#menu-content > li > a{
+  position: relative;
+  display: block;
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 40px;
+  background: #fff;
+  color: black;
+  font-size: 80%;
+  text-decoration: none;
+  z-index: 2;
+}
+#menu-content > li > a:hover{
+  background: #fff;
+  color: black;
+  opacity: 0.8;
+}
+
+/* 2階層目 */
+#menu-content > li > ul.second-content{
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  z-index: -100;
+}
+#menu-content > li:hover > ul.second-content{
+  visibility: visible;
+  top: 40px;
+  z-index: 100;
+  transition: all .3s;
+
+}
+#menu-content > li > ul.second-content > li{
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  position: relative;
+}
+#menu-content > li > ul.second-content > li > a{
+  display: block;
+  line-height: 40px;
+  background: #fff;
+  color: black;
+  font-size: 80%;
+  text-decoration: none;
+}
+#menu-content > li > ul.second-content > li > a:hover{
+  background: green;
+  color: black;
+}
+/* 3階層目 */
+li {
+list-style-type: none;
+}
+
+ul.third-content {
+  position: absolute;
+  visibility: hidden;
+}
+
+#menu-content > li.first-content > ul.second-content > li > ul.third-content {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  z-index: -200;
+}
+#menu-content > li > ul.second-content > li:hover > ul.third-content {
+  visibility: visible;
+  top: 0;
+  left: 200px;
+  z-index: 200;
+  transition: all .3s;
+  background:#fff;
+  color: black;
+}
+#menu-content > li > ul.second-content > li > ul.third-content > li{
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background:#fff;
+  color: black;
+}
+#menu-content > li > ul.second-content > li > ul.third-content > li > a{
+  display: block;
+  line-height: 40px;
+  background:#fff;
+  color: black;
+  font-size: 80%;
+  text-decoration: none;
+}
+#menu-content > li > ul.second-content > li > ul.third-content > li > a:hover{
+  background: blue;
+  color: black;
+}
+
+/* 4階層目 */
+li {
+  list-style-type: none;
+  }
+  
+  ul.forth-content {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  #menu-content > li.first-content > ul.second-content > li > ul.third-content li > ul.fourth-content {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    z-index: -200;
+  }
+  #menu-content > li > ul.second-content > li:hover > ul.third-content > li:hover > ul.fourth-content {
+    visibility: visible;
+    top: 0;
+    left: 200px;
+    z-index: 200;
+    transition: all .3s;
+    background: #fff;
+    color: white;
+  }
+  #menu-content > li > ul.second-content > li > ul.third-content > li > ul.fourth-content > li{
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    position: relative;
+    background: white;
+    color: black;
+  }
+  #menu-content > li > ul.second-content > li > ul.third-content > li > ul.fourth-content > li > a{
+    display: block;
+    line-height: 40px;
+    background: white;
+    color: black;
+    font-size: 80%;
+    text-decoration: none;
+  }
+  #menu-content > li > ul.second-content > li > ul.third-content > li > ul.fourth-content > li > a:hover{
+    background:lightblue;
+    color: black;
+  }
+
+
