@@ -12,19 +12,16 @@
             %span 必須
             %p 最大10枚までアップロードできます 
             .new__exhibition__main__contents__image__up
-              -# %input{ type: "file", name: "image", class: ".new__exhibition__main__contents__image__up__area",placeholder: "ドラッグアンドドロップまたはクリックしてファイルをアップロード"}
-              = f.file_field "image", class: "new__exhibition__main__contents__image__up__area", placeholder: "ドラッグアンドドロップまたはクリックしてファイルをアップロード"
+              = f.file_field :image, class: "new__exhibition__main__contents__image__up__area", placeholder: "ドラッグアンドドロップまたはクリックしてファイルをアップロード"
 
           .new__exhibition__main__contents__name
             .new__exhibition__main__contents__name__input
               %label 商品名
               %span 必須
-              -# %input{ type: "text", name: "name", class: "new__exhibition__main__contents__name__input__box",placeholder: "商品名（必須40文字まで）"}
               = f.text_field "name", class: "new__exhibition__main__contents__name__input__box", placeholder: "商品名（必須40文字まで）"
             .new__exhibition__main__contents__name__text
               %label 商品の説明
               %span 必須
-              -# %textarea{ type: "text", name: "detail", class:"new__exhibition__main__contents__name__text__box2", rows:"5", placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"}
               = f.text_area "detail", class:"new__exhibition__main__contents__name__text__box2", rows:"5", placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
           .new__exhibition__main__contents__info
             %h3.new__exhibition__main__contents__info__word  商品の詳細
@@ -33,7 +30,6 @@
                 %label カテゴリー
                 %span 必須
               .new__exhibition__main__contents__info__inputbox2__select
-                -# = select_tag "category", options_for_select(["---","レディース","メンズ","ベビー・キッズ","インテリア・住まい・小物","本・音楽・ゲーム","おもちゃ・ホビー・グッズ","コスメ・香水・美容","家電・スマホ・カメラ","スポーツ・レジャー","ハンドメイド","チケット","自動車・オートバイ","その他"]) ,class: ".new__exhibition__main__contents__info__inputbox2__select__box1"
                 = f.select "category", ["---","レディース","メンズ","ベビー・キッズ","インテリア・住まい・小物","本・音楽・ゲーム","おもちゃ・ホビー・グッズ","コスメ・香水・美容","家電・スマホ・カメラ","スポーツ・レジャー","ハンドメイド","チケット","自動車・オートバイ","その他"], class: ".new__exhibition__main__contents__info__inputbox2__select__box1"
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
                 
@@ -41,7 +37,6 @@
                 %label 商品の状態
                 %span 必須
               .new__exhibition__main__contents__info__inputbox2__select
-                -# = select_tag "condition", options_for_select(["---","新品、未使用","未使用に近い","目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"]), class: ".new__exhibition__main__contents__info__inputbox2__select__box2"
                 = f.select "condition", ["---","新品、未使用","未使用に近い","目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"], class: ".new__exhibition__main__contents__info__inputbox2__select__box2"
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
             
@@ -53,7 +48,6 @@
                 %label 配送料の負担
                 %span 必須
               .new__exhibition__main__contents__delivery__inputbox3__select
-                -# = select_tag "delivery_fee", options_for_select(["---","送料込み（出品者負担）","着払い（購入者負担）"]),  class: ".new__exhibition__main__contents__info__inputbox2__select__box3"
                 = f.select "delivery_fee", ["---","送料込み（出品者負担）","着払い（購入者負担）"], class: ".new__exhibition__main__contents__info__inputbox2__select__box3"
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
             
@@ -68,7 +62,6 @@
                 %label 発送までの日数
                 %span 必須
               .new__exhibition__main__contents__delivery__inputbox3__select
-                -# = select_tag "shipment_day", options_for_select(["---","1~2日で発送","2~3日で発送","4~7日で発送"]), class: ".new__exhibition__main__contents__info__inputbox3__select__box5"
                 = f.select "shipment_day", ["---","1~2日で発送","2~3日で発送","4~7日で発送"],  class: ".new__exhibition__main__contents__info__inputbox3__select__box5"
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
             
@@ -80,7 +73,6 @@
                 %label 価格
                 %span 必須
               .new__exhibition__main__contents__price__inputbox4__num
-                -# %input{ type:"text", name: "price", class: " .new__exhibition__main__contents__price__inputbox4__num__price",placeholder:"例)300  "}
                 = f.text_field "price", class: " .new__exhibition__main__contents__price__inputbox4__num__price",placeholder:"例)300  "
               .new__exhibition__main__contents__price__inputbox4__10
                 販売手数料(10%)
