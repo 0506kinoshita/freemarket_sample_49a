@@ -30,14 +30,14 @@
                 %label カテゴリー
                 %span 必須
               .new__exhibition__main__contents__info__inputbox2__select
-                = f.select "category", ["---","レディース","メンズ","ベビー・キッズ","インテリア・住まい・小物","本・音楽・ゲーム","おもちゃ・ホビー・グッズ","コスメ・香水・美容","家電・スマホ・カメラ","スポーツ・レジャー","ハンドメイド","チケット","自動車・オートバイ","その他"], class: ".new__exhibition__main__contents__info__inputbox2__select__box1"
+                = f.select "category", ["レディース","メンズ","ベビー・キッズ","インテリア・住まい・小物","本・音楽・ゲーム","おもちゃ・ホビー・グッズ","コスメ・香水・美容","家電・スマホ・カメラ","スポーツ・レジャー","ハンドメイド","チケット","自動車・オートバイ","その他"], class: ".new__exhibition__main__contents__info__inputbox2__select__box1", include_blank: "---"
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
                 
               .new__exhibition__main__contents__info__inputbox2__state
                 %label 商品の状態
                 %span 必須
               .new__exhibition__main__contents__info__inputbox2__select
-                = f.select "condition", ["---","新品、未使用","未使用に近い","目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"], class: ".new__exhibition__main__contents__info__inputbox2__select__box2"
+                = f.select "condition", ["新品、未使用","未使用に近い","目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"], class: ".new__exhibition__main__contents__info__inputbox2__select__box2", include_blank: "---"
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
             
           .new__exhibition__main__contents__delivery
@@ -48,21 +48,20 @@
                 %label 配送料の負担
                 %span 必須
               .new__exhibition__main__contents__delivery__inputbox3__select
-                = f.select "delivery_fee", ["---","送料込み（出品者負担）","着払い（購入者負担）"], class: ".new__exhibition__main__contents__info__inputbox2__select__box3"
+                = f.select "delivery_fee", ["送料込み（出品者負担）","着払い（購入者負担）"], class: ".new__exhibition__main__contents__info__inputbox2__select__box3", include_blank: "---"
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
             
               .new__exhibition__main__contents__delivery__inputbox3__region
                 %label 発売元の地域
                 %span 必須
               .new__exhibition__main__contents__delivery__inputbox3__select
-                -# = form_with model: @prefecture do |f|
-                = f.collection_select :prefecture, Prefecture.all, :id, :name, prompt:"---",class:"form",  class: ".new__exhibition__main__contents__info___inputbox3__select__box4"
+                = f.collection_select :prefecture, Prefecture.all, :id, :name, include_blank: "---", class:"form", class: ".new__exhibition__main__contents__info___inputbox3__select__box4"
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
               .new__exhibition__main__contents__delivery__inputbox3__date
                 %label 発送までの日数
                 %span 必須
               .new__exhibition__main__contents__delivery__inputbox3__select
-                = f.select "shipment_day", ["---","1~2日で発送","2~3日で発送","4~7日で発送"],  class: ".new__exhibition__main__contents__info__inputbox3__select__box5"
+                = f.select "shipment_day", ["1~2日で発送","2~3日で発送","4~7日で発送"], class: ".new__exhibition__main__contents__info__inputbox3__select__box5", include_blank: "---"
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
             
           .new__exhibition__main__contents__price
