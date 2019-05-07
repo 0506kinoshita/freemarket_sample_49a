@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_05_04_024230) do
+ActiveRecord::Schema.define(version: 2019_05_07_044943) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "zip_code", null: false
@@ -37,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_05_04_024230) do
     t.integer "item_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "parent_id"
   end
 
   create_table "item_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -85,5 +85,4 @@ ActiveRecord::Schema.define(version: 2019_05_04_024230) do
   end
 
   add_foreign_key "addresses", "users"
-  add_foreign_key "items", "users"
 end
