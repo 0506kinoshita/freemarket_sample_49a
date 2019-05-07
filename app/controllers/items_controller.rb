@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
 
   def index
-    @items = Item.order(created_at: :desc) .limit(4)
+    @item = Item.new
+    @items = Item.order(created_at: :desc).limit(4)
   end
 
   def new
@@ -9,10 +10,12 @@ class ItemsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @item = Item.new(item_params)
-    @item.save
-    redirect_to root_path
+    if @item.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
@@ -20,4 +23,5 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:image, :name, :detail, :category, :condition, :delivery_fee, :prefecture, :shipment_day, :price)
   end
+  
 end
