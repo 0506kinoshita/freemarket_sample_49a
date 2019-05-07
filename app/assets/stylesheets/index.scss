@@ -71,7 +71,6 @@
 
 .main-gnav {
   color: #333;
-
   &__right {
     float: right;
 
@@ -110,11 +109,11 @@ figure {
 
 .main-gnav__left {
   float: left;
+  width:50%;
 
   li {
     display: inline-block;
     position: relative;
-    margin-top: 10px;
     padding: 0 13px;
     cursor: pointer;
 

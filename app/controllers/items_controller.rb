@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-
   def index
     @item = Item.new
     @items = Item.order(created_at: :desc).limit(4)
@@ -23,5 +22,4 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:image, :name, :detail, :category, :condition, :delivery_fee, :prefecture, :shipment_day, :price)
   end
-  
 end
