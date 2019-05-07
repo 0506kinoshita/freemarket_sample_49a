@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+  mount_uploader :image, ImageUploader
   has_many :items_like, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :item_categories
