@@ -55,7 +55,7 @@
                 %label 発売元の地域
                 %span 必須
               .new__exhibition__main__contents__delivery__inputbox3__select
-                = f.collection_select :prefecture, Prefecture.all, :id, :name, include_blank: "---", class:"form", class: ".new__exhibition__main__contents__info___inputbox3__select__box4"
+                = f.collection_select :prefecture_id, Prefecture.all, :id, :name, include_blank: "---", class:"form", class: ".new__exhibition__main__contents__info___inputbox3__select__box4"
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
               .new__exhibition__main__contents__delivery__inputbox3__date
                 %label 発送までの日数
