@@ -33,12 +33,13 @@
           .member-info__center__content__form
           
           %h2.member-info__center__content__form__text 携帯電話の番号
-          %input.member-info__center__content__form__input{type:'tel',placeholder:'携帯電話の番号を入力'}
+          = form_with model: @user, url: '#', method: :post, local: true do |form|
+            = form.telephone_field :phone_number, placeholder: :'携帯電話の番号を入力', class: :'member-info__center__content__form__input', maxlength: 14
 
-          .member-info__center__content__form
-            .member-info__center__content__form__simple  本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-            %input.member-info__center__content__form__send{type:'submit', value:'SMSを送信する'}
-            .member-info__center__content__form__simple ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+            .member-info__center__content__form
+              .member-info__center__content__form__simple  本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+              = form.submit 'SMSを送信する', class: :'member-info__center__content__form__send'
+              .member-info__center__content__form__simple ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
             
             .member-info__center__content__form__bottom-right
             = link_to '電話番号の確認が必要な理由',''
@@ -60,3 +61,4 @@
           = image_tag'//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?570108281', class:'bottom-logo'
       %p.devise-footer__text 
         %small &copy; 2019 Mercari
+
