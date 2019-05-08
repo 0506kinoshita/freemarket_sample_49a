@@ -97,3 +97,10 @@
               %span マイページ
           %li
             = link_to '新規会員登録', '/users/index', {class: 'header-signup'}
+          %li
+            = link_to 'ログアウト', '/users/destroy'
+          %li
+            - if user_signed_in?
+              = current_user.nickname
+            -else 
+              = 'ゲストユーザー'
