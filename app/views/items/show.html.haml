@@ -1,72 +1,73 @@
+= render 'shared/header'
 .product-wrapper
   %section.main-product-box
-    %h1.main-product-box__name 古着　90's NIKE Tシャツ　ビンテージ　一点物
+    %h1.main-product-box__name #{@item.name}
     .main-product-box__name__clearfix
       #wrap.main-product-box__name__clearfix__photo
         %ul#slider
           %li.slide-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_1.jpg?1538634870"
+            = image_tag @item.image.url
           %li.slide-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_2.jpg?1538634870"
+            = image_tag "https://upload.wikimedia.org/wikipedia/ja/b/b5/Noimage_image.png"
           %li.slide-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_3.jpg?1538634870"
+            = image_tag "https://c-lj.gnst.jp/public/img/common/noimage.jpg?20181011050048"
           %li.slide-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_4.jpg?15386348700"
+            = image_tag "https://www.freeiconspng.com/uploads/no-image-icon-21.png"
         %ul#thumbnail-list
           %li.thumbnail-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_1.jpg?1538634870"
+            = image_tag @item.image.url
           %li.thumbnail-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_2.jpg?1538634870"
+            = image_tag "https://upload.wikimedia.org/wikipedia/ja/b/b5/Noimage_image.png"
           %li.thumbnail-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_3.jpg?1538634870"
+            = image_tag "https://c-lj.gnst.jp/public/img/common/noimage.jpg?20181011050048"
           %li.thumbnail-item
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m83895112625_4.jpg?1538634870"
+            = image_tag "https://www.freeiconspng.com/uploads/no-image-icon-21.png"
 
       %table.product-detail-space
         %tbody
           %tr
             %th出品者
             %td
-              =link_to 'ダテ', ''
+              =link_to '保留さん', ''
               .product-user-ratings
                 %i.fas.fa-smile
-                %span 200
+                %span 0
               .product-user-ratings
                 %i.fas.fa-meh
-                %span 200
+                %span 0
               .product-user-ratings
                 %i.fas.fa-frown
-                %span 200
+                %span 0
           %tr
             %thカテゴリー
             %td
-              =link_to 'メンズ', ''
+              =link_to "#{@item.category}", ''
                 
               =link_to '' do
                 .product-detail-space__second-category
                   %i.fas.fa-chevron-right
-                  トップス
+                  #{@item.category}
               =link_to '' do
                 .product-detail-space__third-category
                   %i.fas.fa-chevron-right
-                  Tシャツ/カットソー(半袖/袖なし)
+                  #{@item.category}
           %tr
             %thブランド
             %td
-              =link_to 'ナイキ', ''
+              =link_to '---', ''
                 
           %tr
             %th商品のサイズ
             %td
-              L
+              サイズ保留
           %tr
             %th商品の状態
             %td
-              目立った傷や汚れなし
+              #{@item.condition}
           %tr
             %th配送料の負担
             %td
-              送料込み(出品者負担)
+              #{@item.delivery_fee}
           %tr
             %th配送の方法
             %td
@@ -74,32 +75,24 @@
           %tr
             %th配送元地域
             %td
-              =link_to '兵庫県', ''
+              =link_to "#{@item.prefecture.name}", ''
                 
           %tr
             %th発送日の目安
             %td
-              2~3日で発送
+              #{@item.shipment_day}
     .product-price-box
-      %span.product-price-box__bold ¥1,800
+      %span.product-price-box__bold ¥#{@item.price}
       %span.product-price-box__bold__tax (税込)
-      %span.product-price-box__bold__tax__delivery-fee 送料込み
+      %span.product-price-box__bold__tax__delivery-fee
+      - if @item.delivery_fee == '着払い（購入者負担）'
+        = "送料別途"
+      - else
+        = "送料込み"
     %a.product-price-box__buy-btn.f18-24{"data-client": "hidden", href: ""}購入画面に進む
     .product-outline.f14
       %p.product-outline__inner
-        ご覧頂きましてありがとうございます。
-        ■年代：90's
-        ■素材：コットン100
-        ■状態：目立ったダメージありませんが古着という事をご理解下さい。
-        3枚目汚れあり
-        着丈70㎝
-        身幅55㎝
-        肩幅53㎝
-        袖丈22㎝
-        ※古着、ビンテージ品となりますので多少の汚れダメージをご理解頂ける方のみお願い致します。
-        原宿、下北沢、高円寺、ビンテージ、レトロ、アート
-        クラシカル、アメカジ、菅田将暉、奇抜、アロハ
-        70's/80's/90'sスタイルの方にオススメです。
+        = @item.detail
 
     .product-button__box.clearfix
       .product-button__box__left
@@ -129,12 +122,10 @@
 
     %ul.product-link__prev-next.clearfix
       %li.product-link__prev-next__prev
-        %a{href: ""}
+        = link_to "" do
           %i.fas.fa-chevron-left
-          トコちゃんベルト2 Mサイズ
       %li.product-link__prev-next__next
-        %a{href: ""}
-          未使用 お年玉袋 27枚
+        = link_to "" do
           %i.fas.fa-chevron-right
       .product-sns__media
         %ul.product-sns__media__sns-media
@@ -147,3 +138,5 @@
           %li
             %a.sns-media__share-btn{"data-window-name": "pinterest_window", href: "", targert: "_blank"}
               = image_tag 'pinterest.png', size: '40x40', alt: 'facebook'
+
+= render 'shared/footer'

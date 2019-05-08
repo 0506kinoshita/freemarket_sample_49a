@@ -1,7 +1,7 @@
 .main-box-content.clearfix
   - @items && @items.each do |item|
     %section.item-content
-      = link_to 'https://item.mercari.com/jp/m27278690533/', {class: 'item-content__photo'} do
+      = link_to item_path(item.id), {class: 'item-content__photo'} do
         %figure.item-content__photo
           = image_tag item.image.url
         .item-content-body
