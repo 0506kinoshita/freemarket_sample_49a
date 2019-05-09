@@ -1,5 +1,5 @@
 .main-box-content.clearfix
-  - @items_for_cosme.first(4).each do |item|
+  - @items_for_cosme.each do |item|
     %section.item-content
       = link_to item_path(item), {class: 'item-content__photo'} do
         %figure.item-content__photo
