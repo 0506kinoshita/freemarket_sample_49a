@@ -3,7 +3,7 @@
     %section.item-content
       = link_to item_path(item.id), {class: 'item-content__photo'} do
         %figure.item-content__photo
-          = image_tag item.image.url
+          -# = image_tag item.image.url
         .item-content-body
           %h3.item-content-body__name #{item.name}
           .item-content-body__num
