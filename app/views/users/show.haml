@@ -1,12 +1,14 @@
+= render "shared/header"
+
 .mypage
   .mypage__user-page
     .mypage__user-page__leftsidebar
-      = render 'sidebar'
+      = render 'shared/sidebar'
     .mypage__user-page__main
       .mypage__user-page__main__inner
         .mypage__user-page__main__inner__icon
-          =image_tag "gopher.png" ,size: "60x60",class: "mypage__user-page__main__inner__icon__user-icon"
-          %h2 ニックネーム
+          =image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1IA7kUZV7ZXU2QUEUQKajKkUjgMT_SEOyeoaNU3gHrqA0kR3-" ,size: "60x60",class: "mypage__user-page__main__inner__icon__user-icon"
+          %h2 #{current_user.nickname}
           .mypage__user-page__main__inner__icon__user-icon__number
             .mypage__user-page__main__inner__icon__user-icon__number__evaluations
               評価
@@ -15,7 +17,6 @@
             .mypage__user-page__main__inner__icon__user-icon__number__exhibitions
               出品数
               %span
-              出品数 
       .mypage__user-page__main__tab
         .mypage__user-page__main__tab__tab1
           %ul.mypage__user-page__main__tab__tab1__contents
@@ -52,3 +53,5 @@
             %h2 過去の取引
         .mypage__user-page__main__trade-information2__traded-box
           取引した商品はありません
+
+= render "shared/footer"

@@ -90,7 +90,7 @@
               %i.fas.fa-check
               %span やることリスト
           %li
-            = link_to "#", {class: 'main-gnav__right__user__menu'} do
+            = link_to "/users/#{current_user.id}", {class: 'main-gnav__right__user__menu'} do
               %figure
                 %div
                   = image_tag 'face-icon.png', alt: 'face-icon', class: 'face-icon'
