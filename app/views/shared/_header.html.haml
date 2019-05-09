@@ -96,9 +96,11 @@
                   = image_tag 'face-icon.png', alt: 'face-icon', class: 'face-icon'
               %span マイページ
           %li
-            = link_to '新規会員登録', '/users/index', {class: 'header-signup'}
+            = link_to 'ログイン', new_user_session_path, {class: 'header-login'}
           %li
-            = link_to 'ログアウト', '/users/destroy'
+            = link_to '新規会員登録', users_index_path, {class: 'header-signup'}
+          %li
+            = link_to 'ログアウト',  users_destroy_path
           %li
             - if user_signed_in?
               = current_user.nickname
