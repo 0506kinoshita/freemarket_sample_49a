@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   root 'items#index'
   resources :items
+  resources :users, only: [:show, :edit]
   resources :credit_card, only: [:new, :show] do
     collection do
       post 'show', to: 'credit_card#show'
