@@ -1,0 +1,55 @@
+.wrapper
+  %header
+  %side-bar
+
+  .credit-edit-content
+    %h2.credit-edit-content__head クレジットカード情報入力
+    = form_tag(pay_credit_card_index_path, method: :post, id: 'charge-form', name: "inputForm") do
+      .credit-edit-content__form__middle
+        .credit-edit-content__form__middle__card-form
+          %label.credit-edit-content__form__middle__card-form__label カード番号
+          %span.credit-edit-content__form__middle__card-form__require 必須
+          = text_field_tag "number", "", class: "number", placeholder: "半角英数字のみ", maxlength: "16", type: "text", id: "card_number", size: "40"
+          %ul.credit-edit-content__form__middle__card-form__image
+            %li.credit-edit-content__form__middle__card-form__image__visa
+              = image_tag "/assets/visa.svg"
+            %li.credit-edit-content__form__middle__card-form__image__mastercard
+              = image_tag "/assets/master-card.svg"
+            %li.credit-edit-content__form__middle__card-form__image__saison
+              = image_tag "/assets/saison-card.svg"
+            %li.credit-edit-content__form__middle__card-form__image__jcb
+              = image_tag "/assets/jcb.svg"
+            %li.credit-edit-content__form__middle__card-form__image__americanexpress
+              = image_tag "/assets/american_express.svg"
+            %li.credit-edit-content__form__middle__card-form__image__dinersclub
+              = image_tag "/assets/dinersclub.svg"
+            %li.credit-edit-content__form__middle__card-form__image__discover
+              = image_tag "/assets/discover.svg"
+
+      .credit-edit-content__form__expire
+        %label.credit-edit-content__form__expire__head 有効期限
+        %span.credit-edit-content__form__expire__require 必須
+
+        #exp_month.credit-edit-content__form__expire__month-box{name: "exp_month", type: "text"}
+          = select_tag "month", options_for_select((01...13)),  class: "credit-edit-content__form__expire__month-box__select"
+          = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
+          %span 月
+
+        #exp_year.credit-edit-content__form__expire__year-box{name: "exp_year", type: "text"}
+          = select_tag "year", options_for_select((19...30)),  class: "credit-edit-content__form__expire__year-box__select"
+          = fa_icon("chevron-down credit-edit-content__form__expire__year-box__image")
+          %span 年 
+
+      .credit-edit-content__form__security
+        %label.credit-edit-content__form__security__head セキュリティコード
+        %span.credit-edit-content__form__security__require 必須
+        = text_field_tag "cvc", "", class: "cvc", placeholder: "カード背面3~4桁の番号", maxlenght: "4", id: "cvc"
+        .credit-edit-content__form__security__question
+          .credit-edit-content__form__security__question__text
+            = fa_icon("question-circle credit-edit-content__form__security__question__text__icon")
+            カード番号とは?
+          .credit-edit-content__form__security__question__info 
+            カード裏面をご覧ください
+            = image_tag "/assets/sequrity_code_info.png"
+      #card_token
+      = submit_tag "追加する", id: "token_submit"

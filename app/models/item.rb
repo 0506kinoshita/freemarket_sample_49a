@@ -5,7 +5,8 @@ class Item < ApplicationRecord
   belongs_to:category
   has_many :ordered_items
 
-  # item単体での動作をチェックしたいので一旦コメントアウトします
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :prefecture
   # belongs_to :user
   # belongs_to :brand
 end

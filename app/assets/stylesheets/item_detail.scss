@@ -30,6 +30,8 @@
   background-color: #fff;
   margin: 0 auto;
   width: 660px;
+  margin-top: 60px;
+  padding-bottom: 90px;
 
   h1 {
     font-size: 22px;
@@ -96,8 +98,8 @@
     display: block;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 75px;
+    height: 75px;
     opacity: 2.0;
     transition: .3s opacity linear;
 
@@ -111,7 +113,7 @@
 
   img {
 
-    width: 100%;
+    width: 75px;
 
   } 
 }
