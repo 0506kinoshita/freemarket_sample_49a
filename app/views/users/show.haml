@@ -1,11 +1,12 @@
+= render '/shared/header'
 .mypage
   .mypage__user-page
     .mypage__user-page__leftsidebar
-      = render 'sidebar'
+      = render '/shared/sidebar'
     .mypage__user-page__main
       .mypage__user-page__main__inner
         .mypage__user-page__main__inner__icon
-          =image_tag "gopher.png" ,size: "60x60",class: "mypage__user-page__main__inner__icon__user-icon"
+          =image_tag "face-icon.png" ,size: "60x60",class: "mypage__user-page__main__inner__icon__user-icon"
           %h2 ニックネーム
           .mypage__user-page__main__inner__icon__user-icon__number
             .mypage__user-page__main__inner__icon__user-icon__number__evaluations
@@ -52,3 +53,4 @@
             %h2 過去の取引
         .mypage__user-page__main__trade-information2__traded-box
           取引した商品はありません
+= render '/shared/footer'

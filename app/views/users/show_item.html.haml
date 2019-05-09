@@ -1,0 +1,18 @@
+.show_item
+  = render '/shared/header'
+  .show_item__main
+    .show_item__left
+      = render '/shared/sidebar'
+    .show_item__right
+      .show_item__right__tab1
+        %h2.show_item__right__tab1__title 出品した商品
+        %ul.show_item__right__tab1__contents
+          %li.show_item__right__tab1__contents__now
+            %h2 出品中
+          %li.show_item__right__tab1__contents__doing
+            %h2 取引中
+          %li.show_item__right__tab1__contents__done
+            %h2 売却済
+        = render '/shared/show_item_list'
+
+= render '/shared/footer'
