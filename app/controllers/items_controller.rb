@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-
   WOMAN    = 1
   MAN      = 2
   BABYKIDS = 3
