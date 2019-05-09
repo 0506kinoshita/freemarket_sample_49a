@@ -21,7 +21,8 @@
     %li.sidebar ポイント
   %h3.mypage-nav__title 設定
   %ul.mypage-nav__list
-    %li.sidebar プロフィール
+    %li.sidebar
+      = link_to "プロフィール", "/users/#{current_user.id}/edit"
     %li.sidebar 発送元・お届け先住所変更
     %li.sidebar 支払い方法
     %li.sidebar メール/パスワード
