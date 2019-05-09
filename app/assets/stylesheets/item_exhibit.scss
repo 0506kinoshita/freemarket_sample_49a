@@ -87,7 +87,7 @@
           }
         } 
         &__info{
-          height: 150px;
+          height: 360px;
           border-top: 1px solid #eee;
           padding:40px;
           &__word{
@@ -123,7 +123,7 @@
               }
             }
             &__state{
-              padding-top: 20px;
+              padding-top: 30px;
               span{
                 background: #ea352d;
                 margin: 0 0 0 8px;
@@ -132,6 +132,9 @@
                 color: white;
                 font-size: 12px;
                 vertical-align: top;
+              }
+              .not-require {
+                background: #888;
               }
             }
             &__select{
@@ -292,6 +295,8 @@
               color: #fff;
               background: #aaa;
               border: 1px solid #aaa;
+              text-align: center;
+              line-height: 50px;
             }
           }
         }
@@ -352,4 +357,9 @@ select {
 
 form {
   height: 100%;
+}
+
+.brand-text {
+  height: 48px;
+  width: 398px;
 }
