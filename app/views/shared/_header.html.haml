@@ -81,26 +81,25 @@
 
       .main-gnav__right
         %ul.main-gnav__right__user
-          %li{key: 'notice', url: '#'}
-            = link_to 'https://www.mercari.com/jp/mypage/notification/', {class: 'main-gnav__right__user__menu'} do
-              %i.far.fa-bell
-              %span お知らせ
-          %li{key: 'todo', url: '#'}
-            = link_to 'https://www.mercari.com/jp/mypage/todo/',{class: 'main-gnav__right__user__menu'} do
-              %i.fas.fa-check
-              %span やることリスト
-          %li
-            = link_to "#", {class: 'main-gnav__right__user__menu'} do
-              %figure
-                %div
-                  = image_tag 'face-icon.png', alt: 'face-icon', class: 'face-icon'
-              %span マイページ
-          %li
-            = link_to '新規会員登録', '/users/index', {class: 'header-signup'}
-          %li
-            = link_to 'ログアウト', '/users/destroy'
-          %li
-            - if user_signed_in?
-              = current_user.nickname
-            -else 
-              = 'ゲストユーザー'
+          - if user_signed_in?
+            %li{key: 'notice', url: '#'}
+              = link_to 'https://www.mercari.com/jp/mypage/notification/', {class: 'main-gnav__right__user__menu'} do
+                %i.far.fa-bell
+                %span お知らせ
+            %li{key: 'todo', url: '#'}
+              = link_to 'https://www.mercari.com/jp/mypage/todo/',{class: 'main-gnav__right__user__menu'} do
+                %i.fas.fa-check
+                %span やることリスト
+            %li
+              = link_to "#", {class: 'main-gnav__right__user__menu'} do
+                %figure
+                  %div
+                    = image_tag 'face-icon.png', alt: 'face-icon', class: 'face-icon'
+                %span マイページ
+            %li
+              = link_to 'ログアウト', users_destroy_path
+          - else
+            %li
+              = link_to 'ログイン', new_user_session_path, {class: 'header-login'}
+            %li
+              = link_to '新規会員登録', users_index_path, {class: 'header-signup'}
