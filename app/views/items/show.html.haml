@@ -59,7 +59,10 @@
           %tr
             %th商品のサイズ
             %td
-              サイズ保留
+              - if @item.size.present?
+                #{@item.size}
+              -else
+                サイズなし
           %tr
             %th商品の状態
             %td
