@@ -17,11 +17,11 @@ class ItemsController < ApplicationController
 
   def index
     @item = Item.order("created_at DESC").limit(4)
-    @items_for_woman = Category.get_category_items(WOMAN).first(4)
-    @items_for_man = Category.get_category_items(MAN).first(4)
-    @items_for_babykids = Category.get_category_items(BABYKIDS).first(4)
-    @items_for_hobys = Category.get_category_items(HOBYS).first(4)
-    @items_for_cosme = Category.get_category_items(COSME).first(4)
+    @items_for_woman = Category.skim(WOMAN)
+    @items_for_man = Category.skim(MAN)
+    @items_for_babykids = Category.skim(BABYKIDS)
+    @items_for_hobys = Category.skim(HOBYS)
+    @items_for_cosme = Category.skim(COSME)
   end
 
   def new

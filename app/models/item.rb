@@ -4,7 +4,7 @@ class Item < ApplicationRecord
   has_many :comments, dependent: :destroy
   belongs_to :category
   has_many :ordered_items
-
+  
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
   # belongs_to :user

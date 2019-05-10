@@ -12,4 +12,7 @@ class Category < ApplicationRecord
     ].flatten.compact
     categories.map { |category| category.items }.flatten.sort_by{|i| i.created_at}.reverse
   end
+
+  scope :skim, -> (type) { get_category_items(type).first(4)}
+
 end
