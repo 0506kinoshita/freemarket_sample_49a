@@ -31,7 +31,7 @@
                 %label カテゴリー
                 %span 必須
               .new__exhibition__main__contents__info__inputbox2__select
-                = f.select "category", ["レディース","メンズ","ベビー・キッズ","インテリア・住まい・小物","本・音楽・ゲーム","おもちゃ・ホビー・グッズ","コスメ・香水・美容","家電・スマホ・カメラ","スポーツ・レジャー","ハンドメイド","チケット","自動車・オートバイ","その他"], class: ".new__exhibition__main__contents__info__inputbox2__select__box1", include_blank: "---"
+                = f.collection_select :category_id, Category.where(parent_id:nil), :id, :name,{include_blank: "---"},{class: "new__exhibition__main__contents__info__inputbox2__select__box1",required:true}
                 = fa_icon("chevron-down credit-edit-content__form__expire__month-box__image")
                 
               .new__exhibition__main__contents__info__inputbox2__state

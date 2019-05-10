@@ -11,23 +11,24 @@
   %h2 ピックアップカテゴリー
   %section.main-box__container.clearfix
     %h3.main-box__container__text
-      = link_to'レディース新着アイテム', '#' 
-    = render 'shared/products'
+      = link_to'レディース新着アイテム', 'new_item_path'
+    .main-box__container__contents
+      = render partial:  'items/lady'
 
   %section.main-box__container.clearfix
     %h3.main-box__container__text
-      = link_to'メンズ新着アイテム', '#' 
-    = render partial: 'shared/products'
+      = link_to'メンズ新着アイテム', 'new_item_path'
+    = render partial: 'items/mens'
 
   %section.main-box__container.clearfix
     %h3.main-box__container__text
-      = link_to'ベビーキッズ新着アイテム', '#' 
-    = render partial: 'shared/products'
+      = link_to'ベビーキッズ新着アイテム', 'new_item_path' 
+    = render partial: 'items/babykids'
 
   %section.main-box__container.clearfix
     %h3.main-box__container__text
       = link_to'コスメ・香水・美容新着アイテム', '#' 
-    = render partial: 'shared/products'
+    = render partial: 'items/cosme'
 
 %section.main-contents
   %h2 ピックアップブランド
