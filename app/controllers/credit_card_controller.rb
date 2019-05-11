@@ -2,6 +2,7 @@ class CreditCardController < ApplicationController
 
   require "payjp"
 
+
   def new
     card = CreditCard
     redirect_to action: "show" if card.exists?
