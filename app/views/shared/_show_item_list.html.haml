@@ -1,5 +1,10 @@
-.show_item__right__tab1__inner
-  .show_item__right__tab1__inner__image
-    %p8 商品画像
-  .show_item__right__tab1__inner__product
-    %p8 商品名
+- @items.each do |item|
+  .show_item__right__tab1__inner
+    .show_item__right__tab1__inner__image
+      %p8= image_tag "#{item.image}", width: "60", height: "60"
+
+    .show_item__right__tab1__inner__product
+      %p8= item.name
+    
+
+    

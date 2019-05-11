@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show_item
+    @items = Item.where(user_id: current_user.id)
   end
 
   def show_profile
@@ -29,3 +30,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:nickname, :profile)
   end
 end
+
