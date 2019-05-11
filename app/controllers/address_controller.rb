@@ -5,7 +5,7 @@ class AddressController < ApplicationController
   end
 
   def create
-    @addrerss = Address.create(address_params)
+    Address.create(address_params)
   end
 
   private

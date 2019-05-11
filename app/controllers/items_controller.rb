@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: :users_index_path
   WOMAN    = 1
   MAN      = 2
   BABYKIDS = 3
