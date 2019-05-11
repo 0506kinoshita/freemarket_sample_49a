@@ -64,9 +64,10 @@ ActiveRecord::Schema.define(version: 2019_05_10_053510) do
     t.string "delivery_fee", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "category"
     t.string "size"
+    t.bigint "category_id"
     t.integer "prefecture_id"
+    t.index ["category_id"], name: "index_items_on_category_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -91,4 +92,5 @@ ActiveRecord::Schema.define(version: 2019_05_10_053510) do
   end
 
   add_foreign_key "addresses", "users"
+  add_foreign_key "items", "categories"
 end

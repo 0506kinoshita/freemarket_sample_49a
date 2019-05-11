@@ -1,0 +1,17 @@
+.main-box-content.clearfix
+  - @items_for_woman.each do |item|
+    %section.item-content
+      = link_to item_path(item), {class: 'item-content__photo'} do
+        %figure.item-content__photo
+          = image_tag item.image.url
+        .item-content-body
+          %h3.item-content-body__name #{item.name}
+          .item-content-body__num
+            .item-content-body__num__price ¥ #{item.price}
+            .item-content-body__num__icon
+              %i.far.fa-heart
+              %span 2
+          %p.item-content-body__num__tax （税込）
+
+.main-all
+  = link_to'すべての商品をみる', 'new_item_path'
