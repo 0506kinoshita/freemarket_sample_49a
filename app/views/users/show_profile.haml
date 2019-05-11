@@ -1,0 +1,15 @@
+= render "shared/header"
+
+.profile
+  .profile__gray
+    .profile__gray__left-sidebar
+      = render 'shared/sidebar'
+    .profile__gray__contents
+      %h2.profile__gray__contents__title プロフィール
+      .profile__gray__contents__show-background
+        =image_tag 'face-icon.png',size: "60x60",class: "profile__gray__contents__background__show-image"
+        .profile__gray__contents__background__show #{current_user.nickname}
+      .profile__gray__contents__introduction
+        .profile__gray__contents__introduction__textarea #{current_user.profile}
+
+= render "shared/footer"

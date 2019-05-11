@@ -6,11 +6,12 @@
       = render 'shared/sidebar'
     .profile__gray__contents
       %h2.profile__gray__contents__title プロフィール
-      .profile__gray__contents__background
-        =image_tag 'face-icon.png',size: "60x60",class: "profile__gray__contents__background__image"
-        %input{ type: "text", name: "", class: :"profile__gray__contents__background__input" }
-      .profile__gray__contents__introduction
-        %textarea{ type: "text", placeholder: "ユーザーの自己紹介文", name: "", class: :"profile__gray__contents__introduction__textarea"} 
-        %button.profile__gray__contents__introduction__btn 変更する
+      = form_with model: @user, local: true do |f|
+        .profile__gray__contents__background
+          = image_tag 'face-icon.png',size: "60x60",class: "profile__gray__contents__background__image"
+          = f.text_field :nickname, class: "profile__gray__contents__background__input", value: "#{current_user.nickname}"
+        .profile__gray__contents__introduction
+          = f.text_area :profile, class: "profile__gray__contents__introduction__textarea", value: "#{current_user.profile}", priceholder: "ユーザーの自己紹介"
+          = f.submit class: "profile__gray__contents__introduction__btn", value: "変更する"
 
 = render "shared/footer"
