@@ -4,7 +4,4 @@
       %p8= image_tag "#{item.image}", width: "60", height: "60"
 
     .show_item__right__tab1__inner__product
-      %p8= item.name
-    
-
-    
+      = link_to "#{item.name}", edit_item_path(item.id)
