@@ -6,7 +6,7 @@
     %li.sidebar いいね！一覧
     %li.sidebar 出品する
     %li.sidebar
-      =link_to '出品した商品 - 出品中 ', '/users/show_item'
+      =link_to '出品した商品 - 出品中 ', '/users/#{current_user.id}/show_item'
     %li.sidebar 出品した商品 - 取引中
     %li.sidebar 出品した商品 - 売却済み
     %li.sidebar 購入した商品 - 取引中

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     sessions: 'devise/sessions'
   }
   get 'users/show_item'=>'users#show_item'
+  get 'users/:user_id/show_item'=>'users#show_item'
 
    devise_scope :user do
     get 'users/index', to: 'devise/registrations#index'

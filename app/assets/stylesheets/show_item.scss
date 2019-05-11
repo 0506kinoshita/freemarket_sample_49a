@@ -8,10 +8,10 @@
     &__left{
     }
     .show_item__right{
-      margin-left:40px;
-      width:850px;
+      margin-left:60px;
+      width:800px;
       background-color: white;
-      height:400px;
+      height:500px;
       overflow: scroll;
       &__tab1{
         // position: relative;
@@ -48,18 +48,15 @@
         }
       }
       .show_item__right__tab1__inner{
-        display: flex;
-        padding:5px;
-        margin:10px 5px 0 5px;
+        padding:16px ;
+        margin:5px 5px 0 5px;
         border: #eee solid 3px;
         background-color: white;
         &__image{
           float: left;
-          width: 50%;
         }
         &__product{
-          float: right;
-          width:50%;
+          margin: 0 40px 0 100px;
         }
       }
     }
