@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
   COSME.freeze
 
   def index
-    @item = Item.order("created_at DESC").limit(4)
+    @item = Item.order("created_at DESC").limit(4).includes(:user).includes(:category)
     @items_for_woman = Category.skim(WOMAN)
     @items_for_man = Category.skim(MAN)
     @items_for_babykids = Category.skim(BABYKIDS)
@@ -42,9 +42,21 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      redirect_to action: :edit
+    end
+  end
+
   private
   def item_params
-    params.require(:item).permit(:image, :name, :detail, :category, :size, :condition, :delivery_fee, :prefecture_id, :shipment_day, :price).merge(user_id: current_user.id)
-
+    params.require(:item).permit(:image, :name, :detail, :category_id, :size, :condition, :delivery_fee, :prefecture_id, :shipment_day, :price).merge(user_id: current_user.id)
   end
 end
