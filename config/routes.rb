@@ -3,8 +3,8 @@ Rails.application.routes.draw do
     registrations: 'devise/registrations',
     sessions: 'devise/sessions'
   }
-  get 'users/show_item'=>'users#show_item'
-  get 'users/show_profile'=>'users#show_profile'
+  get 'users/show_item' => 'users#show_item'
+  get 'users/show_profile' => 'users#show_profile'
 
    devise_scope :user do
     get 'users/index', to: 'devise/registrations#index'
