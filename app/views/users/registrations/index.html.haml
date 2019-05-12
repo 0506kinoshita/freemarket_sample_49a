@@ -17,7 +17,8 @@
                 = fa_icon 'envelope', class: 'icon' 
               .sign-up-center__content__btn--facebook
                 = image_tag 'flogo-HexRBG-Wht-58.png', class: 'icon',size: "20x20"
-                Facebookで登録 
+                = link_to "Facebookで登録", user_facebook_omniauth_authorize_path
+
               .sign-up-center__content__btn--google
                 = image_tag 'google-logo-web.png', class: 'icon',size: "20x20"
                 Googleで登録

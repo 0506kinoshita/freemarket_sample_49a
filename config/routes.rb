@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'devise/registrations',
-    sessions: 'devise/sessions'
+    sessions: 'devise/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks'
   }
 
   get 'users/show_item'=>'users#show_item'
