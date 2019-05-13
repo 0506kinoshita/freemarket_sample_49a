@@ -8,8 +8,25 @@ class User < ApplicationRecord
   has_many :like_high, dependent: :destroy
   has_many :like_middle, dependent: :destroy
   has_many :like_low, dependent: :destroy
+  has_many :sns_credentials
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-         
+         :recoverable, :rememberable, :validatable, :omniauthable,
+         omniauth_providers: [:facebook]
+
+  def self.create_oauth(oauth)
+    user = User.new(
+      nickname: oauth.info.name,
+      email: oauth.info.email,
+      password: Devise.friendly_token
+    )
+    # facebook認証時はバリデーションを外す
+    user.save(:validate => false)
+    SnsCredential.create(
+      uid: oauth.uid,
+      provider: oauth.provider,
+      user_id: user.id
+    )
+    return user
+  end
 end
