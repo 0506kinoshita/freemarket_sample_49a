@@ -96,8 +96,6 @@
                   %div
                     = image_tag 'face-icon.png', alt: 'face-icon', class: 'face-icon'
                 %span マイページ
-            %li
-              = link_to 'ログアウト', users_destroy_path
           - else
             %li
               = link_to 'ログイン', new_user_session_path, {class: 'header-login'}

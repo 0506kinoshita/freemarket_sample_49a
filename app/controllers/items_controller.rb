@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @item = Item.order("created_at DESC").limit(4)
+    @item = Item.order("created_at DESC").limit(4).includes(:user).includes(:category)
     @items_for_woman = Category.skim(WOMAN)
     @items_for_man = Category.skim(MAN)
     @items_for_babykids = Category.skim(BABYKIDS)
@@ -32,6 +32,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
   def create
@@ -47,6 +48,19 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      redirect_to action: :edit
+    end
+  end
 
 
   private

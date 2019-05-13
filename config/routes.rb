@@ -13,9 +13,11 @@ Rails.application.routes.draw do
    devise_scope :user do
     get 'users/index', to: 'devise/registrations#index'
     get 'users/destroy', to: 'devise/sessions#destroy'
+    get 'users/logout', to: 'devise/sessions#logout'
   end
   root 'items#index'
   resources :items
+  resources :address, only: [:index, :create, :new]
   resources :users, only: [:show, :edit, :update]
   resources :credit_card, only: [:new, :show] do
     collection do
