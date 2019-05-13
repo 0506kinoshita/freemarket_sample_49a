@@ -57,6 +57,18 @@
         }
         &__product{
           margin: 0 40px 0 100px;
+
+
+
+            p9{
+              font-weight: 800;
+              text-align: center;
+              padding: 4px;
+              border:solid 1px #333;
+              background-color:#eee; 
+            }
+          
+
         }
       }
     }
@@ -65,4 +77,28 @@
 
 p8{
   color:black;
+}
+.show_item__right__tab1__inner__product__btn{
+  border:1px solid lime;
+  float:right;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color:#eee;
+  font-weight: 900;
+  margin:0 10px;
+}
+
+.show_item__right__tab1__inner__product__btn::before{
+  position: absolute;
+  content:"";
+  width: 100%;
+  height:180%;
+  border-radius: 0 0 50% 50%;
+  background: aqua;
+  transition: 0.8s;
+  opacity:0.2;
+}
+.show_item__right__tab1__inner__product__btn:hover::before{
+  height:0%;
 }
