@@ -15,6 +15,12 @@ class ItemsController < ApplicationController
   HOBYS.freeze
   COSME.freeze
 
+  def destroy
+    item = Item.find(params[:id])
+    item.delete if user_signed_in? && current_user.id == item.user_id
+    redirect_to("/")
+  end
+
   def index
     @item = Item.order("created_at DESC").limit(4)
     @items_for_woman = Category.skim(WOMAN)
@@ -41,9 +47,11 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+
+
   private
   def item_params
-    params.require(:item).permit(:image, :name, :detail, :category, :size, :condition, :delivery_fee, :prefecture_id, :shipment_day, :price).merge(user_id: current_user.id)
+    params.require(:item).permit(:image, :name, :detail, :category_id, :size, :condition, :delivery_fee, :prefecture_id, :shipment_day, :price).merge(user_id: current_user.id)
 
   end
 end
