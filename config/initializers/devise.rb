@@ -264,7 +264,7 @@ Devise.setup do |config|
   when 'development'
     config.omniauth :facebook, Rails.application.secrets.facebook_id, Rails.application.secrets.facebook_secret_key
   when 'production'
-    config.omniauth :facebook, Rails.application.secrets.facebook_id_production, Rails.application.secrets.facebook_secret_key_production
+    config.omniauth :facebook, Rails.application.secrets.facebook_id, Rails.application.secrets.facebook_secret_key
   end
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
