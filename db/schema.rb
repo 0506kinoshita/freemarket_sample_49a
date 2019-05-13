@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(version: 2019_05_12_114308) do
     t.datetime "updated_at", null: false
     t.string "size"
     t.integer "prefecture_id"
-
     t.bigint "category_id"
     t.bigint "user_id"
     t.index ["category_id"], name: "index_items_on_category_id"
@@ -83,6 +82,8 @@ ActiveRecord::Schema.define(version: 2019_05_12_114308) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
     t.string "nickname", null: false
     t.string "last_name"
     t.string "first_name"
@@ -96,11 +97,8 @@ ActiveRecord::Schema.define(version: 2019_05_12_114308) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "password", limit: 11
     t.text "profile"
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
