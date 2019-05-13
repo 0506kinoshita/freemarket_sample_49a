@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2019_05_10_053940) do
     t.datetime "updated_at", null: false
     t.string "size"
     t.integer "prefecture_id"
+
     t.bigint "category_id"
     t.bigint "user_id"
     t.index ["category_id"], name: "index_items_on_category_id"
@@ -86,6 +87,7 @@ ActiveRecord::Schema.define(version: 2019_05_10_053940) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "password", limit: 11
