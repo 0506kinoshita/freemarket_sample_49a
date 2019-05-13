@@ -12,7 +12,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @user = User.create_oauth(request.env["omniauth.auth"])
       if @user.persisted?
         sign_in_and_redirect @user, event: :authentication
-        set_flash_message(:notice, :success, kind: "Facebook") if is_navigational_format?
       else
         # 新規登録用にセッションに情報を格納
         session["device.#{provider}_data"] = oauth
@@ -20,10 +19,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
     else
       # Userテーブルにアドレスが登録済みの場合
-      snscredential = SnsCredential.find_sns(oauth)
-      @user = SnsCredential.check_sns(snscredential, oauth)
+      snscredential = SnsCredential.new
+      snscredential_user = snscredential.find_sns(oauth)
+      @user = snscredential.check_sns(snscredential_user, oauth)
       bypass_sign_in(@user)
-      redirect_to root_path notice: 'ログインしました'
+      redirect_to root_path
     end
 
     def failure

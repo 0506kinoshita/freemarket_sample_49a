@@ -14,10 +14,10 @@
         .sign-up-center__content__btn
           .login-center__content__btn--facebook
             = image_tag 'flogo-HexRBG-Wht-58.png', class: 'icon',size: "20x20"
-            Facebookで登録 
+            = link_to "Facebookでログイン", user_facebook_omniauth_authorize_path
           .login-center__content__btn--google
             = image_tag 'google-logo-web.png', class: 'icon',size: "20x20"
-            Googleで登録
+            Googleでログイン
         .form-member
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| 
           = form.email_field :email, placeholder: 'メールアドレス', value: '', class: :'form-member__input-text', autocomplete: 'email'
