@@ -16,62 +16,18 @@
             = link_to 'https://www.mercari.com/jp/category/', {class: 'main-gnav__left__category__root'} do
               %i.fas.fa-list-ul
               %span カテゴリーから探す
-            %ul.second-content
-              %li 
-                = link_to 'カテゴリ2-1',''
-                %ul.third-content
-                  %li 
-                    = link_to 'カテゴリ2-1-1',''
-                    %ul.fourth-content
-                      %li
-                        = link_to 'カテゴリ2-1-1',''
-                        %li
-                          = link_to 'カテゴリ2-1-1',''
+              %ul.second-content
+                - @categorys.each do |category1|
+                  %li
+                    = link_to "#{category1.name}",''
+                    %ul.third-content
+                      - Category.where(parent_id: category1.id).each do |category2|
                         %li 
-                          = link_to 'カテゴリ2-1-1',''
-                        %li
-                          = link_to 'カテゴリ2-1-2',''
-                        %li
-                          = link_to 'カテゴリ2-1-3',''
-                  %li
-                    = link_to 'カテゴリ2-1-2',''
-                  %li
-                    = link_to 'カテゴリ2-1-3',''
-              %li
-                = link_to 'カテゴリ2-2',''
-                %ul.third-content
-                  %li
-                    = link_to 'カテゴリ2-2-1',''
-                  %li
-                    = link_to 'カテゴリ2-2-2',''
-                  %li
-                    = link_to 'カテゴリ2-2-3',''
-              %li
-                = link_to 'カテゴリ2-3',''
-                %ul.third-content
-                  %li
-                    = link_to 'カテゴリ2-3-1',''
-                  %li
-                    = link_to 'カテゴリ2-3-2',''
-                  %li
-                    = link_to 'カテゴリ2-3-3',''
-            %li
-            //テーブルおよびレコード未作成のため仮置きで作成。下記のように抽出できると考えている
-            -# %ul.category
-            -#   %li.category__list
-            -#     = link_to "カテゴリーから探す",(uri記述)
-            -#     %ul.category__first
-            -#       - @categorys.each do |任意の名前1|
-            -#         %li.category__list__first
-            -#           = link_to "#{任意の名前1.name}",category_path(引数に　任意の名前1をかく)
-            -#           %ul.category__second
-            -#             - Category.where(parent_id: 任意の名前1.id).each do |任意の名前2|
-            -#               %li.category__list__second
-            -#                 = link_to "#{任意の名前2.name}",category_path(引数　任意の名前2)
-            -#                 %ul.category__third
-            -#                   - Category.where(parent_id: 任意の名前2.id).each do |任意の名前3|
-            -#                     %li.category__list__third
-            -#                       = link_to "#{任意の名前3.name}",category_path(任意の名前3)
+                          = link_to "#{category2.name}",''
+                          %ul.fourth-content
+                            - Category.where(parent_id: category2.id).each do |category3|
+                              %li
+                                = link_to "#{category3.name}",''
         %li
           %h2
             = link_to 'https://www.mercari.com/jp/brand/', {class: 'main-gnav__left__category__root'} do
@@ -96,6 +52,8 @@
                   %div
                     = image_tag 'face-icon.png', alt: 'face-icon', class: 'face-icon'
                 %span マイページ
+            %li
+              = link_to 'ログアウト', users_destroy_path, notice: 'ログアウトしました'
           - else
             %li
               = link_to 'ログイン', new_user_session_path, {class: 'header-login'}
