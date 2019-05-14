@@ -1,5 +1,9 @@
 .show_item
   = render '/shared/header'
+  .bread
+    .bread__inner
+      - breadcrumb :show_item
+      = breadcrumbs separator: " &rsaquo; "
   .show_item__main
     .show_item__left
       = render '/shared/sidebar'

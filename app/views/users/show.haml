@@ -1,4 +1,10 @@
-= render "shared/header"
+.mypage-header
+  = render "shared/header"
+  -# パンくず
+.bread
+  .bread__inner
+    - breadcrumb :mypage
+    = breadcrumbs separator: " &rsaquo; "
 
 .mypage
   .mypage__user-page
