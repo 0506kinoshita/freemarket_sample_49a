@@ -2,6 +2,10 @@
   =render 'shared/header'
 
 .log-out-wrapper.clearfix
+  .bread
+    .bread__inner
+      - breadcrumb :logout
+      = breadcrumbs separator: " &rsaquo; "
   .log-out-container.clearfix
     .log-out-container__right
       .log-out-container__right__form

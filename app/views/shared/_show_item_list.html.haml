@@ -10,7 +10,6 @@
         = link_to '削除',"/items/#{item.id}", method: :delete
 
 
-    
-
-      = link_to "#{item.name}", edit_item_path(item.id)
+      .show_item__right__tab1__inner__product__btn
+        = link_to "編集", edit_item_path(item.id)
 
