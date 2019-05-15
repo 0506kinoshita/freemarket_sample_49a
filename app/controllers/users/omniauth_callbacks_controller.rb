@@ -3,6 +3,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     callback(:facebook)
   end
 
+  def google_oauth2
+    callback(:google_oauth2)
+  end
+
   def callback(provider)
     # プロバイダから認証された情報がrequest.env["omniauth.auth"]として返ってくる
     oauth = request.env["omniauth.auth"]

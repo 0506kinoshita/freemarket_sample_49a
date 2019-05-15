@@ -21,7 +21,7 @@
 
               .sign-up-center__content__btn--google
                 = image_tag 'google-logo-web.png', class: 'icon',size: "20x20"
-                Googleで登録
+                = link_to "googleで登録", user_google_oauth2_omniauth_authorize_path
 
     .devise-footer
       %nav

@@ -262,6 +262,7 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   if Rails.env.development?
     config.omniauth :facebook, Rails.application.secrets.facebook_id, Rails.application.secrets.facebook_secret_key
+    config.omniauth :google_oauth2, Rails.application.secrets.google_id, Rails.application.secrets.google_secret_key
   elsif Rails.env.production?
     config.omniauth :facebook, Rails.application.secrets.facebook_id, Rails.application.secrets.facebook_secret_key
   end

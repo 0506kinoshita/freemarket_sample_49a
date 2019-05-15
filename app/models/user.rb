@@ -11,8 +11,8 @@ class User < ApplicationRecord
   has_many :sns_credentials
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable,
-         omniauth_providers: [:facebook]
+         :recoverable, :rememberable, :validatable,
+         :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
   def self.create_oauth(oauth)
     user = User.new(
@@ -20,7 +20,7 @@ class User < ApplicationRecord
       email: oauth.info.email,
       password: Devise.friendly_token
     )
-    # facebook認証時はバリデーションを外す
+    # oauth認証時はバリデーションを外す
     user.save(:validate => false)
     SnsCredential.create(
       uid: oauth.uid,
