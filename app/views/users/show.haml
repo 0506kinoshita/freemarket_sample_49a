@@ -1,10 +1,9 @@
 .mypage-header
   = render "shared/header"
-  -# パンくず
 .bread
   .bread__inner
     - breadcrumb :mypage
-    = breadcrumbs separator: " &rsaquo; "
+    = breadcrumbs separator: "#{content_tag(:i, '', :class=>'fas fa-chevron-right')}"
 
 .mypage
   .mypage__user-page

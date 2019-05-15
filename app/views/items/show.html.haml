@@ -1,4 +1,8 @@
 = render 'shared/header'
+.bread
+  .bread__inner
+    - breadcrumb :item
+    = breadcrumbs separator: "#{content_tag(:i, '', :class=>'fas fa-chevron-right')}"
 .product-wrapper
   %section.main-product-box
     %h1.main-product-box__name #{@item.name}

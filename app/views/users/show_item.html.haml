@@ -3,7 +3,7 @@
   .bread
     .bread__inner
       - breadcrumb :show_item
-      = breadcrumbs separator: " &rsaquo; "
+      = breadcrumbs separator: "#{content_tag(:i, '', :class=>'fas fa-chevron-right')}"
   .show_item__main
     .show_item__left
       = render '/shared/sidebar'
