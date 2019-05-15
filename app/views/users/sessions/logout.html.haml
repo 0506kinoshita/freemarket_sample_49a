@@ -5,7 +5,7 @@
   .bread
     .bread__inner
       - breadcrumb :logout
-      = breadcrumbs separator: " &rsaquo; "
+      = breadcrumbs separator: "#{content_tag(:i, '', :class=>'fas fa-chevron-right')}"
   .log-out-container.clearfix
     .log-out-container__right
       .log-out-container__right__form

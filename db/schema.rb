@@ -66,10 +66,9 @@ ActiveRecord::Schema.define(version: 2019_05_12_114308) do
     t.datetime "updated_at", null: false
     t.string "size"
     t.integer "prefecture_id"
+    t.integer "user_id"
     t.bigint "category_id"
-    t.bigint "user_id"
     t.index ["category_id"], name: "index_items_on_category_id"
-    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -104,6 +103,5 @@ ActiveRecord::Schema.define(version: 2019_05_12_114308) do
 
   add_foreign_key "addresses", "users"
   add_foreign_key "items", "categories"
-  add_foreign_key "items", "users"
   add_foreign_key "sns_credentials", "users"
 end

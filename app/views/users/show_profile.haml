@@ -2,7 +2,7 @@
 .bread
   .bread__inner
     - breadcrumb :userpage
-    = breadcrumbs separator: " &rsaquo; "
+    = breadcrumbs separator: "#{content_tag(:i, '', :class=>'fas fa-chevron-right')}"
 
 .profile
   .profile__gray

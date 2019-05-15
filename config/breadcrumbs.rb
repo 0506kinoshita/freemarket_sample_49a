@@ -7,6 +7,13 @@ crumb :mypage do
   parent :root
 end
 
+
+crumb :item do 
+  @item = Item.find(params[:id])
+  link "#{@item.name}", item_path
+  parent :root
+end
+
 crumb :show_item do
   link "出品した商品-出品中", user_path(current_user.id)
   parent :mypage
@@ -27,3 +34,5 @@ crumb :userpage do
   link current_user.nickname, user_path(current_user.id)
   parent :root
 end
+
+
