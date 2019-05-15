@@ -137,7 +137,14 @@ figure {
 .header-signup{
   border: 1px solid #0099e8;
   background: #fff;
-  padding: 5px 10px;
+  padding: 5px 10px; 
   border-radius: 5px;
   color: #0099e8;
+}
+
+.header-login{
+  border-radius: 5px;
+  border: 1px solid #ea352d;
+  color: white;
+  padding: 5px 10px;
 }

@@ -1,4 +1,4 @@
-= form_with(model: @item, local: true,method: :post) do |f|
+= form_with(model: @item, local: true) do |f|
   .new
     .new__exhibition
       .new__exhibition__header
@@ -6,7 +6,7 @@
           = link_to root_path, target: "_self" do
             = image_tag "mercari_logo_horizontal.png", size: "250x70"
       .new__exhibition__main
-        %h2 商品の情報を入力
+        %h2 商品の情報を編集
         .new__exhibition__main__contents
           .new__exhibition__main__contents__image
             %label 出品画像
@@ -19,11 +19,11 @@
             .new__exhibition__main__contents__name__input
               %label 商品名
               %span 必須
-              = f.text_field "name", class: "new__exhibition__main__contents__name__input__box", placeholder: "商品名（必須40文字まで）"
+              = f.text_field "name", class: "new__exhibition__main__contents__name__input__box", placeholder: "商品名（必須40文字まで）", value: "#{@item.name}"
             .new__exhibition__main__contents__name__text
               %label 商品の説明
               %span 必須
-              = f.text_area "detail", class:"new__exhibition__main__contents__name__text__box2", rows:"5", placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+              = f.text_area "detail", class:"new__exhibition__main__contents__name__text__box2", rows:"5", placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", value: "#{@item.detail}"
           .new__exhibition__main__contents__info
             %h3.new__exhibition__main__contents__info__word  商品の詳細
             .new__exhibition__main__contents__info__inputbox2
@@ -97,7 +97,7 @@
               %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
               %p また、出品を持ちまして加盟店規約に同意したことになります。
             .new__exhibition__main__contents__under-contents__btns
-              = f.submit class: "new__exhibition__main__contents__under-contents__btns__btn1", value: "出品する"
+              = f.submit class: "new__exhibition__main__contents__under-contents__btns__btn1", value: "編集する"
               = link_to "もどる", root_path, class: "new__exhibition__main__contents__under-contents__btns__btn2"
     .new__footer
       .new__footer__nav

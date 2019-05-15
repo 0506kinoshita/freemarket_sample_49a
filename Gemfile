@@ -78,7 +78,10 @@ gem 'fog-aws'
 gem "font-awesome-rails"
 gem 'haml-rails'
 gem 'mini_magick'
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'pry-rails'
 gem 'payjp'
+gem 'gretel'

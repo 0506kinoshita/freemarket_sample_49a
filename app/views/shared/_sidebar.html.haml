@@ -5,7 +5,8 @@
     %li.sidebar やることリスト
     %li.sidebar いいね！一覧
     %li.sidebar 出品する
-    %li.sidebar 出品した商品 - 出品中
+    %li.sidebar
+      =link_to '出品した商品 - 出品中 ', "/users/#{current_user.id}/show_item"
     %li.sidebar 出品した商品 - 取引中
     %li.sidebar 出品した商品 - 売却済み
     %li.sidebar 購入した商品 - 取引中
@@ -20,10 +21,12 @@
     %li.sidebar ポイント
   %h3.mypage-nav__title 設定
   %ul.mypage-nav__list
-    %li.sidebar プロフィール
+    %li.sidebar
+      = link_to "プロフィール", "/users/#{current_user.id}/edit"
     %li.sidebar 発送元・お届け先住所変更
     %li.sidebar 支払い方法
     %li.sidebar メール/パスワード
     %li.sidebar 本人情報
     %li.sidebar 電話番号の確認
-    %li.sidebar ログアウト
+    %li.sidebar
+      = link_to 'ログアウト', users_logout_path

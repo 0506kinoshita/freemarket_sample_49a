@@ -1,11 +1,38 @@
 class ItemsController < ApplicationController
+  WOMAN    = 1
+  MAN      = 2
+  BABYKIDS = 3
+  INTERIOR = 4
+  BOOKS    = 5
+  HOBYS    = 6
+  COSME    = 7
+
+  WOMAN.freeze
+  MAN.freeze
+  BABYKIDS.freeze
+  INTERIOR.freeze
+  BOOKS.freeze
+  HOBYS.freeze
+  COSME.freeze
+
+  def destroy
+    item = Item.find(params[:id])
+    item.delete if user_signed_in? && current_user.id == item.user_id
+    redirect_to("/")
+  end
+
   def index
-    @item = Item.new
-    @items = Item.order(created_at: :desc).limit(4)
+    @item = Item.order("created_at DESC").limit(4).includes(:user).includes(:category)
+    @items_for_woman = Category.skim(WOMAN)
+    @items_for_man = Category.skim(MAN)
+    @items_for_babykids = Category.skim(BABYKIDS)
+    @items_for_hobys = Category.skim(HOBYS)
+    @items_for_cosme = Category.skim(COSME)
   end
 
   def new
     @item = Item.new
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
   def create
@@ -21,9 +48,24 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  private
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      redirect_to action: :edit
+    end
+  end
+
+
+  private
   def item_params
-    params.require(:item).permit(:image, :name, :detail, :category, :size, :condition, :delivery_fee, :prefecture_id, :shipment_day, :price)
+    params.require(:item).permit(:image, :name, :detail, :category_id, :size, :condition, :delivery_fee, :prefecture_id, :shipment_day, :price).merge(user_id: current_user.id)
+
   end
 end

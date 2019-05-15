@@ -1,0 +1,27 @@
+.log-out__header.clearfix
+  =render 'shared/header'
+
+.log-out-wrapper.clearfix
+  .bread
+    .bread__inner
+      - breadcrumb :logout
+      = breadcrumbs separator: " &rsaquo; "
+  .log-out-container.clearfix
+    .log-out-container__right
+      .log-out-container__right__form
+        .log-out-container__right__form__box
+          %button.log-out-container__right__form__box__btn{type:'submit'}
+            = link_to 'ログアウト', users_destroy_path
+
+    .log-out-container__left
+      =render 'shared/sidebar'
+
+.log-out-sells-entrance
+  = link_to'' do
+    .log-out-sells-entrance__area
+      .log-out-sells-entrance__area__text 出品
+      .log-out-sells-entrance__area__image
+        = fa_icon("camera log-out-sells-entrance__area__image__btn")
+
+.log-out__bottom
+  =render 'shared/footer'

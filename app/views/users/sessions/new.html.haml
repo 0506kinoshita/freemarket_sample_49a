@@ -1,0 +1,47 @@
+.devise-wrapper
+  .devise-container
+    .devise-container__header
+      =link_to 'https://www.mercari.com/jp/' do
+        = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281', class:'devise-container__header__logo'
+    .sign-in-main
+      .sign-in-main__upper
+        .sign-in-main__upper__sign-up
+          %pアカウントをお持ちでない方はこちら
+          =link_to '新規会員登録', users_index_path ,id:'recommend-sign-up'
+         
+    .login-center
+      .login-center__content
+        .sign-up-center__content__btn
+          .login-center__content__btn--facebook
+            = image_tag 'flogo-HexRBG-Wht-58.png', class: 'icon',size: "20x20"
+            = link_to "Facebookでログイン", user_facebook_omniauth_authorize_path
+          .login-center__content__btn--google
+            = image_tag 'google-logo-web.png', class: 'icon',size: "20x20"
+            Googleでログイン
+        .form-member
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| 
+          = form.email_field :email, placeholder: 'メールアドレス', value: '', class: :'form-member__input-text', autocomplete: 'email'
+          .form-member
+          = form.password_field :password, placeholder: 'パスワード', class: :'form-member__input-text', autocomplete: 'current-password'
+          .form-member__input-text--captcha{data:{sitekey:''}}
+            = image_tag '認証.png',size: "328x72", class:'robo'
+          = form.submit :submit, value: 'ログイン', class: :'form-member__input-text--red'
+          - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+            = link_to 'パスワードをお忘れの方', new_password_path(resource_name)
+
+
+    .devise-footer
+      %nav
+        %ul.devise-footer__box
+          %li
+            =link_to 'プライバシーポリシー', 'https://www.mercari.com/jp/privacy/'
+          %li
+            =link_to 'メルカリ利用規約', 'https://www.mercari.com/jp/tos/'
+          %li
+            =link_to'特定商取引に関する表記','https://www.mercari.com/jp/tokutei/'
+      .devise-footer__logo
+        =link_to'https://www.mercari.com/jp/' do
+          = image_tag'//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?570108281', class:'bottom-logo'
+      %p.devise-footer__text 
+        %small &copy; 2019 Mercari
+
