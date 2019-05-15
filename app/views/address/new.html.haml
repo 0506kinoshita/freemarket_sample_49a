@@ -29,7 +29,7 @@
           %h2 住所入力
 
       %form.sign-up-main__address
-      = form_with(model: @address, url: '/address',method: :post, local: true) do |form|
+      = form_with(model: @address,url: '/address', method: :post, local: true) do |form|
         .sign-up-main__address__zipcode
           = form.label '郵便番号', class: :'sign-up-main__address__zipcode__head'
           = form.label '必須', class: :'sign-up-main__address__zipcode__require'
