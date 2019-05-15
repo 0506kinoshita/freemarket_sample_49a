@@ -3,7 +3,7 @@ class CreditCardController < ApplicationController
   require "payjp"
 
   def new
-    card = CreditCard.where(user_id: current_user.id)
+    card = current_user.credit_cards.where(user_id: current_user)
     redirect_to action: :show if card.exists?
   end
 
