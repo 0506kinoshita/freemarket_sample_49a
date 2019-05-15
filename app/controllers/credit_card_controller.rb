@@ -26,7 +26,7 @@ class CreditCardController < ApplicationController
   end
 
   def delete
-    card = CreditCard.where(user_id: current_user.id).first
+    card = User.where(user_id: current_user.id).first
     if card.blank?
     else
       Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
