@@ -12,10 +12,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super
   end
 
-  # def after_sign_in_path_for(resource)
-  #   new_address_path
-  # end
-
   # POST /resource
   def create
     super
