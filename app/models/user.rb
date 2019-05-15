@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :like_high, dependent: :destroy
   has_many :like_middle, dependent: :destroy
   has_many :like_low, dependent: :destroy
+  has_many :credit_cards, dependent: :destroy
   has_many :sns_credentials
 
   devise :database_authenticatable, :registerable,
