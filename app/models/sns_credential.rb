@@ -12,7 +12,7 @@ class SnsCredential < ApplicationRecord
   end
 
   def create_sns(oauth)
-    user = User.where(email: auth.info.email).first
+    user = User.where(email: oauth.info.email).first
     SnsCredential.create(
       uid: oauth.uid,
       provider: oauth.provider,
@@ -21,11 +21,12 @@ class SnsCredential < ApplicationRecord
     return user
   end
 
-  def check_sns(snscredential, oauth)
-    if snscredential.present?
+  def check_sns(snscredential_user, oauth)
+    if snscredential_user.present?
       @user = User.where(id: snscredential.user_id).first
     else
-      @user = SnsCredential.create_sns(oauth)
+      snscredential = SnsCredential.new
+      @user = snscredential.create_sns(oauth)
     end
     return @user
   end
