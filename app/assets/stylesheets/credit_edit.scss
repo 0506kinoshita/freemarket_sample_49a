@@ -1,16 +1,19 @@
 .credit-wrapper {
-  margin: 75px auto 0;
-  padding: 0 0 40px;
-  width: 1020px;
-  width: 70%;
   background: #f5f5f5;  
+  padding:40px 0;
+  margin-top:40px; 
+}
+.back-ground-gray{
+  margin: 0 auto ;
+  width: 1020px;
+  height: 1400px;
 }
 
 .credit-edit-content {
   height: 700px;
   width: 666px;
   float: right;
-  margin: 40px 30px 0 0;
+  // margin: 40px 30px 0 0;
   background-color: white;
 
   // 「クレジットカード情報入力」記述
