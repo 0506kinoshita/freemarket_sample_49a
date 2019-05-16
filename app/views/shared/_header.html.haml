@@ -28,12 +28,15 @@
                             - Category.where(parent_id: category2.id).each do |category3|
                               %li
                                 = link_to "#{category3.name}",''
-        %li
-          %h2
-            = link_to 'https://www.mercari.com/jp/brand/', {class: 'main-gnav__left__category__root'} do
-              %i.fa.fa-tag
-              %span ブランドから探す
-            %ul.main-gnav__left__category__root__wrap
+          %ul#menu-content
+            %li.first-content
+              = link_to new_item_path do
+                %i.fa.fa-tag 
+                ブランドから探す
+                %ul.second-content
+                  - @brands.each do |brand|
+                    %li
+                      = link_to "#{brand.name}",''
 
       .main-gnav__right
         %ul.main-gnav__right__user
