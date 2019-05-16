@@ -8,6 +8,8 @@
     %h1.main-product-box__name #{@item.name}
     .main-product-box__name__clearfix
       #wrap.main-product-box__name__clearfix__photo
+        .main-product-box__name__clearfix__photo__sold 
+          %p10 SOLD
         %ul#slider
           %li.slide-item
             = image_tag @item.image.url

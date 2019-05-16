@@ -44,7 +44,7 @@
 }
 
 .main-product-box__name__clearfix {
-
+  position: relative;
   content: '';
   display: block;
   clear: both;
@@ -59,7 +59,24 @@
 
   }
 }
-
+.main-product-box__name__clearfix__photo__sold {
+  position: absolute;
+  border-style: solid;
+  border-width: 120px 120px 0 0;
+  border-color: #ea352d transparent transparent transparent;
+  z-index: 2;
+  height: 0;
+  width:0;
+  top:0;
+  p10{
+    top: -100px;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    transform: rotate( -45deg );
+  }
+}
 #slider {
   width: 300px;
   height: 300px;
